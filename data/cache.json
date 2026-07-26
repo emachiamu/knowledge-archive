@@ -159,6 +159,16 @@
     "title": "Asceticism",
     "wiki_url": "https://en.wikipedia.org/wiki/Asceticism"
   },
+  "https://en.wikipedia.org/wiki/Assembly_language": {
+    "extract": "In computing, assembly language, often referred to simply as assembly and commonly abbreviated as ASM or asm, is any low-level programming language with a very strong correspondence between the instructions in the language and the architecture's machine code instructions. Assembly language usually has one statement per machine code instruction (1:1), but constants, comments, assembler directives, symbolic labels of, e.g., memory locations, registers, and macros are generally also supported.",
+    "fetched_at": "2026-07-26T11:26:47.450265+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Motorola_6800_Assembly_Language.png/330px-Motorola_6800_Assembly_Language.png",
+    "image_height": 525,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Assembly language",
+    "wiki_url": "https://en.wikipedia.org/wiki/Assembly_language"
+  },
   "https://en.wikipedia.org/wiki/Auger_effect": {
     "extract": "The Meitner–Auger effect is a physical phenomenon in which atoms eject electrons. It occurs when an inner-shell vacancy in an atom is filled by an electron, releasing energy that causes the emission of another electron from a different shell of the same atom.",
     "fetched_at": "2026-07-26T11:04:07.704900+00:00",
@@ -419,6 +429,16 @@
     "title": "Copts",
     "wiki_url": "https://en.wikipedia.org/wiki/Copts"
   },
+  "https://en.wikipedia.org/wiki/Court_of_the_Lions": {
+    "extract": "The Court of the Lions (Spanish: Patio de los Leones) or Palace of the Lions is a palace in the heart of the Alhambra, a historic citadel formed by a complex of palaces, gardens and forts in Granada, Spain. It was commissioned by the Nasrid sultan Muhammad V of the Emirate of Granada in Al-Andalus. Its construction started in the second period of his reign, between 1362 and 1391 AD. Along with the Alhambra, the palace is part of a UNESCO World Heritage Site. It was minted in Spain's 2011 limited edition of €2 Commemorative Coins.",
+    "fetched_at": "2026-07-26T11:26:41.670431+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Fountain_in_Patio_de_los_Leones%2C_Alhambra%2C_16.08.14.jpg/330px-Fountain_in_Patio_de_los_Leones%2C_Alhambra%2C_16.08.14.jpg",
+    "image_height": 495,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Court of the Lions",
+    "wiki_url": "https://en.wikipedia.org/wiki/Court_of_the_Lions"
+  },
   "https://en.wikipedia.org/wiki/David_Smith_(sculptor)": {
     "extract": "Roland David Smith was an American abstract expressionist sculptor and painter, best known for creating large steel abstract geometric sculptures.",
     "fetched_at": "2026-07-26T11:04:06.326270+00:00",
@@ -438,6 +458,16 @@
     "lang": "en",
     "title": "Digital nomad",
     "wiki_url": "https://en.wikipedia.org/wiki/Digital_nomad"
+  },
+  "https://en.wikipedia.org/wiki/Dome_of_the_Rock": {
+    "extract": "The Dome of the Rock is an octagonal Islamic shrine at the center of the Al-Aqsa mosque compound on the Temple Mount hill in the Old City of Jerusalem. It is the world's oldest surviving work of Islamic architecture, the earliest archaeologically-attested religious structure to be built by a Muslim ruler and contains the earliest inscriptions proclaiming Islam and the prophet Muhammad.",
+    "fetched_at": "2026-07-26T11:26:41.778924+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Jerusalem_DomeoftheRock_J65_%28cropped%29.JPG/330px-Jerusalem_DomeoftheRock_J65_%28cropped%29.JPG",
+    "image_height": 223,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Dome of the Rock",
+    "wiki_url": "https://en.wikipedia.org/wiki/Dome_of_the_Rock"
   },
   "https://en.wikipedia.org/wiki/Domus_Aurea": {
     "extract": "The Domus Aurea was a vast landscaped complex built by the Emperor Nero largely on the Oppian Hill in the heart of ancient Rome after the great fire in 64 AD had destroyed a large part of the city.",
@@ -1349,6 +1379,16 @@
     "title": "Waiting for Godot",
     "wiki_url": "https://en.wikipedia.org/wiki/Waiting_for_Godot"
   },
+  "https://en.wikipedia.org/wiki/Wes_Anderson": {
+    "extract": "Wesley Wales Anderson is an American filmmaker. His films are known for themes of grief, loss of innocence, and dysfunctional families. Due to his films' eccentricity, distinctive visual and narrative styles, and frequent use of ensemble casts, critics have described Anderson as an auteur. He has received various accolades, including an Academy Award, a BAFTA Award, and nominations for four Golden Globe Awards. Three of his films appeared in BBC Culture's 2016 poll of the greatest films since 2000.",
+    "fetched_at": "2026-07-26T11:26:48.514772+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Wes_Anderson-7541_%28cropped%29.jpg/330px-Wes_Anderson-7541_%28cropped%29.jpg",
+    "image_height": 495,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Wes Anderson",
+    "wiki_url": "https://en.wikipedia.org/wiki/Wes_Anderson"
+  },
   "https://en.wikipedia.org/wiki/William_Hogarth": {
     "extract": "William Hogarth was an English painter, engraver, satirist, cartoonist and writer. His work ranges from realistic portraiture to comic strip-like series of pictures called \"modern moral subjects\", and he is perhaps best known for his series A Harlot's Progress, A Rake's Progress and Marriage A-la-Mode. Familiarity with his work is so widespread that satirical political illustrations in this style are often referred to as \"Hogarthian\".",
     "fetched_at": "2026-07-26T11:17:21.291489+00:00",
@@ -1358,6 +1398,16 @@
     "lang": "en",
     "title": "William Hogarth",
     "wiki_url": "https://en.wikipedia.org/wiki/William_Hogarth"
+  },
+  "https://en.wikipedia.org/wiki/Wolfgang_Beltracchi": {
+    "extract": "Wolfgang Beltracchi is a German former art forger and visual artist who has admitted to forging hundreds of paintings in an international art scam netting millions of euros. Beltracchi, together with his wife Helene, sold forgeries of alleged works by famous artists, including Max Ernst, Heinrich Campendonk, Fernand Léger, and Kees van Dongen. Though he was found guilty for forging 14 works of art that sold for a combined $45m (£28.6m), he claims to have faked \"about 50\" artists. The total estimated profits Beltracchi made from his forgeries surpasses $100m.",
+    "fetched_at": "2026-07-26T11:26:46.903113+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Wolfgang_Beltracchi_%282024%29_III.jpg/330px-Wolfgang_Beltracchi_%282024%29_III.jpg",
+    "image_height": 413,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Wolfgang Beltracchi",
+    "wiki_url": "https://en.wikipedia.org/wiki/Wolfgang_Beltracchi"
   },
   "https://en.wikipedia.org/wiki/XZ_Utils_backdoor": {
     "extract": "On 29 March 2024, a malicious backdoor was discovered in the compression software XZ Utils. The backdoor gives an attacker who possesses a specific private key the ability to remotely execute code on an affected system through OpenSSH, a set of networking utilities. The backdoor was discovered by software developer Andres Freund.",
