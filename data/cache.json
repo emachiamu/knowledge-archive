@@ -1,4 +1,14 @@
 {
+  "https://en.wikipedia.org/wiki/A%20Lover%27s%20Discourse": {
+    "extract": "A Lover's Discourse: Fragments is a 1977 book by Roland Barthes. It contains a list of \"fragments\", some of which come from literature and some from his own philosophical thought, of a lover's point of view. Barthes calls them \"figures\"—gestures of the lover at work.",
+    "fetched_at": "2026-07-26T13:08:06.973806+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/45/A_Lover%27s_Discourse_%28original_French_edition%29.jpg",
+    "image_height": 292,
+    "image_width": 200,
+    "lang": "en",
+    "title": "A Lover's Discourse: Fragments",
+    "wiki_url": "https://en.wikipedia.org/wiki/A_Lover's_Discourse%3A_Fragments"
+  },
   "https://en.wikipedia.org/wiki/ADA_collider": {
     "extract": "\nADA was one of the first Italian particle accelerators and the first-ever electron–positron particle collider, measuring approximately 1.3 metres in diameter and designed to store beams of 250 MeV.",
     "fetched_at": "2026-07-26T11:50:37.808747+00:00",
@@ -18,6 +28,16 @@
     "lang": "en",
     "title": "Aage Bohr",
     "wiki_url": "https://en.wikipedia.org/wiki/Aage_Bohr"
+  },
+  "https://en.wikipedia.org/wiki/Accabadora%20%28novel%29": {
+    "extract": "Michela Murgia was an Italian novelist, playwright, and radio personality. She was a winner of the Campiello Prize, the Mondello International Literary Prize and Dessì Prize, and was an active feminist and left-wing voice in the Italian public scene, speaking out on themes such as euthanasia and LGBTQ+ rights.",
+    "fetched_at": "2026-07-26T13:08:10.643857+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Michela_Murgia.png/330px-Michela_Murgia.png",
+    "image_height": 330,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Michela Murgia",
+    "wiki_url": "https://en.wikipedia.org/wiki/Michela_Murgia"
   },
   "https://en.wikipedia.org/wiki/Active-pixel_sensor": {
     "extract": "An active-pixel sensor (APS) is an image sensor where each pixel sensor unit cell has a photodetector and one or more active transistors. APS sensors are used in digital camera technologies such as cell phone cameras, web cameras, most modern digital pocket cameras, most digital single-lens reflex cameras (DSLRs), mirrorless interchangeable-lens cameras (MILCs), and lensless imaging for, e.g., blood cells.",
@@ -329,6 +349,16 @@
     "title": "Banana equivalent dose",
     "wiki_url": "https://en.wikipedia.org/wiki/Banana_equivalent_dose"
   },
+  "https://en.wikipedia.org/wiki/Banditaccia%20Necropolis": {
+    "extract": "Cerveteri is a comune (municipality) in the Metropolitan City of Rome Capital, in the Italian region of Lazio. Known by the ancient Romans as Caere, and previously by the Etruscans as Caisra or Cisra, and as Agylla by the Greeks, its modern name derives from Caere Vetus used in the 13th century to distinguish it from Caere Novum.",
+    "fetched_at": "2026-07-26T13:07:13.520738+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Cerveteri%2C_necropoli_della_banditaccia%2C_via_sepolcrale_principale%2C_01.jpg/330px-Cerveteri%2C_necropoli_della_banditaccia%2C_via_sepolcrale_principale%2C_01.jpg",
+    "image_height": 220,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Cerveteri",
+    "wiki_url": "https://en.wikipedia.org/wiki/Cerveteri"
+  },
   "https://en.wikipedia.org/wiki/Baptistery_of_Parma": {
     "extract": "The Baptistery of Parma is a religious edifice in Parma, northern Italy. Architecturally, the baptistery of Parma Cathedral marks a transition between the Romanesque and Gothic styles, and it is considered to be among the most important Medieval monuments in Europe.",
     "fetched_at": "2026-07-26T11:03:59.021789+00:00",
@@ -569,6 +599,16 @@
     "title": "Canaletto",
     "wiki_url": "https://en.wikipedia.org/wiki/Canaletto"
   },
+  "https://en.wikipedia.org/wiki/Capitoline%20Geese": {
+    "extract": "The Battle of the Allia was fought c. 387 BC between the Senones – a Gallic tribe led by Brennus, who had invaded Northern Italy – and the Roman Republic.",
+    "fetched_at": "2026-07-26T13:07:59.143159+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Servian_Wall-Termini_Station.jpg/330px-Servian_Wall-Termini_Station.jpg",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Battle of the Allia",
+    "wiki_url": "https://en.wikipedia.org/wiki/Battle_of_the_Allia"
+  },
   "https://en.wikipedia.org/wiki/Capitoline_Hill": {
     "extract": "The Capitolium or Capitoline Hill, between the Forum and the Campus Martius, is one of the Seven Hills of Rome.",
     "fetched_at": "2026-07-26T11:17:17.478801+00:00",
@@ -728,6 +768,16 @@
     "lang": "en",
     "title": "Coalescence (physics)",
     "wiki_url": "https://en.wikipedia.org/wiki/Coalescence_(physics)"
+  },
+  "https://en.wikipedia.org/wiki/Colombe%20d%27Or": {
+    "extract": "La Colombe d'Or is a hotel and residential complex in Neartown, Houston. It includes an original building in a Beaux-Arts style, a skyscraper with 34 stories, and a bungalow property.",
+    "fetched_at": "2026-07-26T13:08:35.652873+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/La_Colombe_d%27Or_Tower_B.jpg/330px-La_Colombe_d%27Or_Tower_B.jpg",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "La Colombe d'Or",
+    "wiki_url": "https://en.wikipedia.org/wiki/La_Colombe_d'Or"
   },
   "https://en.wikipedia.org/wiki/Conformal_field_theory": {
     "extract": "A conformal field theory (CFT) is a quantum field theory that is invariant under conformal transformations. In two dimensions, there is an infinite-dimensional algebra of local conformal transformations, and conformal field theories can sometimes be exactly solved or classified.",
@@ -1139,6 +1189,16 @@
     "title": "Florence Cathedral",
     "wiki_url": "https://en.wikipedia.org/wiki/Florence_Cathedral"
   },
+  "https://en.wikipedia.org/wiki/Fogong%20Temple%20Pagoda": {
+    "extract": "The Sakyamuni Pagoda of Fogong Temple of Ying County, Shanxi province, China, is a wooden Chinese pagoda. It is also known as the Wooden Pagoda of Ying County. It was constructed in 1056, during the second year of the Khitan-led Liao dynasty and was renovated and expended in 1195 during the sixth year of the Jin dynasty. The pagoda was built by Emperor Daozong of Liao (Hongji) at the site of his grandmother's family home. The pagoda, which has survived several large earthquakes throughout the centuries, reached a level of such fame within China that it was given the generic nickname of the \"Muta\".",
+    "fetched_at": "2026-07-26T13:06:54.095429+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Pagodaoffogongtemple2019.jpg/330px-Pagodaoffogongtemple2019.jpg",
+    "image_height": 186,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Pagoda of Fogong Temple",
+    "wiki_url": "https://en.wikipedia.org/wiki/Pagoda_of_Fogong_Temple"
+  },
   "https://en.wikipedia.org/wiki/Fountain_of_the_Four_Rivers": {
     "extract": "Fontana dei Quattro Fiumi is a fountain in the Piazza Navona in Rome, Italy. It was designed in 1651 by Gian Lorenzo Bernini for Pope Innocent X whose family palace, the Palazzo Pamphili, faced onto the piazza as did the church of Sant'Agnese in Agone of which Innocent was the sponsor.",
     "fetched_at": "2026-07-26T11:47:06.582707+00:00",
@@ -1298,6 +1358,16 @@
     "lang": "en",
     "title": "Giacomo Matteotti",
     "wiki_url": "https://en.wikipedia.org/wiki/Giacomo_Matteotti"
+  },
+  "https://en.wikipedia.org/wiki/Gian%20Antonio%20Cibotto": {
+    "extract": "Giovanni Comisso was an important Italian writer of the twentieth century, appreciated by Eugenio Montale, Umberto Saba, Gianfranco Contini and many others.",
+    "fetched_at": "2026-07-26T13:08:19.089522+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/%D0%94%D0%B6%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B8_%D0%9A%D0%BE%D0%BC%D0%B8%D1%81%D1%81%D0%BE_%28%D1%84%D0%BE%D1%82%D0%BE_%D0%B4%D0%BE_1969_%D0%B3%D0%BE%D0%B4%D0%B0%29.jpg/330px-%D0%94%D0%B6%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B8_%D0%9A%D0%BE%D0%BC%D0%B8%D1%81%D1%81%D0%BE_%28%D1%84%D0%BE%D1%82%D0%BE_%D0%B4%D0%BE_1969_%D0%B3%D0%BE%D0%B4%D0%B0%29.jpg",
+    "image_height": 445,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Giovanni Comisso",
+    "wiki_url": "https://en.wikipedia.org/wiki/Giovanni_Comisso"
   },
   "https://en.wikipedia.org/wiki/Gian_Lorenzo_Bernini": {
     "extract": "Gian Lorenzo Bernini was an Italian sculptor, architect, painter and city planner. Bernini's creative abilities and mastery in a range of artistic arenas define him as a uomo universale or Renaissance man. While a major figure in the world of architecture, he was more prominently the leading sculptor of his age, credited with creating the Baroque style of sculpture.",
@@ -1478,6 +1548,16 @@
     "lang": "en",
     "title": "Henri Becquerel",
     "wiki_url": "https://en.wikipedia.org/wiki/Henri_Becquerel"
+  },
+  "https://en.wikipedia.org/wiki/Hermann%20G%C3%B6ring": {
+    "extract": "Hermann Wilhelm Göring was a German politician, aviator, military commander, and convicted war criminal. He was one of the most powerful figures in the Nazi Party, which controlled Germany from 1933 to 1945. He also served as Oberbefehlshaber der Luftwaffe, a position he held until the final days of the regime.",
+    "fetched_at": "2026-07-26T13:07:53.826416+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Hermann_Goering_-_Nuremberg_2_%28cropped%29.jpg/330px-Hermann_Goering_-_Nuremberg_2_%28cropped%29.jpg",
+    "image_height": 404,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Hermann Göring",
+    "wiki_url": "https://en.wikipedia.org/wiki/Hermann_G%C3%B6ring"
   },
   "https://en.wikipedia.org/wiki/Hermann_Hesse": {
     "extract": "Hermann Karl Hesse was a German-Swiss poet and novelist, and winner of the 1946 Nobel Prize in Literature. His interest in Eastern religious, spiritual, and philosophical traditions, combined with his involvement with Jungian analysis, helped shape his literary work. His best-known novels include Demian, Steppenwolf, Siddhartha, Narcissus and Goldmund, and The Glass Bead Game, each of which explores an individual's search for authenticity, self-knowledge, and spirituality.",
@@ -1869,6 +1949,16 @@
     "title": "Leighton House",
     "wiki_url": "https://en.wikipedia.org/wiki/Leighton_House"
   },
+  "https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov%20chain%20algorithm": {
+    "extract": "LZMA is a lossless data compression algorithm developed since 1998 by Igor Pavlov, the developer of 7-Zip. It has been used in the 7z format of the 7-Zip archiver since 2001. This algorithm uses a dictionary compression scheme somewhat similar to the LZ77 algorithm published by Abraham Lempel and Jacob Ziv in 1977 and features a high compression ratio and a variable compression-dictionary size, while still maintaining decompression speed similar to other commonly used compression algorithms.",
+    "fetched_at": "2026-07-26T13:07:20.690562+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "en",
+    "title": "LZMA",
+    "wiki_url": "https://en.wikipedia.org/wiki/LZMA"
+  },
   "https://en.wikipedia.org/wiki/Lenny_Abrahamson": {
     "extract": "Leonard Ian Abrahamson is an Irish film and television director. He is best known for directing the independent films Adam & Paul (2004), Garage (2007), What Richard Did (2012), Frank (2014), and Room (2015), all of which contributed to Abrahamson's six Irish Film and Television Awards.",
     "fetched_at": "2026-07-26T11:55:50.717120+00:00",
@@ -2079,6 +2169,16 @@
     "title": "Martin of Tours",
     "wiki_url": "https://en.wikipedia.org/wiki/Martin_of_Tours"
   },
+  "https://en.wikipedia.org/wiki/Massimiliano%20Locatelli%20%28architect%29": {
+    "extract": "Manuel Locatelli is an Italian professional footballer who plays as a defensive midfielder for Serie A club Juventus, which he captains, and the Italy national team.",
+    "fetched_at": "2026-07-26T13:06:52.340821+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/FC_Zenit_Saint_Petersburg_vs._Juventus%2C_20_October_2021_34_%28Manuel_Locatelli%29.jpg/330px-FC_Zenit_Saint_Petersburg_vs._Juventus%2C_20_October_2021_34_%28Manuel_Locatelli%29.jpg",
+    "image_height": 495,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Manuel Locatelli",
+    "wiki_url": "https://en.wikipedia.org/wiki/Manuel_Locatelli"
+  },
   "https://en.wikipedia.org/wiki/Maurizio_Cocciolone": {
     "extract": "Maurizio Cocciolone is an Italian Air Force officer, who served with UN Coalition forces and was a prisoner of war during the Gulf War.",
     "fetched_at": "2026-07-26T11:53:01.479647+00:00",
@@ -2108,6 +2208,16 @@
     "lang": "en",
     "title": "Max Richter",
     "wiki_url": "https://en.wikipedia.org/wiki/Max_Richter"
+  },
+  "https://en.wikipedia.org/wiki/Men%C3%A9ndez%20brothers": {
+    "extract": "Joseph Lyle Menendez and Erik Galen Menendez, commonly referred to as the Menendez brothers, are American brothers convicted of killing their parents, José and Mary Louise \"Kitty\" Menendez, in their Beverly Hills home in 1989.",
+    "fetched_at": "2026-07-26T13:07:57.318082+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Menendez_brothers_2023_%28cropped%29.png/330px-Menendez_brothers_2023_%28cropped%29.png",
+    "image_height": 173,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Lyle and Erik Menendez",
+    "wiki_url": "https://en.wikipedia.org/wiki/Lyle_and_Erik_Menendez"
   },
   "https://en.wikipedia.org/wiki/Mencius": {
     "extract": "Mencius, born Meng Ke (孟軻), was a Chinese Confucian philosopher, often described as the Second Sage (亞聖) to reflect his traditional esteem relative to Confucius himself. He was part of Confucius's fourth generation of disciples, inheriting his ideology and developing it further. Living during the Warring States period, he is said to have spent much of his life travelling around the states offering counsel to different rulers. Conversations with these rulers form the basis of the Mencius, which would later be canonised as a Confucian classic.",
@@ -2329,6 +2439,16 @@
     "title": "Mycenae",
     "wiki_url": "https://en.wikipedia.org/wiki/Mycenae"
   },
+  "https://en.wikipedia.org/wiki/Myricae": {
+    "extract": "Phyllonorycter myricae is a moth of the family Gracillariidae. It is native to Madeira and the Canary Islands. In 2000, it was studied in Hawaii as a potential biological control agent for Myrica faya.",
+    "fetched_at": "2026-07-26T13:08:21.776122+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "en",
+    "title": "Phyllonorycter myricae",
+    "wiki_url": "https://en.wikipedia.org/wiki/Phyllonorycter_myricae"
+  },
   "https://en.wikipedia.org/wiki/Nasrid_dynasty": {
     "extract": "The Nasrid dynasty was an Arab dynasty that ruled the Emirate of Granada from 1232 to 1492. It was the last Muslim dynasty in the Iberian Peninsula and of al-Andalus. Twenty-three sultans ruled Granada from the founding of the dynasty in 1232 by Muhammad I until 1492, when Muhammad XI surrendered all lands to Isabella I of Castile. Today, the most visible evidence of the Nasrid dynasty is the Alhambra palace complex built under their reign.",
     "fetched_at": "2026-07-26T11:54:36.567214+00:00",
@@ -2448,6 +2568,16 @@
     "lang": "en",
     "title": "List of obelisks in Rome",
     "wiki_url": "https://en.wikipedia.org/wiki/List_of_obelisks_in_Rome"
+  },
+  "https://en.wikipedia.org/wiki/On%20Literature%20%28essay%20collection%29": {
+    "extract": "Literature is any collection of written work. The term is also used more narrowly for writings considered an art form, especially novels, plays, and poems. It includes both print and digital writing. In recent centuries, the definition has expanded to include oral literature, much of which has been transcribed. Literature is a method of recording, preserving, and transmitting knowledge and entertainment. It can also have a social, psychological, spiritual, or political role.",
+    "fetched_at": "2026-07-26T13:08:26.604304+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Biblioth%C3%A8que_de_l%27Assembl%C3%A9e_Nationale_%28Lunon%29.jpg/330px-Biblioth%C3%A8que_de_l%27Assembl%C3%A9e_Nationale_%28Lunon%29.jpg",
+    "image_height": 220,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Literature",
+    "wiki_url": "https://en.wikipedia.org/wiki/Literature"
   },
   "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude": {
     "extract": "One Hundred Years of Solitude is a 1967 novel by Colombian author Gabriel García Márquez that tells the multi-generational story of the Buendía family, whose patriarch, José Arcadio Buendía, founded the fictitious town of Macondo. The novel is often cited as one of the supreme achievements in world literature. It was recognized as one of the most important works of the Spanish language during the 4th International Conference of the Spanish Language held in Cartagena de Indias in March 2007.",
@@ -2638,6 +2768,16 @@
     "lang": "en",
     "title": "Paraprosdokian",
     "wiki_url": "https://en.wikipedia.org/wiki/Paraprosdokian"
+  },
+  "https://en.wikipedia.org/wiki/Pascal%27s%20calculator": {
+    "extract": "The Pascaline is a mechanical calculator invented by Blaise Pascal in 1642. Pascal was led to develop a calculator by the laborious arithmetical calculations required by his father's work as the supervisor of taxes in Rouen, France. He designed the machine to add and subtract two numbers and to perform multiplication and division through repeated addition or subtraction. It used a stylus to perform calculations.",
+    "fetched_at": "2026-07-26T13:07:26.293005+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Pascaline-CnAM_823-1-IMG_1506-black.jpg/330px-Pascaline-CnAM_823-1-IMG_1506-black.jpg",
+    "image_height": 220,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Pascaline",
+    "wiki_url": "https://en.wikipedia.org/wiki/Pascaline"
   },
   "https://en.wikipedia.org/wiki/Paul_Marcinkus": {
     "extract": "Paul Casimir Marcinkus was an American Catholic prelate who served as president of the Institute for the Works of Religion, commonly known as the Vatican Bank, from 1971 to 1989. He also served as president of the Governorate for Vatican City State from 1989 to 1990, following eight years as vice-president. He was the titular Archbishop of Horta.",
@@ -3319,6 +3459,16 @@
     "title": "Superlattice",
     "wiki_url": "https://en.wikipedia.org/wiki/Superlattice"
   },
+  "https://en.wikipedia.org/wiki/Sutor%2C%20ne%20ultra%20crepidam": {
+    "extract": "Ne supra crepidam is a Latin expression used to tell others not to pass judgment beyond their expertise.",
+    "fetched_at": "2026-07-26T13:08:37.095869+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Casa_vasari_FI%2C_salone%2C_storie_di_apelle_02.JPG/330px-Casa_vasari_FI%2C_salone%2C_storie_di_apelle_02.JPG",
+    "image_height": 248,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Ne supra crepidam",
+    "wiki_url": "https://en.wikipedia.org/wiki/Ne_supra_crepidam"
+  },
   "https://en.wikipedia.org/wiki/Suzanne_Valadon": {
     "extract": "Marie-Clémentine \"Suzanne\" Valadon was a French painter who was born at Bessines-sur-Gartempe, Haute-Vienne, France. In 1894, Valadon became the first woman painter admitted to the Société Nationale des Beaux-Arts. She was also the mother of painter Maurice Utrillo.",
     "fetched_at": "2026-07-26T11:04:06.661437+00:00",
@@ -3389,6 +3539,16 @@
     "title": "Pavilion of Prince Teng",
     "wiki_url": "https://en.wikipedia.org/wiki/Pavilion_of_Prince_Teng"
   },
+  "https://en.wikipedia.org/wiki/Testa%20di%20moro": {
+    "extract": "The Alfa Romeo 105 and 115 series coupés are a range of cars made by the Italian manufacturer Alfa Romeo from 1963 until 1977, based on a shortened floorpan from the Giulia saloon. They were the successors to the Giulietta Sprint coupé.",
+    "fetched_at": "2026-07-26T13:08:38.711635+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Alfa_Romeo_GT_1300_Junior.jpg/330px-Alfa_Romeo_GT_1300_Junior.jpg",
+    "image_height": 228,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Alfa Romeo 105/115 Series Coupés",
+    "wiki_url": "https://en.wikipedia.org/wiki/Alfa_Romeo_105%2F115_Series_Coup%C3%A9s"
+  },
   "https://en.wikipedia.org/wiki/Thales_of_Miletus": {
     "extract": "Thales of Miletus was an Ancient Greek pre-Socratic philosopher from Miletus in Ionia, Asia Minor. Thales was one of the Seven Sages, founding figures of Ancient Greece.",
     "fetched_at": "2026-07-26T11:54:19.962501+00:00",
@@ -3398,6 +3558,16 @@
     "lang": "en",
     "title": "Thales of Miletus",
     "wiki_url": "https://en.wikipedia.org/wiki/Thales_of_Miletus"
+  },
+  "https://en.wikipedia.org/wiki/The%20Nine%20%28Siena%29": {
+    "extract": "9 is a number, numeral, and glyph.",
+    "fetched_at": "2026-07-26T13:07:51.068800+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "en",
+    "title": "9 (disambiguation)",
+    "wiki_url": "https://en.wikipedia.org/wiki/9_(disambiguation)"
   },
   "https://en.wikipedia.org/wiki/The_Broad": {
     "extract": "The Broad is a contemporary art museum on Grand Avenue in Downtown Los Angeles. The museum is named for philanthropists Eli and Edythe Broad, who financed the $140 million building that houses the Broad art collections. It offers free general admission to its permanent collection galleries. However, not all of its events are free and admission prices may vary by exhibit and/or by event. It opened on September 20, 2015.",
