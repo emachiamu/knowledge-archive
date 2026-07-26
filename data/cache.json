@@ -9,6 +9,26 @@
     "title": "Aage Bohr",
     "wiki_url": "https://en.wikipedia.org/wiki/Aage_Bohr"
   },
+  "https://en.wikipedia.org/wiki/Akira_Kurosawa": {
+    "extract": "Akira Kurosawa  was a Japanese filmmaker who directed 30 feature films in a career spanning six decades. With a bold and dynamic style strongly influenced by Western cinema yet distinct from it, he is widely regarded as one of the greatest and most influential filmmakers in the history of cinema. Known as a hands-on filmmaker, he was heavily involved with all aspects of production as a director, writer, producer, and editor.",
+    "fetched_at": "2026-07-26T11:17:23.109281+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Akirakurosawa-onthesetof7samurai-1953-page88.jpg/330px-Akirakurosawa-onthesetof7samurai-1953-page88.jpg",
+    "image_height": 553,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Akira Kurosawa",
+    "wiki_url": "https://en.wikipedia.org/wiki/Akira_Kurosawa"
+  },
+  "https://en.wikipedia.org/wiki/Albert_Camus": {
+    "extract": "Albert Camus was a French philosopher, novelist, author, dramatist, journalist, world federalist, and political activist. He was the recipient of the 1957 Nobel Prize in Literature at the age of 44, the second-youngest recipient in history, and the first laureate in literature born in Africa. His works include The Stranger, The Plague, The Myth of Sisyphus, The Fall and The Rebel.",
+    "fetched_at": "2026-07-26T11:17:22.410584+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg/330px-Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg",
+    "image_height": 396,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Albert Camus",
+    "wiki_url": "https://en.wikipedia.org/wiki/Albert_Camus"
+  },
   "https://en.wikipedia.org/wiki/Alfred_Hitchcock": {
     "extract": "Sir Alfred Joseph Hitchcock was an English filmmaker. He is widely regarded as one of the greatest and most influential figures in the history of cinema. In a career spanning six decades, he directed over 50 feature films, many of which are still widely watched and studied today. Known as the \"Master of Suspense\", Hitchcock became as well known as any of his actors thanks to his many interviews, his cameo appearances in most of his films, and his hosting and producing the television anthology Alfred Hitchcock Presents (1955–65). Among other accolades, his films garnered 46 Academy Award nominations, including six wins, although he never won the award for Best Director, despite five nominations.",
     "fetched_at": "2026-07-26T11:04:10.801743+00:00",
@@ -29,6 +49,26 @@
     "title": "Amish",
     "wiki_url": "https://en.wikipedia.org/wiki/Amish"
   },
+  "https://en.wikipedia.org/wiki/Andre_Geim": {
+    "extract": "Sir Andre Konstantin Geim is a Russian-born British physicist working in England in the School of Physics and Astronomy at the University of Manchester.",
+    "fetched_at": "2026-07-26T11:17:21.638489+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Andre_Geim_10.jpg/330px-Andre_Geim_10.jpg",
+    "image_height": 439,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Andre Geim",
+    "wiki_url": "https://en.wikipedia.org/wiki/Andre_Geim"
+  },
+  "https://en.wikipedia.org/wiki/Andrea_Mantegna": {
+    "extract": "Andrea Mantegna was an Italian Renaissance painter, a student of Roman archaeology, and the son-in-law of Jacopo Bellini.",
+    "fetched_at": "2026-07-26T11:17:20.545672+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Mantegna_Bronze_Bust_San_Andrea_Mantua.png/330px-Mantegna_Bronze_Bust_San_Andrea_Mantua.png",
+    "image_height": 437,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Andrea Mantegna",
+    "wiki_url": "https://en.wikipedia.org/wiki/Andrea_Mantegna"
+  },
   "https://en.wikipedia.org/wiki/Andrea_Palladio": {
     "extract": "Andrea Palladio was an Italian Renaissance architect active in the Venetian Republic. Palladio, influenced by Roman and Greek architecture, primarily Vitruvius, is widely considered to be one of the most influential individuals in the history of architecture. While he designed churches and palaces, he was best known for country houses and villas. His teachings, summarized in the architectural treatise, The Four Books of Architecture, gained him wide recognition.",
     "fetched_at": "2026-07-26T11:04:06.136634+00:00",
@@ -38,6 +78,26 @@
     "lang": "en",
     "title": "Andrea Palladio",
     "wiki_url": "https://en.wikipedia.org/wiki/Andrea_Palladio"
+  },
+  "https://en.wikipedia.org/wiki/Andrea_del_Verrocchio": {
+    "extract": "Andrea del Verrocchio was an Italian sculptor, painter and goldsmith who was a master of a workshop in Florence. He was the teacher of Leonardo da Vinci, who assisted in painting The Baptism of Christ.",
+    "fetched_at": "2026-07-26T11:17:20.491750+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Andrea_del_Castagno%2C_portrait_de_Verrocchio%2C_vers_1470.jpg/330px-Andrea_del_Castagno%2C_portrait_de_Verrocchio%2C_vers_1470.jpg",
+    "image_height": 362,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Andrea del Verrocchio",
+    "wiki_url": "https://en.wikipedia.org/wiki/Andrea_del_Verrocchio"
+  },
+  "https://en.wikipedia.org/wiki/Anselm_Kiefer": {
+    "extract": "Anselm Kiefer is a German painter and sculptor. He studied with Peter Dreher and Horst Antes at the end of the 1960s. His works incorporate materials such as straw, ash, clay, lead, and shellac. The poems of Paul Celan have played a role in developing Kiefer's themes of German history and the horrors of the Holocaust, as have the spiritual concepts of Kabbalah.",
+    "fetched_at": "2026-07-26T11:17:20.599822+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/cc/%27Grane%27_by_Anselm_Kiefer._Woodcut_with_paint_and_collage_on_paper_mounted_on_linin%2C_Museum_of_Modern_Art_%28New_York_City%29.jpg",
+    "image_height": 300,
+    "image_width": 255,
+    "lang": "en",
+    "title": "Anselm Kiefer",
+    "wiki_url": "https://en.wikipedia.org/wiki/Anselm_Kiefer"
   },
   "https://en.wikipedia.org/wiki/Aporia": {
     "extract": "In philosophy, an aporia is a conundrum or state of puzzlement. In rhetoric, it is a declaration of doubt, made for rhetorical purpose and often feigned. The notion of an aporia is principally found in ancient Greek philosophy, but it also plays a role in modern post-structuralist philosophy, as in the writings of Jacques Derrida and Luce Irigaray, and it has also served as an instrument of investigation in analytic philosophy.",
@@ -169,6 +229,26 @@
     "title": "Biedermeier",
     "wiki_url": "https://en.wikipedia.org/wiki/Biedermeier"
   },
+  "https://en.wikipedia.org/wiki/Boris_Pasternak": {
+    "extract": "Boris Leonidovich Pasternak was a Russian and Soviet poet, novelist, and literary translator.",
+    "fetched_at": "2026-07-26T11:17:22.794289+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Boris_Pasternak_1958_photo.jpg/330px-Boris_Pasternak_1958_photo.jpg",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Boris Pasternak",
+    "wiki_url": "https://en.wikipedia.org/wiki/Boris_Pasternak"
+  },
+  "https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate": {
+    "extract": "In condensed matter physics, a Bose–Einstein condensate (BEC) is a state of matter that is typically formed when a gas of bosons at very low densities is cooled to temperatures very close to absolute zero, i.e. 0 K. Under such conditions, a large fraction of bosons occupy the lowest quantum state, at which microscopic quantum-mechanical phenomena, particularly wavefunction interference, become apparent macroscopically.\nMore generally, condensation refers to the appearance of macroscopic occupation of one or several states: for example, in BCS theory, a superconductor is a condensate of Cooper pairs. As such, condensation can be associated with phase transition, and the macroscopic occupation of the state is the order parameter.",
+    "fetched_at": "2026-07-26T11:17:21.720832+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/QuantumPhaseTransition.svg/330px-QuantumPhaseTransition.svg.png",
+    "image_height": 238,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Bose–Einstein condensate",
+    "wiki_url": "https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate"
+  },
   "https://en.wikipedia.org/wiki/British_Museum": {
     "extract": "The British Museum is a public museum dedicated to human history, art and culture located in the Bloomsbury area of London. Its permanent collection of eight million works is the largest in the world. It documents the story of human culture from its beginnings to the present. Established in 1753, the British Museum was the world's first public national museum. In 2025, the museum received 6,440,120 visitors and was the second most visited attraction in the United Kingdom.",
     "fetched_at": "2026-07-26T11:03:59.432996+00:00",
@@ -198,6 +278,76 @@
     "lang": "en",
     "title": "Ca' d'Oro",
     "wiki_url": "https://en.wikipedia.org/wiki/Ca'_d'Oro"
+  },
+  "https://en.wikipedia.org/wiki/Camille_Pissarro": {
+    "extract": "Jacob Abraham Camille Pissarro was a Danish-French Impressionist and Neo-Impressionist painter born on the island of Saint Thomas. His importance resides in his contributions to both Impressionism and Post-Impressionism. Pissarro studied from great forerunners, including Gustave Courbet and Jean-Baptiste-Camille Corot. He later studied and worked alongside Georges Seurat and Paul Signac when he took on the Neo-Impressionist style at the age of 54.",
+    "fetched_at": "2026-07-26T11:17:20.675434+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pissarro-portrait.jpg/330px-Pissarro-portrait.jpg",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Camille Pissarro",
+    "wiki_url": "https://en.wikipedia.org/wiki/Camille_Pissarro"
+  },
+  "https://en.wikipedia.org/wiki/Canaletto": {
+    "extract": "Giovanni Antonio Canal, commonly known as Canaletto, was an Italian painter from the Republic of Venice, considered an important member of the 18th-century Venetian school.",
+    "fetched_at": "2026-07-26T11:17:20.729624+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Giovanni_Antonio_Canal.jpg/330px-Giovanni_Antonio_Canal.jpg",
+    "image_height": 426,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Canaletto",
+    "wiki_url": "https://en.wikipedia.org/wiki/Canaletto"
+  },
+  "https://en.wikipedia.org/wiki/Capitoline_Hill": {
+    "extract": "The Capitolium or Capitoline Hill, between the Forum and the Campus Martius, is one of the Seven Hills of Rome.",
+    "fetched_at": "2026-07-26T11:17:17.478801+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Maquette_de_Rome_%28mus%C3%A9e_de_la_civilisation_romaine%2C_Rome%29_%285911810278%29.jpg/330px-Maquette_de_Rome_%28mus%C3%A9e_de_la_civilisation_romaine%2C_Rome%29_%285911810278%29.jpg",
+    "image_height": 244,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Capitoline Hill",
+    "wiki_url": "https://en.wikipedia.org/wiki/Capitoline_Hill"
+  },
+  "https://en.wikipedia.org/wiki/Cardiff_Castle": {
+    "extract": "Cardiff Castle is a medieval castle and Victorian Gothic revival mansion located in the city centre of Cardiff, Wales. The original motte and bailey castle was built in the late 11th century by Norman invaders on top of a 3rd-century Roman fort. The castle was commissioned either by William the Conqueror or by Robert Fitzhamon, and formed the heart of the medieval town of Cardiff and the Marcher Lord territory of Glamorgan. In the 12th century the castle began to be rebuilt in stone, probably by Robert of Gloucester, with a shell keep and substantial defensive walls being erected. Further work was conducted by the 6th Earl of Gloucester in the second half of the 13th century. Cardiff Castle was repeatedly involved in the conflicts between the Anglo-Normans and the Welsh, being attacked several times in the 12th century, and stormed in 1404 during the revolt of Owain Glyndŵr.",
+    "fetched_at": "2026-07-26T11:17:17.649267+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Aerial_view_of_Cardiff_Castle.jpg/330px-Aerial_view_of_Cardiff_Castle.jpg",
+    "image_height": 206,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Cardiff Castle",
+    "wiki_url": "https://en.wikipedia.org/wiki/Cardiff_Castle"
+  },
+  "https://en.wikipedia.org/wiki/Caryatid": {
+    "extract": "A caryatid is a sculpted female figure serving as an architectural support taking the place of a column or a pillar supporting an entablature on her head. The Greek term karyatides literally means \"maidens of Karyai\", an ancient town on the Peloponnese. Karyai had a temple dedicated to the goddess Artemis in her aspect of Artemis Karyatis: \"As Karyatis she rejoiced in the dances of the nut-tree village of Karyai, those Karyatides, who in their ecstatic round-dance carried on their heads baskets of live reeds, as if they were dancing plants\".",
+    "fetched_at": "2026-07-26T11:17:18.909911+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ath%C3%A8nes_Acropole_Caryatides.JPG/330px-Ath%C3%A8nes_Acropole_Caryatides.JPG",
+    "image_height": 238,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Caryatid",
+    "wiki_url": "https://en.wikipedia.org/wiki/Caryatid"
+  },
+  "https://en.wikipedia.org/wiki/Casimir_effect": {
+    "extract": "In quantum field theory, the Casimir effect is a physical force acting on the macroscopic boundaries of a confined space which arises from the quantum fluctuations of a field. The term Casimir pressure is sometimes used when it is described in units of force per unit area. It is named after the Dutch physicist Hendrik Casimir, who predicted the effect for electromagnetic systems in 1948.",
+    "fetched_at": "2026-07-26T11:17:21.799765+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Casimir_plates.svg/330px-Casimir_plates.svg.png",
+    "image_height": 338,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Casimir effect",
+    "wiki_url": "https://en.wikipedia.org/wiki/Casimir_effect"
+  },
+  "https://en.wikipedia.org/wiki/Castel_Sant%27Angelo": {
+    "extract": "Castel Sant'Angelo, also known as Mausoleum of Hadrian, is a towering rotunda in Parco Adriano, Rome, Italy. It was initially commissioned by the Roman Emperor Hadrian as a mausoleum for himself and his family. The popes later used the building as a fortress and castle dedicated to Saint Michael the Archangel, and it is now a museum. The structure was once the tallest building in Rome.",
+    "fetched_at": "2026-07-26T11:17:18.964052+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Castel_Sant%27Angelo_at_Night.jpg/330px-Castel_Sant%27Angelo_at_Night.jpg",
+    "image_height": 296,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Castel Sant'Angelo",
+    "wiki_url": "https://en.wikipedia.org/wiki/Castel_Sant'Angelo"
   },
   "https://en.wikipedia.org/wiki/Catenary_arch": {
     "extract": "A catenary arch is a type of architectural arch that follows an inverted catenary curve. The catenary curve has been employed in buildings since ancient times. It is not a parabolic arch, although the non-circumferential curves used in arch designs look similar, and match at shallow profiles, so a catenary is often misclassified as a parabola.",
@@ -259,6 +409,16 @@
     "title": "Chrysler Building",
     "wiki_url": "https://en.wikipedia.org/wiki/Chrysler_Building"
   },
+  "https://en.wikipedia.org/wiki/Copts": {
+    "extract": "Copts are a Christian ethnoreligious group native to Egypt who have inhabited the area of modern Egypt since antiquity. They are, like the broader Egyptian population, descended from the ancient Egyptians. Copts predominantly follow the Coptic Orthodox Church, the Alexandrian Greek Orthodox Church and the Coptic Catholic Church. They are the largest Christian population in Egypt and the Middle East, as well as in Sudan and Libya. Copts account for roughly 5 to 15 percent of the population of Egypt.",
+    "fetched_at": "2026-07-26T11:17:22.623843+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Coptic_diaspora_map.png/330px-Coptic_diaspora_map.png",
+    "image_height": 174,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Copts",
+    "wiki_url": "https://en.wikipedia.org/wiki/Copts"
+  },
   "https://en.wikipedia.org/wiki/David_Smith_(sculptor)": {
     "extract": "Roland David Smith was an American abstract expressionist sculptor and painter, best known for creating large steel abstract geometric sculptures.",
     "fetched_at": "2026-07-26T11:04:06.326270+00:00",
@@ -268,6 +428,36 @@
     "lang": "en",
     "title": "David Smith (sculptor)",
     "wiki_url": "https://en.wikipedia.org/wiki/David_Smith_(sculptor)"
+  },
+  "https://en.wikipedia.org/wiki/Digital_nomad": {
+    "extract": "A digital nomad is a person who travels freely while working remotely using information and communications technology such as the Internet. Such people generally have minimal material possessions and work remotely in temporary housing, internet cafés, public libraries, co-working spaces, or recreational vehicles, using Wi-Fi or mobile hotspots to access the Internet.",
+    "fetched_at": "2026-07-26T11:17:23.359059+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Taking_notes_at_a_coffee_table_%28Unsplash%29.jpg/330px-Taking_notes_at_a_coffee_table_%28Unsplash%29.jpg",
+    "image_height": 220,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Digital nomad",
+    "wiki_url": "https://en.wikipedia.org/wiki/Digital_nomad"
+  },
+  "https://en.wikipedia.org/wiki/Domus_Aurea": {
+    "extract": "The Domus Aurea was a vast landscaped complex built by the Emperor Nero largely on the Oppian Hill in the heart of ancient Rome after the great fire in 64 AD had destroyed a large part of the city.",
+    "fetched_at": "2026-07-26T11:17:19.564104+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Domus_Aurea_pianta_generale.png/330px-Domus_Aurea_pianta_generale.png",
+    "image_height": 229,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Domus Aurea",
+    "wiki_url": "https://en.wikipedia.org/wiki/Domus_Aurea"
+  },
+  "https://en.wikipedia.org/wiki/Eames_House": {
+    "extract": "The Eames House is a landmark of mid-20th century modern architecture located at 203 North Chautauqua Boulevard in the Pacific Palisades neighborhood of Los Angeles. It was constructed in 1949, by husband-and-wife design pioneers Charles and Ray Eames of the Eames Office, to serve as their home and studio. The house was commissioned by Arts & Architecture magazine as part of its Case Study House program, challenging architects to design progressive, but modest, homes in Southern California. Charles and Ray moved into the home on Christmas Eve in 1949 and never moved out. Charles's daughter, Lucia Eames, inherited the home and created the non-profit organization, the Eames Foundation, in 2004. Now a historic house museum maintained by the Eames Foundation, it was designated a National Historic Landmark in 2006 and is visited by nearly 20,000 people annually.",
+    "fetched_at": "2026-07-26T11:17:19.618110+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Eames_house_entry.jpg/330px-Eames_house_entry.jpg",
+    "image_height": 398,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Eames House",
+    "wiki_url": "https://en.wikipedia.org/wiki/Eames_House"
   },
   "https://en.wikipedia.org/wiki/Edgar_Allan_Poe": {
     "extract": "Edgar Allan Poe was an American writer, poet, editor, and literary critic who is best known for his poetry and short stories, particularly his tales involving mystery and the macabre. He is widely regarded as one of the central figures of Romanticism and Gothic fiction in the United States and of early American literature. Poe was one of the country's first successful practitioners of the short story, and is generally considered to be one of the pioneers of the detective fiction genre. In addition, he is credited with contributing significantly to the emergence of science fiction. He is the first well-known American writer to earn a living exclusively through writing, which resulted in a financially difficult life and career.",
@@ -299,6 +489,16 @@
     "title": "Entebbe raid",
     "wiki_url": "https://en.wikipedia.org/wiki/Entebbe_raid"
   },
+  "https://en.wikipedia.org/wiki/Federico_Fellini": {
+    "extract": "Federico Fellini was an Italian film director and screenwriter known for his distinctive style that blends fantasy and baroque images with earthiness. Recognized as one of the greatest and most influential filmmakers of all time, his films rank highly in critical polls such as that of Cahiers du Cinéma and Sight & Sound, which lists his 1963 film 8½ as the 10th-greatest film of all time.",
+    "fetched_at": "2026-07-26T11:17:23.184854+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Federico_Fellini_010.jpg/330px-Federico_Fellini_010.jpg",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Federico Fellini",
+    "wiki_url": "https://en.wikipedia.org/wiki/Federico_Fellini"
+  },
   "https://en.wikipedia.org/wiki/Florence_Cathedral": {
     "extract": "Florence Cathedral, formally the Cathedral of Saint Mary of the Flower, is the cathedral of the Catholic Archdiocese of Florence in Florence, Italy. Commenced in 1296 in the Gothic style to a design of Arnolfo di Cambio and completed by 1436 with a dome engineered by Filippo Brunelleschi, the basilica's exterior is faced with polychrome marble panels in various shades of green and pink, alternated by white, and features an elaborate 19th-century Gothic Revival western façade by Emilio De Fabris.",
     "fetched_at": "2026-07-26T11:04:00.264339+00:00",
@@ -309,6 +509,16 @@
     "title": "Florence Cathedral",
     "wiki_url": "https://en.wikipedia.org/wiki/Florence_Cathedral"
   },
+  "https://en.wikipedia.org/wiki/Francesco_Borromini": {
+    "extract": "Francesco Borromini, byname of Francesco Castelli, was an Italian architect born in the modern Swiss canton of Ticino who, with his contemporaries Gian Lorenzo Bernini and Pietro da Cortona, was a leading figure in the emergence of Roman Baroque architecture.",
+    "fetched_at": "2026-07-26T11:17:19.744439+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Borromini.jpg",
+    "image_height": 418,
+    "image_width": 310,
+    "lang": "en",
+    "title": "Francesco Borromini",
+    "wiki_url": "https://en.wikipedia.org/wiki/Francesco_Borromini"
+  },
   "https://en.wikipedia.org/wiki/Frank_Gehry": {
     "extract": "Frank Owen Gehry was a Canadian and American architect and designer known for his postmodern designs and use of unconventional forms and materials. A number of his buildings, including his private residence in Santa Monica, California, have become attractions. His most famous works include the Guggenheim Museum Bilbao in Spain, the Walt Disney Concert Hall in Los Angeles, and the Louis Vuitton Foundation in Paris. These buildings are characterized by their sculptural, often undulating exteriors and innovative use of materials such as titanium and stainless steel.",
     "fetched_at": "2026-07-26T11:04:02.298869+00:00",
@@ -318,6 +528,26 @@
     "lang": "en",
     "title": "Frank Gehry",
     "wiki_url": "https://en.wikipedia.org/wiki/Frank_Gehry"
+  },
+  "https://en.wikipedia.org/wiki/Frida_Kahlo": {
+    "extract": "Magdalena Carmen Frida Kahlo y Calderón was a Mexican painter known for her many portraits, self-portraits, and works inspired by the nature and artifacts of Mexico. Inspired by the country's popular culture, she employed a naïve folk art style to explore questions of identity, postcolonialism, gender, class, and race in Mexican society. Her paintings often had strong autobiographical elements and mixed realism with fantasy. In addition to belonging to the post-revolutionary Mexicayotl movement, which sought to define a Mexican identity, Kahlo has been described as a surrealist or magical realist. She is also known for painting about her experience of chronic pain. Her 1940 self-portrait titled The Dream  holds the record for the most expensive work by a female artist ever auctioned, at $54.7 million.",
+    "fetched_at": "2026-07-26T11:17:20.803143+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg/330px-Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg",
+    "image_height": 495,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Frida Kahlo",
+    "wiki_url": "https://en.wikipedia.org/wiki/Frida_Kahlo"
+  },
+  "https://en.wikipedia.org/wiki/Fushimi_Inari-taisha": {
+    "extract": "Fushimi Inari-taisha  is the head shrine of the kami Inari, located in Fushimi-ku, Kyoto, Japan. The shrine sits at the base of a mountain, also named Inari, which is 233 metres (764 ft) above sea level, and includes trails up the mountain to many smaller shrines which span 4 kilometres (2.5 mi) and take approximately 2 hours to walk up. It is unclear whether the mountain's name, Inariyama, or the shrine's name came first.",
+    "fetched_at": "2026-07-26T11:17:20.240642+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg/330px-Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg",
+    "image_height": 220,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Fushimi Inari-taisha",
+    "wiki_url": "https://en.wikipedia.org/wiki/Fushimi_Inari-taisha"
   },
   "https://en.wikipedia.org/wiki/Galois_group": {
     "extract": "In Galois theory, a branch of abstract algebra, the Galois group of a certain type of field extension is a symmetry group characterizing how it extends the base field. Each element of the Galois group is a transformation of the field extension which leaves each element of the base field fixed.",
@@ -339,6 +569,16 @@
     "title": "Galois theory",
     "wiki_url": "https://en.wikipedia.org/wiki/Galois_theory"
   },
+  "https://en.wikipedia.org/wiki/Gian_Lorenzo_Bernini": {
+    "extract": "Gian Lorenzo Bernini was an Italian sculptor, architect, painter and city planner. Bernini's creative abilities and mastery in a range of artistic arenas define him as a uomo universale or Renaissance man. While a major figure in the world of architecture, he was more prominently the leading sculptor of his age, credited with creating the Baroque style of sculpture.",
+    "fetched_at": "2026-07-26T11:17:19.811822+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg/330px-Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg",
+    "image_height": 429,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Gian Lorenzo Bernini",
+    "wiki_url": "https://en.wikipedia.org/wiki/Gian_Lorenzo_Bernini"
+  },
   "https://en.wikipedia.org/wiki/Glenn_Gould": {
     "extract": "Glenn Herbert Gould was a Canadian pianist and broadcaster. Regarded as one of the greatest pianists of the 20th century, he was renowned as an interpreter of the keyboard works of Johann Sebastian Bach. His playing was distinguished by remarkable technical proficiency and a capacity to articulate the contrapuntal texture of Bach's music.",
     "fetched_at": "2026-07-26T11:04:06.876153+00:00",
@@ -359,6 +599,16 @@
     "title": "Gulf War",
     "wiki_url": "https://en.wikipedia.org/wiki/Gulf_War"
   },
+  "https://en.wikipedia.org/wiki/Hagia_Sophia": {
+    "extract": "Hagia Sophia, officially the Hagia Sophia Grand Mosque, is a mosque and a major cultural and historical site in Istanbul, Turkey. It was formerly a church (360–1453) and a museum (1935–2020). The last of three church buildings to be successively erected on the site by the Eastern Roman Empire, it was completed in AD 537, becoming the world's largest interior space and among the first to employ a fully pendentive dome. It is considered the epitome of Byzantine architecture and is said to have \"changed the history of architecture\". From its dedication in 360 until 1453, Hagia Sophia served as the cathedral of Constantinople in the Byzantine liturgical tradition, except for the period 1204–1261 when the Latin Crusaders installed their own hierarchy. After the fall of Constantinople in 1453, it served as a mosque, having its minarets added soon after. The site became a museum in 1935, and was redesignated as a mosque in 2020.",
+    "fetched_at": "2026-07-26T11:17:19.872619+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Hagia_Sophia_%28228968325%29.jpeg/330px-Hagia_Sophia_%28228968325%29.jpeg",
+    "image_height": 199,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Hagia Sophia",
+    "wiki_url": "https://en.wikipedia.org/wiki/Hagia_Sophia"
+  },
   "https://en.wikipedia.org/wiki/Haruki_Murakami": {
     "extract": "Haruki Murakami  is a Japanese writer. His novels, essays, and short stories have been best-sellers in Japan and internationally, with his work translated into 50 languages and having sold millions of copies outside Japan. He has received numerous awards for his work, including the Gunzo Prize for New Writers, the World Fantasy Award, the Tanizaki Prize, Yomiuri Prize for Literature, the Frank O'Connor International Short Story Award, the Noma Literary Prize, the Franz Kafka Prize, the Kiriyama Prize for Fiction, the Goodreads Choice Awards for Best Fiction, the Jerusalem Prize, and the Princess of Asturias Awards.",
     "fetched_at": "2026-07-26T11:04:10.348105+00:00",
@@ -368,6 +618,26 @@
     "lang": "en",
     "title": "Haruki Murakami",
     "wiki_url": "https://en.wikipedia.org/wiki/Haruki_Murakami"
+  },
+  "https://en.wikipedia.org/wiki/Helen_Frankenthaler": {
+    "extract": "Helen Frankenthaler was an American abstract expressionist painter. She was a major contributor to the history of postwar American painting. Having exhibited her work for over six decades, she spanned several generations of abstract painters while continuing to produce vital and ever-changing new work. Frankenthaler began exhibiting her large-scale abstract expressionist paintings in contemporary museums and galleries in the early 1950s. She was included in the 1964 Post-Painterly Abstraction exhibition curated by Clement Greenberg that introduced a newer generation of abstract painting that came to be known as color field. Born in Manhattan, she was influenced by Greenberg, Hans Hofmann, and Jackson Pollock's paintings. Her work has been the subject of several retrospective exhibitions, including a 1989 retrospective at the Museum of Modern Art in New York City, and been exhibited worldwide since the 1950s. In 2001, she was awarded the National Medal of Arts.",
+    "fetched_at": "2026-07-26T11:17:20.871619+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/%C2%A9lynngilbert_Helen_Frankenthaler_1978.jpg/330px-%C2%A9lynngilbert_Helen_Frankenthaler_1978.jpg",
+    "image_height": 487,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Helen Frankenthaler",
+    "wiki_url": "https://en.wikipedia.org/wiki/Helen_Frankenthaler"
+  },
+  "https://en.wikipedia.org/wiki/Hermann_Hesse": {
+    "extract": "Hermann Karl Hesse was a German-Swiss poet and novelist, and winner of the 1946 Nobel Prize in Literature. His interest in Eastern religious, spiritual, and philosophical traditions, combined with his involvement with Jungian analysis, helped shape his literary work. His best-known novels include Demian, Steppenwolf, Siddhartha, Narcissus and Goldmund, and The Glass Bead Game, each of which explores an individual's search for authenticity, self-knowledge, and spirituality.",
+    "fetched_at": "2026-07-26T11:17:22.894594+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Hermann_Hesse_2.jpg/330px-Hermann_Hesse_2.jpg",
+    "image_height": 394,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Hermann Hesse",
+    "wiki_url": "https://en.wikipedia.org/wiki/Hermann_Hesse"
   },
   "https://en.wikipedia.org/wiki/Hyperphantasia": {
     "extract": "Hyperphantasia is the condition of having extremely vivid mental imagery. It is the opposite condition to aphantasia, where mental visual imagery is not present. The experience of hyperphantasia is more common than aphantasia and has been described as being \"as vivid as real seeing\". Hyperphantasia constitutes all five senses within vivid mental imagery, although literature on the subject is dominated by \"visual\" mental imagery research, with a lack of research on the other four senses.",
@@ -399,6 +669,16 @@
     "title": "Ikebana",
     "wiki_url": "https://en.wikipedia.org/wiki/Ikebana"
   },
+  "https://en.wikipedia.org/wiki/Isle_of_the_Dead_(painting)": {
+    "extract": "Isle of the Dead is the best-known painting of Swiss Symbolist artist Arnold Böcklin (1827–1901). Prints were very popular in central Europe in the early 20th century—Vladimir Nabokov observed in his 1936 novel Despair that they could be \"found in every Berlin home\".",
+    "fetched_at": "2026-07-26T11:17:20.945448+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Arnold_B%C3%B6cklin_-_Die_Toteninsel_I_%28Basel%2C_Kunstmuseum%29.jpg/330px-Arnold_B%C3%B6cklin_-_Die_Toteninsel_I_%28Basel%2C_Kunstmuseum%29.jpg",
+    "image_height": 235,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Isle of the Dead (painting)",
+    "wiki_url": "https://en.wikipedia.org/wiki/Isle_of_the_Dead_(painting)"
+  },
   "https://en.wikipedia.org/wiki/Ivan_Goncharov": {
     "extract": "Ivan Aleksandrovich Goncharov was a Russian novelist best known for his novels The Same Old Story, Oblomov (1859), and The Precipice. He also served in many official capacities, including the position of censor.",
     "fetched_at": "2026-07-26T11:04:10.437090+00:00",
@@ -408,6 +688,16 @@
     "lang": "en",
     "title": "Ivan Goncharov",
     "wiki_url": "https://en.wikipedia.org/wiki/Ivan_Goncharov"
+  },
+  "https://en.wikipedia.org/wiki/Jean-Paul_Sartre": {
+    "extract": "Jean-Paul Charles Aymard Sartre was a French philosopher, playwright, novelist, screenwriter, political activist, biographer, and literary critic, considered a leading figure in 20th-century French philosophy and Marxism. Sartre was one of the key figures in the philosophy of existentialism and was a proponent of Libertarian Marxism. His work has influenced sociology, critical theory, post-colonial theory, and literary studies. He was awarded the 1964 Nobel Prize in Literature despite attempting to refuse it, saying that he always declined official honors and that \"a writer should not allow himself to be turned into an institution.\"",
+    "fetched_at": "2026-07-26T11:17:22.485498+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jean_Paul_Sartre_1965.jpg/330px-Jean_Paul_Sartre_1965.jpg",
+    "image_height": 432,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Jean-Paul Sartre",
+    "wiki_url": "https://en.wikipedia.org/wiki/Jean-Paul_Sartre"
   },
   "https://en.wikipedia.org/wiki/John_Carpenter": {
     "extract": "John Howard Carpenter is an American filmmaker, composer, and actor. Most commonly associated with horror, action, and science fiction films of the 1970s and 1980s, he is generally recognized as a master of the horror genre. At the 2019 Cannes Film Festival, the French Directors' Guild gave him the Golden Coach Award and lauded him as \"a creative genius of raw, fantastic, and spectacular emotions\". On April 3, 2025, he received a star on the Hollywood Walk of Fame.",
@@ -428,6 +718,16 @@
     "lang": "en",
     "title": "John Zorn",
     "wiki_url": "https://en.wikipedia.org/wiki/John_Zorn"
+  },
+  "https://en.wikipedia.org/wiki/Joseph_Brodsky": {
+    "extract": "Iosif Aleksandrovich Brodsky, anglicized as Joseph, was a Russian and American poet and essayist.",
+    "fetched_at": "2026-07-26T11:17:22.972452+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Joseph_Brodsky_1988.jpg/330px-Joseph_Brodsky_1988.jpg",
+    "image_height": 463,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Joseph Brodsky",
+    "wiki_url": "https://en.wikipedia.org/wiki/Joseph_Brodsky"
   },
   "https://en.wikipedia.org/wiki/Karnak": {
     "extract": "The Karnak Temple Complex, commonly known as Karnak, comprises a vast mix of temples, pylons, chapels, and other buildings near Luxor, Egypt. Construction at the complex began during the reign of Senusret I in the Middle Kingdom and continued into the Ptolemaic Kingdom, although most of the extant buildings date from the New Kingdom. The area around Karnak was the ancient Egyptian Ipet-isut and the main place of worship of the 18th Dynastic Theban Triad, with the god Amun as its head.",
@@ -548,6 +848,16 @@
     "lang": "en",
     "title": "Marina Abramović",
     "wiki_url": "https://en.wikipedia.org/wiki/Marina_Abramovi%C4%87"
+  },
+  "https://en.wikipedia.org/wiki/Mencius": {
+    "extract": "Mencius, born Meng Ke (孟軻), was a Chinese Confucian philosopher, often described as the Second Sage (亞聖) to reflect his traditional esteem relative to Confucius himself. He was part of Confucius's fourth generation of disciples, inheriting his ideology and developing it further. Living during the Warring States period, he is said to have spent much of his life travelling around the states offering counsel to different rulers. Conversations with these rulers form the basis of the Mencius, which would later be canonised as a Confucian classic.",
+    "fetched_at": "2026-07-26T11:17:22.547199+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Half_Portraits_of_the_Great_Sage_and_Virtuous_Men_of_Old_-_Meng_Ke_%28%E5%AD%9F%E8%BB%BB%29.jpg/330px-Half_Portraits_of_the_Great_Sage_and_Virtuous_Men_of_Old_-_Meng_Ke_%28%E5%AD%9F%E8%BB%BB%29.jpg",
+    "image_height": 447,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Mencius",
+    "wiki_url": "https://en.wikipedia.org/wiki/Mencius"
   },
   "https://en.wikipedia.org/wiki/Metonymy": {
     "extract": "Metonymy is a figure of speech in which a concept is referred to by the name of something associated with that thing or concept. For example, the word \"suit\" may refer to a person from groups commonly seen wearing business attire, such as business executives, bankers, or lawyers.",
@@ -679,6 +989,16 @@
     "title": "Operation Barbarossa",
     "wiki_url": "https://en.wikipedia.org/wiki/Operation_Barbarossa"
   },
+  "https://en.wikipedia.org/wiki/Orson_Welles": {
+    "extract": "George Orson Welles was an American actor and filmmaker. Remembered for his innovative work in film, radio, and theatre, he is considered among the greatest and most influential filmmakers of all time.",
+    "fetched_at": "2026-07-26T11:17:23.276965+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Orson_Welles_1937_cr3-4.jpg/330px-Orson_Welles_1937_cr3-4.jpg",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Orson Welles",
+    "wiki_url": "https://en.wikipedia.org/wiki/Orson_Welles"
+  },
   "https://en.wikipedia.org/wiki/Orthodox_Judaism": {
     "extract": "Orthodox Judaism is a collective term for the traditionalist branches of contemporary Judaism. Theologically, it is chiefly defined by regarding the Torah, both Written and Oral, as literally revealed by God on Mount Sinai and faithfully transmitted ever since.",
     "fetched_at": "2026-07-26T11:04:09.900865+00:00",
@@ -719,6 +1039,26 @@
     "title": "Paul Signac",
     "wiki_url": "https://en.wikipedia.org/wiki/Paul_Signac"
   },
+  "https://en.wikipedia.org/wiki/Pope_John_Paul_II": {
+    "extract": "Pope John Paul II was the head of the Catholic Church and sovereign of Vatican City from 16 October 1978 until his death in 2005. He was the first non-Italian pope since Adrian VI in the 16th century, as well as the third-longest-serving pope in history, after St. Peter and Pius IX. In addition to this, he was an important philosopher and theologian of the 20th century.",
+    "fetched_at": "2026-07-26T11:17:22.714594+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/ADAMELLO_-_PAPA_-_Giovanni_Paolo_II_-_panoramio_%28cropped%29.jpg/330px-ADAMELLO_-_PAPA_-_Giovanni_Paolo_II_-_panoramio_%28cropped%29.jpg",
+    "image_height": 385,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Pope John Paul II",
+    "wiki_url": "https://en.wikipedia.org/wiki/Pope_John_Paul_II"
+  },
+  "https://en.wikipedia.org/wiki/Quaternion": {
+    "extract": "In mathematics, the quaternions form a number system similar to the complex numbers, with the usual arithmetical operations of addition, subtraction, multiplication, and division, but with four real-number components instead of two. Unlike with the complex numbers, quaternion multiplication is not commutative, meaning that the result of multiplying two quaternions depends on their order. Quaternions can be used to represent vectors in three-dimensional space, which provides a definition of the quotient of two vectors.",
+    "fetched_at": "2026-07-26T11:17:22.019528+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Cayley_Q8_multiplication_graph.svg/330px-Cayley_Q8_multiplication_graph.svg.png",
+    "image_height": 330,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Quaternion",
+    "wiki_url": "https://en.wikipedia.org/wiki/Quaternion"
+  },
   "https://en.wikipedia.org/wiki/Ramesses_II": {
     "extract": "Ramesses II, commonly known as Ramesses the Great, was the third pharaoh of the Nineteenth Dynasty of Egypt. Ramesses II is often regarded as the greatest, most celebrated, and most powerful pharaoh of the New Kingdom, which itself was the most powerful period of ancient Egypt. He is also widely considered one of ancient Egypt's most successful warrior pharaohs, conducting no fewer than 15 military campaigns, all resulting in victories, excluding the Battle of Kadesh, which is generally considered a stalemate. His 66-year rule was also the longest recorded reign of any pharaoh, possibly alongside Pepi II, who lived 1000 years earlier and is said to have reigned for over 90 years.",
     "fetched_at": "2026-07-26T11:04:09.122358+00:00",
@@ -729,6 +1069,26 @@
     "title": "Ramesses II",
     "wiki_url": "https://en.wikipedia.org/wiki/Ramesses_II"
   },
+  "https://en.wikipedia.org/wiki/Raphael": {
+    "extract": "Raffaello Sanzio da Urbino, now generally known in English as Raphael, was an Italian painter and architect of the High Renaissance. His work is admired for its clarity of form, ease of composition, and visual achievement of the Neoplatonic ideal of human grandeur. Together with Leonardo da Vinci and Michelangelo, he forms the traditional trinity of great masters of that period.",
+    "fetched_at": "2026-07-26T11:17:21.026991+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/330px-Raffaello_Sanzio.jpg",
+    "image_height": 450,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Raphael",
+    "wiki_url": "https://en.wikipedia.org/wiki/Raphael"
+  },
+  "https://en.wikipedia.org/wiki/Reinhard_Heydrich": {
+    "extract": "Reinhard Tristan Eugen Heydrich was a high-ranking SS and police official in Nazi Germany as well as one of the principal architects of the Holocaust. He held the rank of SS-Obergruppenführer und General der Polizei. Many historians regard Heydrich as one of the most sinister figures within the Nazi regime. Adolf Hitler described him as \"the man with the iron heart\".",
+    "fetched_at": "2026-07-26T11:17:22.303893+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Reinhard_Heydrich_1940_Portrait_%283x4_cropped%29_%282%29.jpg/330px-Reinhard_Heydrich_1940_Portrait_%283x4_cropped%29_%282%29.jpg",
+    "image_height": 414,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Reinhard Heydrich",
+    "wiki_url": "https://en.wikipedia.org/wiki/Reinhard_Heydrich"
+  },
   "https://en.wikipedia.org/wiki/Rick_Rubin": {
     "extract": "Frederick Jay \"Rick\" Rubin is an American record producer. He is a co-founder of Def Jam Recordings, founder of American Recordings, and former co-president of Columbia Records.",
     "fetched_at": "2026-07-26T11:04:07.188669+00:00",
@@ -738,6 +1098,16 @@
     "lang": "en",
     "title": "Rick Rubin",
     "wiki_url": "https://en.wikipedia.org/wiki/Rick_Rubin"
+  },
+  "https://en.wikipedia.org/wiki/Roman_Forum": {
+    "extract": "The Roman Forum, also known by its Latin name Forum Romanum, is a rectangular forum (plaza) surrounded by the ruins of several important ancient government buildings at the centre of the city of Rome. Citizens of the ancient city referred to this space, originally a marketplace, as the Forum Magnum, or simply the Forum.",
+    "fetched_at": "2026-07-26T11:17:19.690813+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Foro_Romano_Musei_Capitolini_Roma.jpg/330px-Foro_Romano_Musei_Capitolini_Roma.jpg",
+    "image_height": 135,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Roman Forum",
+    "wiki_url": "https://en.wikipedia.org/wiki/Roman_Forum"
   },
   "https://en.wikipedia.org/wiki/Romanesque_architecture": {
     "extract": "Romanesque architecture is an architectural style of medieval Europe that was predominant in the 11th and 12th centuries. The style eventually developed into the Gothic style with the shape of the arches providing a simple distinction: the Romanesque is characterized by semicircular arches, while the Gothic is marked by the pointed arches. The Romanesque emerged nearly simultaneously in multiple countries of Western Europe; its examples can be found across the continent, making it the first pan-European architectural style since Imperial Roman architecture. As is the case with Gothic, the name of the style was transferred onto the contemporary Romanesque art.",
@@ -758,6 +1128,16 @@
     "lang": "en",
     "title": "Rope (film)",
     "wiki_url": "https://en.wikipedia.org/wiki/Rope_(film)"
+  },
+  "https://en.wikipedia.org/wiki/Royal_Crescent": {
+    "extract": "The Royal Crescent is a row of 30 terraced houses laid out in a sweeping crescent in the city of Bath, England. Designed by the architect John Wood, the Younger, and built between 1767 and 1774, it is among the greatest examples of Georgian architecture to be found in the United Kingdom and is a Grade I listed building. Although some changes have been made to the various interiors over the years, the Georgian stone facade remains much as it was when first built.",
+    "fetched_at": "2026-07-26T11:17:20.174309+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Royal.crescent.aerial.bath.arp.jpg/330px-Royal.crescent.aerial.bath.arp.jpg",
+    "image_height": 252,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Royal Crescent",
+    "wiki_url": "https://en.wikipedia.org/wiki/Royal_Crescent"
   },
   "https://en.wikipedia.org/wiki/Rustication_(architecture)": {
     "extract": "Rustication is a range of masonry techniques used in classical architecture giving visible surfaces a finish texture that contrasts with smooth, squared-block masonry called ashlar. The visible face of each individual block is cut back around the edges to make its size and placing very clear. In addition the central part of the face of each block may be given a deliberately rough or patterned surface.",
@@ -788,6 +1168,16 @@
     "lang": "en",
     "title": "Samuel Beckett",
     "wiki_url": "https://en.wikipedia.org/wiki/Samuel_Beckett"
+  },
+  "https://en.wikipedia.org/wiki/Sansevero_Chapel": {
+    "extract": "The Cappella Sansevero is a chapel located on Via Francesco de Sanctis 19, just northeast of the church of San Domenico Maggiore, in the historic center of Naples, Italy. The chapel is more properly named the Chapel of Santa Maria della Pietà. It contains works of Rococo art by some of the leading Italian artists of the 18th century.",
+    "fetched_at": "2026-07-26T11:17:17.586932+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Cappellaentrance.jpg/330px-Cappellaentrance.jpg",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Cappella Sansevero",
+    "wiki_url": "https://en.wikipedia.org/wiki/Cappella_Sansevero"
   },
   "https://en.wikipedia.org/wiki/Sant%27Agnese_in_Agone": {
     "extract": "Sant'Agnese in Agone is a 17th-century Baroque church in Rome, Italy. It faces onto the Piazza Navona, one of the main urban spaces in the historic centre of the city and the site where the Early Christian Saint Agnes was martyred in the ancient Stadium of Domitian. Construction began in 1652 under the architects Girolamo Rainaldi and his son Carlo Rainaldi. After numerous quarrels, the other main architect involved was Francesco Borromini.",
@@ -859,6 +1249,16 @@
     "title": "Suzanne Valadon",
     "wiki_url": "https://en.wikipedia.org/wiki/Suzanne_Valadon"
   },
+  "https://en.wikipedia.org/wiki/Taj_Mahal": {
+    "extract": "The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in Agra, Uttar Pradesh, India. It was commissioned in 1631 by the fifth Mughal emperor, Shah Jahan, to house the tomb of his late wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. The tomb is the centrepiece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a crenellated wall.",
+    "fetched_at": "2026-07-26T11:17:20.332086+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/330px-Taj_Mahal_%28Edited%29.jpeg",
+    "image_height": 217,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Taj Mahal",
+    "wiki_url": "https://en.wikipedia.org/wiki/Taj_Mahal"
+  },
   "https://en.wikipedia.org/wiki/Temple_of_Juno_Moneta": {
     "extract": "The Temple of Juno Moneta was an ancient Roman temple that stood on the Arx or the citadel on the Capitoline Hill overlooking the Roman Forum. Located at the center of the city of Rome, it was next to the place where Roman coins were first minted, and probably stored the metal and coins involved in this process, thereby initiating the ancient practice of associating mints with temples. In addition, it was the place where the books of the magistrates were deposited.",
     "fetched_at": "2026-07-26T11:04:05.350719+00:00",
@@ -878,6 +1278,16 @@
     "lang": "en",
     "title": "The Myth of Sisyphus",
     "wiki_url": "https://en.wikipedia.org/wiki/The_Myth_of_Sisyphus"
+  },
+  "https://en.wikipedia.org/wiki/Titian": {
+    "extract": "Tiziano Vecellio, Latinized as Titianus, hence known in English as Titian, was an Italian Renaissance painter. The most important artist of Renaissance Venetian painting, he was born in Pieve di Cadore, near Belluno.",
+    "fetched_at": "2026-07-26T11:17:21.096623+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Titian_-_Self-portrait_%28Museo_del_Prado%29.jpg/330px-Titian_-_Self-portrait_%28Museo_del_Prado%29.jpg",
+    "image_height": 448,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Titian",
+    "wiki_url": "https://en.wikipedia.org/wiki/Titian"
   },
   "https://en.wikipedia.org/wiki/Tokyo_subway_sarin_attack": {
     "extract": "The Tokyo subway sarin attack  was a domestic chemical terrorist attack perpetrated on 20 March 1995, in Tokyo, Japan, by members of the Aum Shinrikyo cult. In five coordinated attacks, the perpetrators released sarin, a nerve agent, on three lines of the Tokyo Metro during rush hour, killing 14 people, severely injuring 50, and causing temporary vision problems for nearly 1,000 others. The attack was directed against trains passing through Kasumigaseki and Nagatachō, where the National Diet is headquartered in Tokyo.",
@@ -919,6 +1329,16 @@
     "title": "View of Delft",
     "wiki_url": "https://en.wikipedia.org/wiki/View_of_Delft"
   },
+  "https://en.wikipedia.org/wiki/Waco_siege": {
+    "extract": "The Waco siege, also known as the Waco massacre, was the siege by US federal government and Texas state law enforcement officials of a compound belonging to the religious cult known as the Branch Davidians, between February 28 and April 19, 1993. The Branch Davidians, led by David Koresh, were headquartered at Mount Carmel Center ranch in unincorporated McLennan County, Texas, 13 miles northeast of Waco. Suspecting the group of stockpiling illegal weapons, the Bureau of Alcohol, Tobacco, and Firearms (ATF) obtained a search warrant for the compound and arrest warrants for Koresh and several of the group's members.",
+    "fetched_at": "2026-07-26T11:17:22.143326+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Mountcarmelfire04-19-93-n.jpg/330px-Mountcarmelfire04-19-93-n.jpg",
+    "image_height": 242,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Waco siege",
+    "wiki_url": "https://en.wikipedia.org/wiki/Waco_siege"
+  },
   "https://en.wikipedia.org/wiki/Waiting_for_Godot": {
     "extract": "Waiting for Godot is a play by Irish playwright and author Samuel Beckett. It was written (1948–1949), first published (1952), and first performed (1953) in French as En attendant Godot. The play is Beckett's own English-language adaptation of the original. Subtitled \"tragicomedy in two acts\", it is his best-known literary work and is regarded by critics as \"one of the most enigmatic plays of modern literature\". In a public poll conducted by London's Royal National Theatre in the year 1998, Waiting for Godot was voted as \"the most significant English-language play of the 20th century.\"",
     "fetched_at": "2026-07-26T11:04:10.079213+00:00",
@@ -929,6 +1349,36 @@
     "title": "Waiting for Godot",
     "wiki_url": "https://en.wikipedia.org/wiki/Waiting_for_Godot"
   },
+  "https://en.wikipedia.org/wiki/William_Hogarth": {
+    "extract": "William Hogarth was an English painter, engraver, satirist, cartoonist and writer. His work ranges from realistic portraiture to comic strip-like series of pictures called \"modern moral subjects\", and he is perhaps best known for his series A Harlot's Progress, A Rake's Progress and Marriage A-la-Mode. Familiarity with his work is so widespread that satirical political illustrations in this style are often referred to as \"Hogarthian\".",
+    "fetched_at": "2026-07-26T11:17:21.291489+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/The_Painter_and_His_Pug_by_William_Hogarth.jpg/330px-The_Painter_and_His_Pug_by_William_Hogarth.jpg",
+    "image_height": 431,
+    "image_width": 330,
+    "lang": "en",
+    "title": "William Hogarth",
+    "wiki_url": "https://en.wikipedia.org/wiki/William_Hogarth"
+  },
+  "https://en.wikipedia.org/wiki/XZ_Utils_backdoor": {
+    "extract": "On 29 March 2024, a malicious backdoor was discovered in the compression software XZ Utils. The backdoor gives an attacker who possesses a specific private key the ability to remotely execute code on an affected system through OpenSSH, a set of networking utilities. The backdoor was discovered by software developer Andres Freund.",
+    "fetched_at": "2026-07-26T11:17:21.569929+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/XZ_logo_contributed_by_Jia_Tan.png",
+    "image_height": 216,
+    "image_width": 266,
+    "lang": "en",
+    "title": "XZ Utils backdoor",
+    "wiki_url": "https://en.wikipedia.org/wiki/XZ_Utils_backdoor"
+  },
+  "https://en.wikipedia.org/wiki/Yayoi_Kusama": {
+    "extract": "Yayoi Kusama  is a Japanese contemporary artist who works primarily in sculpture and installation. She is also active in painting, performance, video art, fashion, poetry, fiction, and other arts. Her work is based in conceptual art and shows some attributes of feminism, minimalism, surrealism, art brut, pop art, and abstract expressionism, and is infused with autobiographical, psychological, and sexual content. She has been acknowledged as one of the most important artists to come out of Japan, the world's top-selling female artist, and the world's most successful living artist. Her work influenced that of her contemporaries, including Andy Warhol and Claes Oldenburg.",
+    "fetched_at": "2026-07-26T11:17:21.351356+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Yayoi_Kusama_wax_model_at_Louis_Vitton.jpg/330px-Yayoi_Kusama_wax_model_at_Louis_Vitton.jpg",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Yayoi Kusama",
+    "wiki_url": "https://en.wikipedia.org/wiki/Yayoi_Kusama"
+  },
   "https://en.wikipedia.org/wiki/Zaha_Hadid": {
     "extract": "Dame Zaha Mohammad Hadid was an Iraqi and British architect, artist, and designer. She is recognised as a key figure in the architecture of the late-20th and early-21st centuries. Born in Baghdad, Iraq, Hadid studied mathematics as an undergraduate and later enrolled at the Architectural Association School of Architecture in 1972. In search of an alternative to traditional architectural drawing, and influenced by Suprematism and the Russian avant-garde, Hadid adopted painting as a design tool and abstraction as a method to \"reinvestigate the aborted and untested experiments of Modernism [...] to unveil new fields of building\".",
     "fetched_at": "2026-07-26T11:04:05.885688+00:00",
@@ -938,5 +1388,15 @@
     "lang": "en",
     "title": "Zaha Hadid",
     "wiki_url": "https://en.wikipedia.org/wiki/Zaha_Hadid"
+  },
+  "https://it.wikipedia.org/wiki/J._R._R._Tolkien": {
+    "extract": "John Ronald Reuel Tolkien è stato uno scrittore, filologo, glottoteta e linguista britannico.",
+    "fetched_at": "2026-07-26T11:17:23.051717+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/J._R._R._Tolkien%2C_ca._1925.jpg/330px-J._R._R._Tolkien%2C_ca._1925.jpg?utm_source=it.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "it",
+    "title": "J. R. R. Tolkien",
+    "wiki_url": "https://it.wikipedia.org/wiki/J._R._R._Tolkien"
   }
 }
