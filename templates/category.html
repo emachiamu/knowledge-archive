@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}{{ category.name }} — {{ site_title }}{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="../index.html">Catalog</a>
+  <span aria-hidden="true">/</span>
+  <span aria-current="page">{{ category.name }}</span>
+</nav>
+{% endblock %}
+
+{% block content %}
+<section class="category-header">
+  <p class="eyebrow">Category {{ category.call_number }}</p>
+  <h1>{{ category.name }}</h1>
+  <p class="lede">{{ category.entries|length }} article{{ 's' if category.entries|length != 1 else '' }} in this section.</p>
+</section>
+
+<section class="article-list" aria-label="Articles in {{ category.name }}">
+  {% for e in category.entries %}
+  <article class="article-card">
+    {% if e.image %}
+    <a class="article-thumb" href="{{ e.url }}" target="_blank" rel="noopener" tabindex="-1">
+      <img src="{{ e.image }}" alt="" loading="lazy" width="{{ e.image_width or 120 }}" height="{{ e.image_height or 120 }}">
+    </a>
+    {% else %}
+    <div class="article-thumb article-thumb--placeholder" aria-hidden="true">
+      <span>{{ e.title[0]|upper }}</span>
+    </div>
+    {% endif %}
+    <div class="article-body">
+      <h2><a href="{{ e.url }}" target="_blank" rel="noopener">{{ e.title }}</a></h2>
+      {% if e.extract %}
+      <p>{{ e.extract|truncate_words(280) }}</p>
+      {% else %}
+      <p class="no-extract">No summary cached yet — run the build script to fetch it.</p>
+      {% endif %}
+      <a class="source-link" href="{{ e.url }}" target="_blank" rel="noopener">
+        Read on Wikipedia{{ ' (IT)' if e.lang == 'it' else '' }} →
+      </a>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<nav class="cat-pager" aria-label="Category navigation">
+  {% if prev_cat %}
+  <a class="pager-link pager-prev" href="{{ prev_cat.slug }}.html">
+    <span class="pager-label">← Previous</span>
+    <span class="pager-name">{{ prev_cat.name }}</span>
+  </a>
+  {% else %}<span></span>{% endif %}
+  {% if next_cat %}
+  <a class="pager-link pager-next" href="{{ next_cat.slug }}.html">
+    <span class="pager-label">Next →</span>
+    <span class="pager-name">{{ next_cat.name }}</span>
+  </a>
+  {% endif %}
+</nav>
+{% endblock %}

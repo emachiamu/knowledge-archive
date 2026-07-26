@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}{{ site_title }} — Catalog{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">A personal reference library</p>
+  <h1>{{ site_title }}</h1>
+  <p class="lede">
+    {{ total_articles }} Wikipedia articles, curated by hand and organised like a card catalog.
+    Browse by subject, search by title, or pick something at random.
+  </p>
+</section>
+
+{% if recent %}
+<section class="recent" aria-labelledby="recent-heading">
+  <h2 id="recent-heading">Recently added</h2>
+  <ul class="recent-list">
+    {% for e in recent %}
+    <li>
+      <a href="{{ e.url }}" target="_blank" rel="noopener">{{ e.title }}</a>
+      <span class="recent-cat">— {{ e.category }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="catalog" aria-labelledby="catalog-heading">
+  <h2 id="catalog-heading">Categories</h2>
+  <div class="catalog-grid">
+    {% for cat in categories %}
+    <a class="catalog-card" href="categories/{{ cat.slug }}.html">
+      <span class="call-number">{{ cat.call_number }}</span>
+      <h3>{{ cat.name }}</h3>
+      <p class="count">{{ cat.entries|length }} article{{ 's' if cat.entries|length != 1 else '' }}</p>
+      <p class="preview">
+        {{ cat.entries[:3]|map(attribute='title')|join(' · ') }}{% if cat.entries|length > 3 %} …{% endif %}
+      </p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

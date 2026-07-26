@@ -1,0 +1,65 @@
+name: Build and deploy Knowledge Archive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/archive.md"
+      - "scripts/**"
+      - "templates/**"
+      - "static/**"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch: {}   # lets you trigger a manual rebuild (e.g. to refresh the cache)
+  schedule:
+    - cron: "0 6 * * 1"  # weekly, catches new thumbnails/edits on already-cached pages
+
+permissions:
+  contents: write   # to commit the refreshed data/cache.json
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Build site (fetches new/changed Wikipedia metadata, caches it)
+        run: python scripts/build.py
+
+      - name: Commit updated cache
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/cache.json
+          git diff --cached --quiet || git commit -m "Update Wikipedia metadata cache [skip ci]"
+          git push
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

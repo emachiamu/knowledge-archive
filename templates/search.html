@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Search — {{ site_title }}{% endblock %}
+
+{% block breadcrumbs %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <a href="index.html">Catalog</a>
+  <span aria-hidden="true">/</span>
+  <span aria-current="page">Search</span>
+</nav>
+{% endblock %}
+
+{% block content %}
+<section class="search-page">
+  <h1>Search the archive</h1>
+  <div class="search-controls">
+    <label class="visually-hidden" for="search-input">Search article titles</label>
+    <input id="search-input" type="search" placeholder="Search {{ total_articles }} article titles…" autocomplete="off">
+
+    <label class="visually-hidden" for="category-filter">Filter by category</label>
+    <select id="category-filter">
+      <option value="">All categories</option>
+      {% for cat in categories %}
+      <option value="{{ cat.slug }}">{{ cat.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <p id="search-status" class="search-status" role="status"></p>
+  <ul id="search-results" class="search-results"></ul>
+</section>
+{% endblock %}

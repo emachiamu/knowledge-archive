@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}{{ site_title }}{% endblock %}</title>
+<meta name="description" content="A personal, curated archive of Wikipedia articles, organised by subject.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '../' if page_type in ['category'] else '' }}static/style.css">
+<link rel="icon" href="data:,">
+<script>
+/* Set theme before paint to avoid a flash of the wrong theme */
+(function () {
+  var stored = localStorage.getItem('theme');
+  var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="{{ '../' if page_type in ['category'] else '' }}index.html">
+      <span class="brand-mark" aria-hidden="true">§</span>
+      <span class="brand-text">{{ site_title }}</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="{{ '../' if page_type in ['category'] else '' }}index.html" {% if page_type == 'home' %}aria-current="page"{% endif %}>Catalog</a>
+      <a href="{{ '../' if page_type in ['category'] else '' }}search.html" {% if page_type == 'search' %}aria-current="page"{% endif %}>Search</a>
+      <button id="random-btn" type="button" title="Open a random article">Random</button>
+      <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+        <span class="theme-icon" aria-hidden="true">◐</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+{% block breadcrumbs %}{% endblock %}
+
+<main id="main">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <p>{{ total_articles }} articles across {{ categories|length }} categories &middot; built {{ build_date }}</p>
+</footer>
+
+<script src="{{ '../' if page_type in ['category'] else '' }}static/app.js"
+        data-root="{{ '../' if page_type in ['category'] else '' }}"></script>
+</body>
+</html>
