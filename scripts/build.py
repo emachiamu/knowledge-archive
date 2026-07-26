@@ -15,9 +15,6 @@ Usage:
     python scripts/build.py              # normal build, uses cache
     python scripts/build.py --refresh    # re-fetch every URL, ignore cache
     python scripts/build.py --offline    # skip fetching entirely, use cache only
-
-Run this locally, or let the GitHub Actions workflow (.github/workflows/deploy.yml)
-run it automatically whenever content/archive.md changes.
 """
 import argparse
 import json
@@ -41,23 +38,18 @@ CONTENT_MD = ROOT / "content" / "archive.md"
 CACHE_FILE = ROOT / "data" / "cache.json"
 TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
-OUTPUT_DIR = ROOT / "docs"  # GitHub Pages serves from /docs on the main branch
+OUTPUT_DIR = ROOT / "docs"
 
-USER_AGENT = "KnowledgeArchive/1.0 (https://github.com/emachiamu/knowledge-archive; personal knowledge archive project)"
+USER_AGENT = "KnowledgeArchive/1.0 (https://github.com/emachiamu/knowledge-archive)"
 SITE_TITLE = "Knowledge Archive"
 
 CATEGORY_RE = re.compile(r"^(.+?)\s*((?:\[\[[a-z0-9\- ]+\]\]\s*,?\s*)+)$")
 TAG_RE = re.compile(r"\[\[([a-z0-9\- ]+)\]\]")
 ENTRY_RE = re.compile(r"^(.+?):\s*(https?://\S+)\s*$")
 
-# Cache saving interval (number of successful fetches between saves)
 CACHE_SAVE_INTERVAL = 25
-
-# Maximum number of retries for failed requests
-MAX_RETRIES = 6
-
-# Base delay between requests (in seconds)
-BASE_REQUEST_DELAY = 1.0
+MAX_RETRIES = 3
+BASE_REQUEST_DELAY = 0.5
 
 
 # ---------------------------------------------------------------------------
@@ -71,8 +63,6 @@ def slugify(text: str) -> str:
 
 
 def repair_url(url: str) -> str:
-    """Best-effort fix for a couple of known malformed-URL patterns so a typo
-    in the markdown doesn't silently drop an entire entry."""
     if "wikipedia.org/wiki/" in url:
         return url
     m = re.match(r"^https?://([a-z]{2,3})\.wikipediaorgwiki(.+)$", url)
@@ -83,9 +73,6 @@ def repair_url(url: str) -> str:
 
 
 def parse_archive(md_path: Path):
-    """Returns a list of category dicts, in file order:
-    {name, slug, tags: [...], entries: [{title, url}, ...]}
-    """
     categories = []
     current = None
 
@@ -113,224 +100,150 @@ def parse_archive(md_path: Path):
 
 
 # ---------------------------------------------------------------------------
-# 2. Fetch + cache Wikipedia metadata (with robust retry logic)
+# 2. Fetch Wikipedia metadata (properly handling URL encoding)
 # ---------------------------------------------------------------------------
 
 def wiki_lang_and_title(url: str) -> Tuple[str, str]:
     parsed = urllib.parse.urlparse(url)
     lang = parsed.netloc.split(".")[0]
     page_title = parsed.path.rsplit("/wiki/", 1)[-1]
+    # Decode the title once to get the actual page title
+    page_title = urllib.parse.unquote(page_title)
     return lang, page_title
 
 
-def resolve_redirect(lang: str, page_title: str, session: requests.Session) -> Optional[Dict[str, Any]]:
-    """Resolve Wikipedia redirects and get the actual page info using MediaWiki API."""
-    # Decode the page title first (to handle %27, %20, etc.)
-    decoded_title = urllib.parse.unquote(page_title)
+def get_wikipedia_summary(lang: str, title: str, session: requests.Session) -> Optional[Dict[str, Any]]:
+    """
+    Fetch Wikipedia summary for a given language and title.
+    Uses the REST API with properly encoded URLs.
+    """
+    # The REST API expects the title in the URL path, properly URL-encoded
+    # But we need to be careful not to double-encode
+    encoded_title = urllib.parse.quote(title, safe="")
+    api_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{encoded_title}"
     
-    # Try different variations of the title
+    try:
+        resp = session.get(api_url, timeout=10)
+        
+        if resp.status_code == 404:
+            # Try with spaces instead of underscores
+            alt_title = title.replace("_", " ")
+            if alt_title != title:
+                encoded_alt = urllib.parse.quote(alt_title, safe="")
+                alt_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{encoded_alt}"
+                resp_alt = session.get(alt_url, timeout=10)
+                if resp_alt.status_code == 200:
+                    return resp_alt.json()
+            return None
+        
+        if resp.status_code == 403:
+            # Try with a different encoding approach
+            # Sometimes the API rejects certain characters, try without them
+            alt_title = re.sub(r'[^\w\s\-\.]', '', title)
+            if alt_title != title:
+                encoded_alt = urllib.parse.quote(alt_title, safe="")
+                alt_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{encoded_alt}"
+                resp_alt = session.get(alt_url, timeout=10)
+                if resp_alt.status_code == 200:
+                    return resp_alt.json()
+            return None
+        
+        resp.raise_for_status()
+        return resp.json()
+        
+    except requests.exceptions.RequestException:
+        return None
+
+
+def resolve_wikipedia_title(lang: str, title: str, session: requests.Session) -> Optional[str]:
+    """
+    Use the MediaWiki API to resolve a title to its canonical form.
+    This handles redirects and finds the correct page.
+    """
+    # Try the title as-is first (with underscores)
     titles_to_try = [
-        decoded_title,  # Fully decoded
-        decoded_title.replace("_", " "),  # Replace underscores with spaces
-        decoded_title.replace(" ", "_"),  # Replace spaces with underscores
-        decoded_title.replace(",", ""),  # Remove commas
-        decoded_title.replace("(architect)", "").strip(),  # Remove (architect) suffix
-        decoded_title.replace("(architect)", "").replace(" ", "_").strip(),  # Remove (architect) and underscore
-        decoded_title.replace("(architect)", "").strip(),  # Remove (architect) with spaces
+        title,
+        title.replace("_", " "),
+        re.sub(r'\s*\([^)]*\)\s*$', '', title),  # Remove parenthetical suffix
+        re.sub(r'\s*\([^)]*\)\s*$', '', title).replace("_", " "),
     ]
     
-    # Also try the original URL-encoded version
-    if page_title != decoded_title:
-        titles_to_try.insert(0, page_title)  # Original URL-encoded
-    
-    # Remove duplicates while preserving order
+    # Remove duplicates
     seen = set()
-    titles_to_try = [t for t in titles_to_try if not (t in seen or seen.add(t))]
+    titles_to_try = [t for t in titles_to_try if t and not (t in seen or seen.add(t))]
     
-    for title in titles_to_try:
-        if not title:
-            continue
-            
+    for t in titles_to_try:
         query_url = (
             f"https://{lang}.wikipedia.org/w/api.php"
             f"?action=query"
-            f"&titles={urllib.parse.quote(title)}"
+            f"&titles={urllib.parse.quote(t)}"
             "&redirects=1"
-            "&converttitles=1"  # Convert to canonical title
             "&format=json"
         )
         try:
-            resp = session.get(query_url, timeout=15)
+            resp = session.get(query_url, timeout=10)
             resp.raise_for_status()
             data = resp.json()
             pages = data.get("query", {}).get("pages", {})
             
-            # Find the first valid page
             for page_id, page in pages.items():
                 if page_id != "-1" and "missing" not in page:
-                    # Check if this is a redirect
-                    if "redirects" in data.get("query", {}):
-                        for redirect in data["query"]["redirects"]:
-                            if redirect.get("to"):
-                                # This is a redirect, get the target
-                                page = pages.get(str(redirect.get("to")), page)
-                                break
-                    return {
-                        "title": page.get("title"),
-                        "pageid": page.get("pageid"),
-                        "redirected": title != page.get("title")
-                    }
+                    return page.get("title")
         except Exception:
             continue
     
     return None
 
 
-def fetch_summary_with_retry(url: str, session: requests.Session) -> Dict[str, Any]:
+def fetch_with_retry(url: str, session: requests.Session) -> Dict[str, Any]:
     """
-    Fetch Wikipedia summary with robust retry logic, redirect resolution,
-    and exponential backoff for rate limiting.
+    Fetch Wikipedia metadata with retry logic and proper error handling.
     """
     lang, page_title = wiki_lang_and_title(url)
     
-    # First, try to resolve redirects
-    page_info = resolve_redirect(lang, page_title, session)
+    # First, resolve any redirects
+    resolved_title = resolve_wikipedia_title(lang, page_title, session)
+    if resolved_title:
+        page_title = resolved_title
     
-    if page_info:
-        # Use the resolved title
-        resolved_title = page_info["title"]
-        if resolved_title and resolved_title != urllib.parse.unquote(page_title):
-            print(f"  ↪ Redirected from '{urllib.parse.unquote(page_title)}' to '{resolved_title}'")
-            page_title = resolved_title
-    else:
-        # Try to find the page by searching for it
-        search_term = urllib.parse.unquote(page_title).replace("_", " ")
-        # Remove common suffixes that might cause search issues
-        search_term = re.sub(r"\s*\([^)]*\)\s*$", "", search_term)
+    # Try to fetch the summary
+    for attempt in range(MAX_RETRIES + 1):
+        data = get_wikipedia_summary(lang, page_title, session)
         
-        search_url = (
-            f"https://{lang}.wikipedia.org/w/api.php"
-            f"?action=query"
-            f"&list=search"
-            f"&srsearch={urllib.parse.quote(search_term)}"
-            f"&srlimit=1"
-            f"&format=json"
-        )
-        try:
-            resp = session.get(search_url, timeout=10)
-            resp.raise_for_status()
-            data = resp.json()
-            search_results = data.get("query", {}).get("search", [])
-            if search_results:
-                # Use the first search result
-                search_title = search_results[0].get("title")
-                if search_title and search_title != search_term:
-                    print(f"  🔍 Found '{search_title}' via search for '{search_term}'")
-                    page_title = search_title
-        except Exception:
-            pass
-    
-    # Now fetch the summary - use the decoded title directly (don't double-encode)
-    # The API expects a URL path, so we need to URL-encode once
-    encoded_title = urllib.parse.quote(page_title)
-    api_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{encoded_title}"
-    
-    retry_count = 0
-    last_error = None
-    
-    while retry_count <= MAX_RETRIES:
-        try:
-            resp = session.get(api_url, timeout=15)
-            
-            if resp.status_code == 404:
-                # Page not found - this might be a genuinely missing page
-                # Try one more time with a different encoding
-                alt_title = urllib.parse.unquote(page_title).replace("_", " ")
-                if alt_title != page_title:
-                    api_url_alt = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{urllib.parse.quote(alt_title)}"
-                    resp_alt = session.get(api_url_alt, timeout=15)
-                    if resp_alt.status_code == 200:
-                        resp = resp_alt
-                        break
-                raise requests.exceptions.HTTPError(f"404 Not Found: {page_title}")
-            
-            if resp.status_code == 429:
-                # Rate limited - wait and retry
-                retry_after = int(resp.headers.get("Retry-After", 10))
-                wait_time = retry_after + random.uniform(0.5, 2.0)
-                print(f"  ⏳ Rate limited for {page_title}, waiting {wait_time:.1f}s...")
-                time.sleep(wait_time)
-                retry_count += 1
-                continue
-            
-            if resp.status_code >= 500:
-                # Server error - retry with backoff
-                wait_time = (2 ** retry_count) + random.uniform(0.5, 1.0)
-                print(f"  ⏳ Server error ({resp.status_code}) for {page_title}, retrying in {wait_time:.1f}s...")
-                time.sleep(wait_time)
-                retry_count += 1
-                continue
-            
-            resp.raise_for_status()
-            break
-            
-        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
-            wait_time = (2 ** retry_count) + random.uniform(0.5, 1.0)
-            print(f"  ⏳ Connection error: {e}, retrying in {wait_time:.1f}s...")
+        if data:
+            thumb = data.get("thumbnail") or data.get("originalimage") or {}
+            return {
+                "title": data.get("title", page_title),
+                "extract": data.get("extract", ""),
+                "image": thumb.get("source"),
+                "image_width": thumb.get("width"),
+                "image_height": thumb.get("height"),
+                "wiki_url": data.get("content_urls", {}).get("desktop", {}).get("page", url),
+                "lang": lang,
+                "fetched_at": datetime.now(timezone.utc).isoformat(),
+            }
+        
+        # If we got a 404, the page doesn't exist
+        if attempt < MAX_RETRIES:
+            wait_time = (2 ** attempt) + random.uniform(0.1, 0.5)
             time.sleep(wait_time)
-            retry_count += 1
-            last_error = e
-            continue
-        except requests.exceptions.HTTPError as e:
-            # Don't retry 404s
-            if e.response and e.response.status_code == 404:
-                raise
-            # Don't retry 403s (Forbidden - usually means malformed URL)
-            if e.response and e.response.status_code == 403:
-                raise
-            retry_count += 1
-            last_error = e
-            continue
     
-    # If we exhausted retries, raise the last error
-    if retry_count > MAX_RETRIES:
-        raise last_error or requests.exceptions.RequestException(f"Max retries exceeded for {api_url}")
-    
-    data = resp.json()
-    thumb = data.get("thumbnail") or data.get("originalimage") or {}
-    return {
-        "title": data.get("title", page_title.replace("_", " ")),
-        "extract": data.get("extract", ""),
-        "image": thumb.get("source"),
-        "image_width": thumb.get("width"),
-        "image_height": thumb.get("height"),
-        "wiki_url": data.get("content_urls", {}).get("desktop", {}).get("page", url),
-        "lang": lang,
-        "fetched_at": datetime.now(timezone.utc).isoformat(),
-    }
+    # If all attempts failed, raise an exception
+    raise requests.exceptions.HTTPError(f"Failed to fetch {page_title} after {MAX_RETRIES} attempts")
 
 
 def create_robust_session() -> requests.Session:
-    """Create a requests session with retry logic and proper headers."""
     session = requests.Session()
-    
-    # Set user agent
     session.headers.update({"User-Agent": USER_AGENT})
     
-    # Configure retry strategy
     retry_strategy = Retry(
         total=MAX_RETRIES,
-        backoff_factor=2,
+        backoff_factor=1,
         status_forcelist=[429, 500, 502, 503, 504],
         allowed_methods=["GET"],
-        raise_on_status=False,
     )
     
-    adapter = HTTPAdapter(
-        max_retries=retry_strategy,
-        pool_connections=10,
-        pool_maxsize=10,
-    )
+    adapter = HTTPAdapter(max_retries=retry_strategy)
     session.mount("https://", adapter)
     session.mount("http://", adapter)
     
@@ -348,7 +261,6 @@ def load_cache() -> Dict[str, Any]:
 
 
 def save_cache(cache: Dict[str, Any]):
-    """Save cache atomically to avoid corruption."""
     CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
     temp_file = CACHE_FILE.with_suffix(".tmp")
     temp_file.write_text(
@@ -359,7 +271,6 @@ def save_cache(cache: Dict[str, Any]):
 
 
 def enrich_categories(categories: List[Dict], refresh: bool = False, offline: bool = False) -> List[Dict]:
-    """Fetch Wikipedia metadata for all entries with robust retry logic."""
     cache = load_cache()
     session = create_robust_session()
     
@@ -368,96 +279,89 @@ def enrich_categories(categories: List[Dict], refresh: bool = False, offline: bo
         "from_cache": 0,
         "failed": 0,
         "redirected": 0,
-        "found_via_search": 0,
     }
     
-    # Count total entries
-    total_entries = sum(len(c["entries"]) for c in categories)
-    processed = 0
-    
-    # Manual override for known problematic URLs
-    # These are the CORRECT titles that Wikipedia uses
+    # Manual fixes for known problematic titles
     manual_fixes = {
-        "https://en.wikipedia.org/wiki/King%27s_College_Chapel,_Cambridge": "King's College Chapel, Cambridge",
-        "https://en.wikipedia.org/wiki/Lion_Gate,_Mycenae": "Lion Gate",
-        "https://en.wikipedia.org/wiki/Massimiliano_Locatelli": "Massimiliano Locatelli (architect)",
-        "https://en.wikipedia.org/wiki/Fogong_Temple_Wooden_Pagoda": "Fogong Temple Pagoda",
-        "https://en.wikipedia.org/wiki/Doge%27s_Palace": "Doge's Palace",
-        "https://en.wikipedia.org/wiki/Rurik%C5%8D-ji": "Rurikō-ji",
-        "https://en.wikipedia.org/wiki/Sir_John_Soane%27s_Museum": "Sir John Soane's Museum",
-        "https://en.wikipedia.org/wiki/Speakers%27_Corner": "Speakers' Corner",
-        "https://en.wikipedia.org/wiki/St._Mary%27s_Cathedral,_Tokyo": "St. Mary's Cathedral, Tokyo",
-        "https://en.wikipedia.org/wiki/Trajan%27s_Kiosk": "Trajan's Kiosk",
-        "https://en.wikipedia.org/wiki/Arnold_B%C3%B6cklin": "Arnold Böcklin",
-        "https://en.wikipedia.org/wiki/Jupiter_and_Semele_(Moreau)": "Jupiter and Semele",
-        "https://en.wikipedia.org/wiki/Artist%27s_Shit": "Artist's Shit",
-        "https://en.wikipedia.org/wiki/Banditaccia_necropolis": "Banditaccia Necropolis",
-        "https://en.wikipedia.org/wiki/Trompe-l%27%C5%93il": "Trompe-l'œil",
-        "https://en.wikipedia.org/wiki/Faberg%C3%A9_egg": "Fabergé egg",
-        "https://en.wikipedia.org/wiki/Aberration-corrected_electron_microscope": "Aberration-corrected transmission electron microscopy",
-        "https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm": "Lempel–Ziv–Markov chain algorithm",
-        "https://it.wikipedia.org/wiki/Curva_di_B%C3%A9zier": "Curva di Bézier",
-        "https://en.wikipedia.org/wiki/Pascal%27s_calculator": "Pascal's calculator",
-        "https://it.wikipedia.org/wiki/Carl_Friedrich_von_Weizs%C3%A4cker": "Carl Friedrich von Weizsäcker",
-        "https://en.wikipedia.org/wiki/Maxwell%27s_demon": "Maxwell's demon",
-        "https://en.wikipedia.org/wiki/Elitzur%E2%80%93Vaidman_bomb_tester": "Elitzur–Vaidman bomb tester",
-        "https://it.wikipedia.org/wiki/Gruppo_di_Poincar%C3%A9": "Gruppo di Poincaré",
-        "https://en.wikipedia.org/wiki/Hilbert%27s_problems": "Hilbert's problems",
-        "https://en.wikipedia.org/wiki/Mach%E2%80%93Zehnder_interferometer": "Mach–Zehnder interferometer",
-        "https://en.wikipedia.org/wiki/Moir%C3%A9_pattern": "Moiré pattern",
-        "https://en.wikipedia.org/wiki/Landauer%27s_principle": "Landauer's principle",
-        "https://en.wikipedia.org/wiki/Sol%C3%A8r%27s_theorem": "Solèr's theorem",
-        "https://en.wikipedia.org/wiki/Bell%27s_theorem": "Bell's theorem",
-        "https://it.wikipedia.org/wiki/Teorema_di_Rouch%C3%A9-Capelli": "Teorema di Rouché-Capelli",
-        "https://en.wikipedia.org/wiki/Assassination_attempt_on_Pope_John_Paul_II": "Attempted assassination of Pope John Paul II",
-        "https://en.wikipedia.org/wiki/Government_of_the_Nine": "The Nine (Siena)",
-        "https://en.wikipedia.org/wiki/Hermann_G%C3%B6ring": "Hermann Göring",
-        "https://en.wikipedia.org/wiki/Lorenzo_de%27_Medici": "Lorenzo de' Medici",
-        "https://en.wikipedia.org/wiki/Men%C3%A9ndez_brothers": "Menéndez brothers",
-        "https://en.wikipedia.org/wiki/Capitoline_Geese": "Capitoline Geese",
-        "https://en.wikipedia.org/wiki/Rudolf_H%C3%B6%C3%9F": "Rudolf Höss",
-        "https://en.wikipedia.org/wiki/2010_Smolensk_air_disaster": "Smolensk air disaster",
-        "https://en.wikipedia.org/wiki/2011_T%C5%8Dhoku_earthquake_and_tsunami": "2011 Tōhoku earthquake and tsunami",
-        "https://en.wikipedia.org/wiki/A_Lover%27s_Discourse:_Fragments": "A Lover's Discourse",
-        "https://en.wikipedia.org/wiki/Barlaam_and_Iosaphat": "Barlaam and Josaphat",
-        "https://en.wikipedia.org/wiki/Accabadora": "Accabadora (novel)",
-        "https://en.wikipedia.org/wiki/Georg_G%C3%A4nswein": "Georg Gänswein",
-        "https://en.wikipedia.org/wiki/J%C5%ABrat%C4%97_and_Kastytis": "Jūratė and Kastytis",
-        "https://en.wikipedia.org/wiki/Alcestis_(Euripides)": "Alcestis (play)",
-        "https://en.wikipedia.org/wiki/Gian_Antonio_Cibotto": "Gian Antonio Cibotto",
-        "https://en.wikipedia.org/wiki/Myricae": "Myricae",
-        "https://en.wikipedia.org/wiki/Stanis%C5%82aw_Lem": "Stanisław Lem",
-        "https://en.wikipedia.org/wiki/On_Literature_(Eco)": "On Literature (essay collection)",
-        "https://it.wikipedia.org/wiki/L%27armata_Brancaleone": "L'armata Brancaleone",
-        "https://it.wikipedia.org/wiki/L%27eclisse": "L'eclisse",
-        "https://en.wikipedia.org/wiki/Roman_Pola%C5%84ski": "Roman Polanski",
-        "https://it.wikipedia.org/wiki/Belzeb%C3%B9": "Belzebù",
-        "https://en.wikipedia.org/wiki/Colombe_d%27Or": "Colombe d'Or",
-        "https://en.wikipedia.org/wiki/Ne_sutor_ultra_crepidam": "Sutor, ne ultra crepidam",
-        "https://en.wikipedia.org/wiki/Testa_di_moro": "Testa di moro",
-        "https://en.wikipedia.org/wiki/Christie%27s": "Christie's",
-        "https://en.wikipedia.org/wiki/Sotheby%27s": "Sotheby's",
+        "King%27s_College_Chapel,_Cambridge": "King's College Chapel, Cambridge",
+        "Lion_Gate,_Mycenae": "Lion Gate",
+        "Massimiliano_Locatelli": "Massimiliano Locatelli",
+        "Fogong_Temple_Wooden_Pagoda": "Fogong Temple Pagoda",
+        "Doge%27s_Palace": "Doge's Palace",
+        "Rurik%C5%8D-ji": "Rurikō-ji",
+        "Sir_John_Soane%27s_Museum": "Sir John Soane's Museum",
+        "Speakers%27_Corner": "Speakers' Corner",
+        "St._Mary%27s_Cathedral,_Tokyo": "St. Mary's Cathedral, Tokyo",
+        "Trajan%27s_Kiosk": "Trajan's Kiosk",
+        "Arnold_B%C3%B6cklin": "Arnold Böcklin",
+        "Jupiter_and_Semele_(Moreau)": "Jupiter and Semele",
+        "Artist%27s_Shit": "Artist's Shit",
+        "Banditaccia_necropolis": "Banditaccia Necropolis",
+        "Trompe-l%27%C5%93il": "Trompe-l'œil",
+        "Faberg%C3%A9_egg": "Fabergé egg",
+        "Aberration-corrected_electron_microscope": "Aberration-corrected transmission electron microscopy",
+        "Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm": "Lempel–Ziv–Markov chain algorithm",
+        "Curva_di_B%C3%A9zier": "Curva di Bézier",
+        "Pascal%27s_calculator": "Pascal's calculator",
+        "Carl_Friedrich_von_Weizs%C3%A4cker": "Carl Friedrich von Weizsäcker",
+        "Maxwell%27s_demon": "Maxwell's demon",
+        "Elitzur%E2%80%93Vaidman_bomb_tester": "Elitzur–Vaidman bomb tester",
+        "Gruppo_di_Poincar%C3%A9": "Gruppo di Poincaré",
+        "Hilbert%27s_problems": "Hilbert's problems",
+        "Mach%E2%80%93Zehnder_interferometer": "Mach–Zehnder interferometer",
+        "Moir%C3%A9_pattern": "Moiré pattern",
+        "Landauer%27s_principle": "Landauer's principle",
+        "Sol%C3%A8r%27s_theorem": "Solèr's theorem",
+        "Bell%27s_theorem": "Bell's theorem",
+        "Teorema_di_Rouch%C3%A9-Capelli": "Teorema di Rouché-Capelli",
+        "Assassination_attempt_on_Pope_John_Paul_II": "Attempted assassination of Pope John Paul II",
+        "Government_of_the_Nine": "The Nine",
+        "Hermann_G%C3%B6ring": "Hermann Göring",
+        "Lorenzo_de%27_Medici": "Lorenzo de' Medici",
+        "Men%C3%A9ndez_brothers": "Menéndez brothers",
+        "Capitoline_Geese": "Capitoline Geese",
+        "Rudolf_H%C3%B6%C3%9F": "Rudolf Höss",
+        "2010_Smolensk_air_disaster": "Smolensk air disaster",
+        "2011_T%C5%8Dhoku_earthquake_and_tsunami": "2011 Tōhoku earthquake and tsunami",
+        "A_Lover%27s_Discourse:_Fragments": "A Lover's Discourse",
+        "Barlaam_and_Iosaphat": "Barlaam and Josaphat",
+        "Accabadora": "Accabadora",
+        "Georg_G%C3%A4nswein": "Georg Gänswein",
+        "J%C5%ABrat%C4%97_and_Kastytis": "Jūratė and Kastytis",
+        "Alcestis_(Euripides)": "Alcestis",
+        "Gian_Antonio_Cibotto": "Gian Antonio Cibotto",
+        "Myricae": "Myricae",
+        "Stanis%C5%82aw_Lem": "Stanisław Lem",
+        "On_Literature_(Eco)": "On Literature",
+        "L%27armata_Brancaleone": "L'armata Brancaleone",
+        "L%27eclisse": "L'eclisse",
+        "Roman_Pola%C5%84ski": "Roman Polanski",
+        "Belzeb%C3%B9": "Belzebù",
+        "Colombe_d%27Or": "Colombe d'Or",
+        "Ne_sutor_ultra_crepidam": "Sutor, ne ultra crepidam",
+        "Testa_di_moro": "Testa di moro",
+        "Christie%27s": "Christie's",
+        "Sotheby%27s": "Sotheby's",
     }
     
     for cat in categories:
         for entry in cat["entries"]:
             url = entry["url"]
-            processed += 1
             
-            # Check if we have a manual fix for this URL
-            if url in manual_fixes:
-                # Get the correct title
-                correct_title = manual_fixes[url]
-                lang, _ = wiki_lang_and_title(url)
-                
-                # Replace the URL with the corrected one (properly encoded)
-                encoded_title = urllib.parse.quote(correct_title)
-                corrected_url = f"https://{lang}.wikipedia.org/wiki/{encoded_title}"
-                
-                if url != corrected_url:
-                    print(f"  🔧 Manual fix: {url} -> {corrected_url}")
-                    entry["url"] = corrected_url
-                    url = corrected_url
+            # Extract the page title from the URL and decode it
+            _, page_title = wiki_lang_and_title(url)
+            
+            # Check if we have a manual fix for this title
+            if page_title in manual_fixes:
+                corrected = manual_fixes[page_title]
+                if corrected != page_title:
+                    print(f"  🔧 Manual fix: {page_title} -> {corrected}")
+                    # Reconstruct the URL with the corrected title
+                    lang, _ = wiki_lang_and_title(url)
+                    encoded_corrected = urllib.parse.quote(corrected)
+                    url = f"https://{lang}.wikipedia.org/wiki/{encoded_corrected}"
+                    entry["url"] = url
+                    page_title = corrected
             
             # Check cache
             cached = cache.get(url)
@@ -467,10 +371,9 @@ def enrich_categories(categories: List[Dict], refresh: bool = False, offline: bo
                 continue
             
             if offline:
-                # Offline mode: use minimal placeholder
                 lang, _ = wiki_lang_and_title(url)
                 entry.update({
-                    "title": entry["title"],
+                    "title": page_title,
                     "extract": "",
                     "image": None,
                     "wiki_url": url,
@@ -480,42 +383,26 @@ def enrich_categories(categories: List[Dict], refresh: bool = False, offline: bo
                 stats["from_cache"] += 1
                 continue
             
-            # Fetch from Wikipedia with retry
+            # Fetch from Wikipedia
             try:
-                meta = fetch_summary_with_retry(url, session)
+                meta = fetch_with_retry(url, session)
+                
+                # Check if the actual title is different from what we expected
+                if meta.get("title") and meta["title"] != page_title:
+                    stats["redirected"] += 1
+                    print(f"  ↪ '{page_title}' -> '{meta['title']}'")
+                
                 cache[url] = meta
                 entry.update(meta)
                 stats["fetched"] += 1
+                print(f"  ✓ {meta['title']} (fetched: {stats['fetched']}, cached: {stats['from_cache']}, failed: {stats['failed']})")
                 
-                # Check if URL was redirected
-                if meta.get("wiki_url") != url and meta.get("wiki_url"):
-                    stats["redirected"] += 1
-                
-                print(f"  ✓ {meta['title']} ({stats['fetched']} fetched, {stats['from_cache']} cached, {stats['failed']} failed)")
-                
-            except requests.exceptions.HTTPError as e:
-                # 403/404 errors - log but don't count as fatal
-                if "403" in str(e) or "404" in str(e):
-                    print(f"  ⚠ Page not accessible: {url} ({str(e)})")
-                    stats["failed"] += 1
-                    # Use cached version if available, otherwise fallback
-                    fallback = cache.get(url) or {
-                        "title": entry["title"],
-                        "extract": "",
-                        "image": None,
-                        "wiki_url": url,
-                        "lang": wiki_lang_and_title(url)[0],
-                        "fetched_at": None,
-                    }
-                    entry.update(fallback)
-                else:
-                    raise
             except Exception as exc:
-                print(f"  ! failed to fetch {url}: {exc}")
+                print(f"  ! Failed: {page_title} ({str(exc)[:50]})")
                 stats["failed"] += 1
-                # Use cached version if available, otherwise fallback
+                # Use cache if available, otherwise create placeholder
                 fallback = cache.get(url) or {
-                    "title": entry["title"],
+                    "title": page_title,
                     "extract": "",
                     "image": None,
                     "wiki_url": url,
@@ -529,22 +416,20 @@ def enrich_categories(categories: List[Dict], refresh: bool = False, offline: bo
                 save_cache(cache)
                 print(f"  💾 Cache saved ({len(cache)} entries)")
             
-            # Polite delay between requests (with jitter)
+            # Polite delay
             if stats["fetched"] > 0:
-                delay = BASE_REQUEST_DELAY + random.uniform(0.1, 0.5)
-                time.sleep(delay)
+                time.sleep(BASE_REQUEST_DELAY + random.uniform(0.1, 0.3))
     
     # Final cache save
     if not offline:
         save_cache(cache)
     
-    print(f"\nWikipedia metadata summary:")
-    print(f"  ✓ {stats['fetched']} new articles fetched")
-    print(f"  ↪ {stats['redirected']} redirects resolved")
-    print(f"  🔍 {stats['found_via_search']} found via search")
-    print(f"  📦 {stats['from_cache']} articles from cache")
-    print(f"  ⚠ {stats['failed']} articles failed (404/403)")
-    print(f"  📊 {len(cache)} total entries in cache")
+    print(f"\n📊 Wikipedia metadata summary:")
+    print(f"  ✅ {stats['fetched']} new articles fetched")
+    print(f"  🔄 {stats['redirected']} redirects resolved")
+    print(f"  💾 {stats['from_cache']} articles from cache")
+    print(f"  ❌ {stats['failed']} articles failed")
+    print(f"  📚 {len(cache)} total entries in cache")
     
     return categories
 
@@ -577,15 +462,14 @@ def build_site(categories: List[Dict]):
 
     total_articles = sum(len(c["entries"]) for c in categories)
 
-    # Assign a library-style call number to each category, in file order.
     for i, cat in enumerate(categories, start=1):
         cat["call_number"] = f"{i:03d}"
 
-    # "Recently added" = entries with the most recent fetched_at date.
     all_entries = []
     for cat in categories:
         for e in cat["entries"]:
             all_entries.append({**e, "category": cat["name"], "category_slug": cat["slug"]})
+    
     recent = sorted(
         [e for e in all_entries if e.get("fetched_at")],
         key=lambda e: e["fetched_at"], reverse=True,
@@ -605,7 +489,7 @@ def build_site(categories: List[Dict]):
         encoding="utf-8",
     )
 
-    # Category pages, with simple prev/next links following file order
+    # Category pages
     cat_tpl = env.get_template("category.html")
     for i, cat in enumerate(categories):
         prev_cat = categories[i - 1] if i > 0 else None
@@ -622,7 +506,7 @@ def build_site(categories: List[Dict]):
             encoding="utf-8",
         )
 
-    # Search page (client-side, driven by search-index.json)
+    # Search page
     search_tpl = env.get_template("search.html")
     (OUTPUT_DIR / "search.html").write_text(
         search_tpl.render(**common_ctx, page_type="search"),
@@ -636,7 +520,7 @@ def build_site(categories: List[Dict]):
             tpl404.render(**common_ctx, page_type="404"), encoding="utf-8"
         )
 
-    # Search index for client-side JS search
+    # Search index
     search_index = [
         {
             "title": e["title"],
@@ -655,10 +539,10 @@ def build_site(categories: List[Dict]):
     static_out = OUTPUT_DIR / "static"
     shutil.copytree(STATIC_DIR, static_out)
 
-    # .nojekyll so GitHub Pages serves the docs/ folder as-is
+    # .nojekyll
     (OUTPUT_DIR / ".nojekyll").write_text("", encoding="utf-8")
 
-    print(f"\nBuilt {len(categories)} category pages + homepage + search page "
+    print(f"\n🏗️  Built {len(categories)} category pages + homepage + search page "
           f"({total_articles} articles) into {OUTPUT_DIR}")
 
 
@@ -673,18 +557,18 @@ def main():
     args = parser.parse_args()
 
     print("=" * 60)
-    print("Knowledge Archive Build")
+    print("📚 Knowledge Archive Build")
     print("=" * 60)
     
     categories = parse_archive(CONTENT_MD)
     total = sum(len(c["entries"]) for c in categories)
-    print(f"Parsed {len(categories)} categories, {total} articles from {CONTENT_MD.name}")
+    print(f"📄 Parsed {len(categories)} categories, {total} articles from {CONTENT_MD.name}")
 
     categories = enrich_categories(categories, refresh=args.refresh, offline=args.offline)
     build_site(categories)
     
     print("\n" + "=" * 60)
-    print("Build complete!")
+    print("✅ Build complete!")
 
 
 if __name__ == "__main__":
