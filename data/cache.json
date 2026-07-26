@@ -1,4 +1,14 @@
 {
+  "https://en.wikipedia.org/wiki/2011_T%C5%8Dhoku_earthquake_and_tsunami": {
+    "extract": "On 11 March 2011, at 14:46:24 JST, a Mw 9.0–9.1 undersea megathrust earthquake occurred in the Pacific Ocean, 72 km (45 mi) east of the Oshika Peninsula of the Tōhoku region of Japan. It lasted approximately six minutes and caused a tsunami. It is sometimes known in Japan as the \"Great East Japan Earthquake\" , among other names. It is often referred to by its numerical date, 3.11.",
+    "fetched_at": "2026-07-26T13:14:27.260462+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/SH-60B_helicopter_flies_over_Sendai.jpg/330px-SH-60B_helicopter_flies_over_Sendai.jpg",
+    "image_height": 220,
+    "image_width": 330,
+    "lang": "en",
+    "title": "2011 Tōhoku earthquake and tsunami",
+    "wiki_url": "https://en.wikipedia.org/wiki/2011_T%C5%8Dhoku_earthquake_and_tsunami"
+  },
   "https://en.wikipedia.org/wiki/A%20Lover%27s%20Discourse": {
     "extract": "A Lover's Discourse: Fragments is a 1977 book by Roland Barthes. It contains a list of \"fragments\", some of which come from literature and some from his own philosophical thought, of a lover's point of view. Barthes calls them \"figures\"—gestures of the lover at work.",
     "fetched_at": "2026-07-26T13:08:06.973806+00:00",
@@ -19,6 +29,16 @@
     "title": "ADA collider",
     "wiki_url": "https://en.wikipedia.org/wiki/ADA_collider"
   },
+  "https://en.wikipedia.org/wiki/A_Lover%27s_Discourse:_Fragments": {
+    "extract": "A Lover's Discourse: Fragments is a 1977 book by Roland Barthes. It contains a list of \"fragments\", some of which come from literature and some from his own philosophical thought, of a lover's point of view. Barthes calls them \"figures\"—gestures of the lover at work.",
+    "fetched_at": "2026-07-26T13:14:28.038676+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/45/A_Lover%27s_Discourse_%28original_French_edition%29.jpg",
+    "image_height": 292,
+    "image_width": 200,
+    "lang": "en",
+    "title": "A Lover's Discourse: Fragments",
+    "wiki_url": "https://en.wikipedia.org/wiki/A_Lover's_Discourse%3A_Fragments"
+  },
   "https://en.wikipedia.org/wiki/Aage_Bohr": {
     "extract": "Aage Niels Bohr was a Danish nuclear physicist who shared the Nobel Prize in Physics in 1975 with Ben Roy Mottelson and James Rainwater \"for the discovery of the connection between collective motion and particle motion in atomic nuclei and the development of the theory of the structure of the atomic nucleus based on this connection\". His father was Niels Bohr.",
     "fetched_at": "2026-07-26T11:04:07.576333+00:00",
@@ -28,6 +48,16 @@
     "lang": "en",
     "title": "Aage Bohr",
     "wiki_url": "https://en.wikipedia.org/wiki/Aage_Bohr"
+  },
+  "https://en.wikipedia.org/wiki/Aberration-corrected%20transmission%20electron%20microscopy": {
+    "extract": "Aberration-corrected transmission electron microscopy (AC-TEM) is the general term for using electron microscopes where electro optical components are introduced to reduce the aberrations that would otherwise reduce the resolution of images. Historically electron microscopes had quite severe aberrations, and until about the start of the 21st century the resolution was quite limited, at best able to image the atomic structure of materials so long as the atoms were far enough apart. Theoretical methods of correcting the aberrations existed for some time, but could not be implemented in practice. Around the turn of the century the electron optical components were coupled with computer control of the lenses and their alignment; this was the breakthrough which led to significant improvements both in resolution and the clarity of the images. As of 2024 correction of geometric aberrations is standard in many commercial electron microscopes. They are extensively used in many different areas of science.",
+    "fetched_at": "2026-07-26T13:14:05.765219+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/MicroscopyResolution.png/330px-MicroscopyResolution.png",
+    "image_height": 343,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Aberration-corrected transmission electron microscopy",
+    "wiki_url": "https://en.wikipedia.org/wiki/Aberration-corrected_transmission_electron_microscopy"
   },
   "https://en.wikipedia.org/wiki/Accabadora%20%28novel%29": {
     "extract": "Michela Murgia was an Italian novelist, playwright, and radio personality. She was a winner of the Campiello Prize, the Mondello International Literary Prize and Dessì Prize, and was an active feminist and left-wing voice in the Italian public scene, speaking out on themes such as euthanasia and LGBTQ+ rights.",
@@ -98,6 +128,16 @@
     "lang": "en",
     "title": "Albert Memorial",
     "wiki_url": "https://en.wikipedia.org/wiki/Albert_Memorial"
+  },
+  "https://en.wikipedia.org/wiki/Alcestis": {
+    "extract": "In Greek mythology, Alcestis or Alceste, was a princess of Iolcus known for her love of her husband. Her life story was described by Pseudo-Apollodorus in his Bibliotheca, and a version of her death and return from the dead was also popularized by Euripides' tragedy Alcestis.",
+    "fetched_at": "2026-07-26T13:14:40.674475+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Affreschi_romani_-_pompei_-_alcesti_e_admeto.JPG/330px-Affreschi_romani_-_pompei_-_alcesti_e_admeto.JPG",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Alcestis",
+    "wiki_url": "https://en.wikipedia.org/wiki/Alcestis"
   },
   "https://en.wikipedia.org/wiki/Alessandro_Antonelli": {
     "extract": "Alessandro Antonelli was an Italian architect of the 19th century. He was the most prominent Neoclassical 19th-century architect in Piedmont, with a long and prolific career that included designs for houses, churches and major urban planning schemes. His most famous works are the Mole Antonelliana in Turin, one of the tallest masonry structures ever erected, and both the Novara Cathedral and the Basilica of San Gaudenzio in Novara.",
@@ -269,6 +309,16 @@
     "title": "Ariadne",
     "wiki_url": "https://en.wikipedia.org/wiki/Ariadne"
   },
+  "https://en.wikipedia.org/wiki/Arnold_B%C3%B6cklin": {
+    "extract": "Arnold Böcklin was a Swiss Symbolist painter. His five versions of the Isle of the Dead inspired works by several late Romantic composers.",
+    "fetched_at": "2026-07-26T13:14:01.190985+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Arnold_B%C3%B6cklin_%281827_-_1901%29%2C_Selbstportrait_%281873%29.jpg/330px-Arnold_B%C3%B6cklin_%281827_-_1901%29%2C_Selbstportrait_%281873%29.jpg",
+    "image_height": 412,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Arnold Böcklin",
+    "wiki_url": "https://en.wikipedia.org/wiki/Arnold_B%C3%B6cklin"
+  },
   "https://en.wikipedia.org/wiki/Artemisia_Gentileschi": {
     "extract": "Artemisia Lomi Gentileschi was an Italian Baroque painter. Gentileschi is considered among the most accomplished 17th-century artists, initially working in the style of Caravaggio. She was producing professional work by the age of 15. In an era when women had few opportunities to pursue artistic training or work as professional artists, Gentileschi was the first woman to become a member of the Accademia di Arte del Disegno in Florence and she had an international clientele. Gentileschi worked as an expatriate painter in the court of Charles I of England from 1638 to 1642, but she is thought to have fled the country in the early phases of the English Civil War. Her whereabouts over the following years are unknown, but she resurfaced in Naples during 1649. Her last known letter to one of her mentors was dated to 1650 and it indicates that she was still working as an artist. Her time of death is disputed, but her last known commission was in January 1654.",
     "fetched_at": "2026-07-26T11:04:06.199848+00:00",
@@ -278,6 +328,16 @@
     "lang": "en",
     "title": "Artemisia Gentileschi",
     "wiki_url": "https://en.wikipedia.org/wiki/Artemisia_Gentileschi"
+  },
+  "https://en.wikipedia.org/wiki/Artist%27s_Shit": {
+    "extract": "Artist's Shit is a 1961 anti-artwork by Piero Manzoni. The work consists of 90 tin cans, each reportedly filled with 30 grams (1.1 oz) of feces, and measuring 4.8 by 6.5 centimetres, with a label in Italian, English, French, and German stating:\nArtist's Shit\nContents 30 gr net\nFreshly preserved\nProduced and tinned\nin May 1961\n",
+    "fetched_at": "2026-07-26T13:14:03.566749+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Piero_Manzoni_-_Merda_D%27artista_%281961%29_-_panoramio.jpg/330px-Piero_Manzoni_-_Merda_D%27artista_%281961%29_-_panoramio.jpg",
+    "image_height": 279,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Artist's Shit",
+    "wiki_url": "https://en.wikipedia.org/wiki/Artist's_Shit"
   },
   "https://en.wikipedia.org/wiki/Arturo_Toscanini": {
     "extract": "Arturo Toscanini was an Italian conductor. One of the most acclaimed and influential musicians of the late 19th and early 20th century, Toscanini was renowned for his intensity, his perfectionism, his ear for orchestral detail and sonority, and his eidetic memory. He was at various times the music director of La Scala in Milan and the New York Philharmonic. Later in his career, he was appointed the first music director of the NBC Symphony Orchestra (1937–1954), and this led to his becoming a household name, especially in the United States, through his radio and television broadcasts and many recordings of the operatic and symphonic repertoire.",
@@ -318,6 +378,16 @@
     "lang": "en",
     "title": "Atlas (architecture)",
     "wiki_url": "https://en.wikipedia.org/wiki/Atlas_(architecture)"
+  },
+  "https://en.wikipedia.org/wiki/Attempted%20assassination%20of%20Pope%20John%20Paul%20II": {
+    "extract": "On 13 May 1981, in St. Peter's Square in Vatican City, Pope John Paul II was shot and wounded by Mehmet Ali Ağca while he was entering the square. The Pope was struck twice and suffered severe blood loss. Ağca was apprehended immediately and later sentenced to life in prison by an Italian court. The Pope forgave Ağca for the assassination attempt. He was pardoned by Italian president Carlo Azeglio Ciampi at the Pope's request and was deported to Turkey in June 2000.",
+    "fetched_at": "2026-07-26T13:14:20.819851+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/PapalAssassinationAttemptSite.jpg/330px-PapalAssassinationAttemptSite.jpg",
+    "image_height": 248,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Attempted assassination of Pope John Paul II",
+    "wiki_url": "https://en.wikipedia.org/wiki/Attempted_assassination_of_Pope_John_Paul_II"
   },
   "https://en.wikipedia.org/wiki/Auger_effect": {
     "extract": "The Meitner–Auger effect is a physical phenomenon in which atoms eject electrons. It occurs when an inner-shell vacancy in an atom is filled by an electron, releasing energy that causes the emission of another electron from a different shell of the same atom.",
@@ -379,6 +449,16 @@
     "title": "Barbican",
     "wiki_url": "https://en.wikipedia.org/wiki/Barbican"
   },
+  "https://en.wikipedia.org/wiki/Barlaam%20and%20Josaphat": {
+    "extract": "Barlaam and Josaphat, also known as Bilawhar and Budhasaf, are Christian saints. Their story tells of the conversion of Josaphat to Christianity. According to tradition, an Indian king persecuted the Christian Church in his realm. After astrologers predicted that his own son would some day become a Christian, the king imprisoned the young prince Josaphat, who nevertheless met the hermit Saint Barlaam and converted to Christianity. After much tribulation the young prince's father accepted the Christian faith, turned over his throne to Josaphat, and retired to the desert to become a hermit. Josaphat himself later abdicated and went into seclusion with his old teacher Barlaam. The story is thought to be a Christianized and later version of the story of Siddhartha Gautama, who became the Buddha.",
+    "fetched_at": "2026-07-26T13:14:29.281456+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Varlaam_and_Joasath%2C_based_on_Simon_Ushakov.jpg/330px-Varlaam_and_Joasath%2C_based_on_Simon_Ushakov.jpg",
+    "image_height": 478,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Barlaam and Josaphat",
+    "wiki_url": "https://en.wikipedia.org/wiki/Barlaam_and_Josaphat"
+  },
   "https://en.wikipedia.org/wiki/Barry_Lyndon": {
     "extract": "Barry Lyndon is a 1975 epic historical drama film written, directed, and produced by Stanley Kubrick, based on the 1844 novel The Luck of Barry Lyndon by William Makepeace Thackeray. Narrated by Michael Hordern, and starring Ryan O'Neal, Marisa Berenson, Patrick Magee, Leonard Rossiter, and Hardy Krüger, the film recounts the early exploits and later unravelling of an 18th-century Irish rogue and gold digger who marries a rich widow in order to attempt to climb the social ladder and assume her late husband's aristocratic position.",
     "fetched_at": "2026-07-26T11:55:33.776085+00:00",
@@ -418,6 +498,16 @@
     "lang": "en",
     "title": "Bedford Square",
     "wiki_url": "https://en.wikipedia.org/wiki/Bedford_Square"
+  },
+  "https://en.wikipedia.org/wiki/Bell%27s_theorem": {
+    "extract": "Bell's theorem is a term encompassing a number of closely related results in physics, all of which determine that quantum mechanics is incompatible with local hidden-variable theories, given some basic assumptions about the nature of measurement. The first such result was introduced by John Stewart Bell in 1964, building upon the Einstein–Podolsky–Rosen paradox, which had called attention to the phenomenon of quantum entanglement.",
+    "fetched_at": "2026-07-26T13:14:18.961796+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "en",
+    "title": "Bell's theorem",
+    "wiki_url": "https://en.wikipedia.org/wiki/Bell's_theorem"
   },
   "https://en.wikipedia.org/wiki/Berlin_State_Opera": {
     "extract": "The Staatsoper Unter den Linden, also known as the Berlin State Opera, is a listed building on Unter den Linden boulevard in the historic center of Berlin, Germany. Initially called the Königliche Oper or Berlin Hofoper, the opera house was built by order of Prussian king Frederick the Great from 1741 to 1743 according to plans by Georg Wenzeslaus von Knobelsdorff in the Palladian style. Damaged during the Allied bombing in World War II, the former Royal Prussian Opera House was rebuilt from 1951 to 1955 as part of the Forum Fridericianum square in East Berlin.",
@@ -729,6 +819,16 @@
     "title": "Cholent",
     "wiki_url": "https://en.wikipedia.org/wiki/Cholent"
   },
+  "https://en.wikipedia.org/wiki/Christie%27s": {
+    "extract": "Christie's is a British auction house founded in 1766 by James Christie. Its main premises are on King Street, St James's in London, with additional salerooms in New York, Paris, Hong Kong, Milan, Geneva, Shanghai and Dubai. It is owned by Groupe Artémis, the holding company of François Pinault. In 2022, Christie's sold US$8.4 billion in art and luxury goods, an all-time high for any auction house. On 15 November 2017, the Salvator Mundi was sold at Christie's in New York for $450 million to Saudi Prince Badr bin Abdullah Al Saud, the highest price ever paid for a painting.",
+    "fetched_at": "2026-07-26T13:15:03.611810+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Christie%27s_King_Street.jpg/330px-Christie%27s_King_Street.jpg",
+    "image_height": 485,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Christie's",
+    "wiki_url": "https://en.wikipedia.org/wiki/Christie's"
+  },
   "https://en.wikipedia.org/wiki/Christina,_Queen_of_Sweden": {
     "extract": "Christina, a member of the House of Vasa, was Queen of Sweden from 1632 until her abdication in 1654. Her conversion to Catholicism and refusal to marry led her to relinquish her throne and move to Rome.",
     "fetched_at": "2026-07-26T11:04:09.224239+00:00",
@@ -929,6 +1029,16 @@
     "title": "Digital nomad",
     "wiki_url": "https://en.wikipedia.org/wiki/Digital_nomad"
   },
+  "https://en.wikipedia.org/wiki/Doge%27s_Palace": {
+    "extract": "The Doge's Palace is a palace built in Venetian Gothic style, and one of the main landmarks of the city of Venice in northern Italy. The palace included government offices, a jail, and the residence of the Doge of Venice, the elected authority of the former Republic of Venice. It was originally built in 810, rebuilt in 1340 and extended and modified in the following centuries. It became a museum in 1923 and is one of 11 museums run by the Fondazione Musei Civici di Venezia.",
+    "fetched_at": "2026-07-26T13:13:56.764256+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/%28Venice%29_Doge%27s_Palace_and_campanile_of_St._Mark%27s_Basilica_facing_the_sea.jpg/330px-%28Venice%29_Doge%27s_Palace_and_campanile_of_St._Mark%27s_Basilica_facing_the_sea.jpg",
+    "image_height": 228,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Doge's Palace",
+    "wiki_url": "https://en.wikipedia.org/wiki/Doge's_Palace"
+  },
   "https://en.wikipedia.org/wiki/Dome_of_the_Rock": {
     "extract": "The Dome of the Rock is an octagonal Islamic shrine at the center of the Al-Aqsa mosque compound on the Temple Mount hill in the Old City of Jerusalem. It is the world's oldest surviving work of Islamic architecture, the earliest archaeologically-attested religious structure to be built by a Muslim ruler and contains the earliest inscriptions proclaiming Islam and the prophet Muhammad.",
     "fetched_at": "2026-07-26T11:26:41.778924+00:00",
@@ -1049,6 +1159,16 @@
     "title": "Electrodynamic tether",
     "wiki_url": "https://en.wikipedia.org/wiki/Electrodynamic_tether"
   },
+  "https://en.wikipedia.org/wiki/Elitzur%E2%80%93Vaidman_bomb_tester": {
+    "extract": "The Elitzur–Vaidman bomb-tester is a quantum mechanics thought experiment that uses interaction-free measurements to verify that a bomb is functional without having to detonate it. It was conceived in 1993 by Avshalom Elitzur and Lev Vaidman. Since their publication, real-world experiments have confirmed that their theoretical method works as predicted.",
+    "fetched_at": "2026-07-26T13:14:11.483101+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/E-V_bomb-testing_2.svg/330px-E-V_bomb-testing_2.svg.png",
+    "image_height": 244,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Elitzur–Vaidman bomb tester",
+    "wiki_url": "https://en.wikipedia.org/wiki/Elitzur%E2%80%93Vaidman_bomb_tester"
+  },
   "https://en.wikipedia.org/wiki/Emergence": {
     "extract": "In philosophy, systems theory, science, and art, emergence occurs when a complex entity has properties or behaviors that its components do not have on their own, and emerge only when they interact in a wider whole.",
     "fetched_at": "2026-07-26T11:51:09.885821+00:00",
@@ -1138,6 +1258,16 @@
     "lang": "en",
     "title": "FFmpeg",
     "wiki_url": "https://en.wikipedia.org/wiki/FFmpeg"
+  },
+  "https://en.wikipedia.org/wiki/Faberg%C3%A9_egg": {
+    "extract": "A Fabergé egg is a jewelled egg first created by the jewellery firm House of Fabergé, in Saint Petersburg, Russia. As many as 69 eggs were created during the Czarist era, of which 61 are known to have survived. Virtually all of the original first-edition eggs were manufactured under the supervision of Peter Carl Fabergé, between 1885 and 1917. The most famous of the firm's creations are the 50 delivered Imperial Easter eggs, of which 44 are known to be in complete or partial physical existence, leaving the fate of those remaining unknown. The eggs are very highly sought-after collectors items. For example, the Fabergé Winter Egg was sold for US$30.2 million at auction in 2025.",
+    "fetched_at": "2026-07-26T13:14:05.061664+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Faberg%C3%A9_egg_Rome_05.JPG/330px-Faberg%C3%A9_egg_Rome_05.JPG",
+    "image_height": 268,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Fabergé egg",
+    "wiki_url": "https://en.wikipedia.org/wiki/Faberg%C3%A9_egg"
   },
   "https://en.wikipedia.org/wiki/Faust_(Goethe)": {
     "extract": "Faust is a tragic play in two parts by Johann Wolfgang von Goethe, usually known in English as Faust, Part One and Faust, Part Two. Nearly all of Part One and the majority of Part Two are written in rhymed verse. Although rarely staged in its entirety, it is the play with the largest audience numbers on German-language stages. Faust is considered by many to be Goethe's magnum opus and the greatest work of German literature.",
@@ -1328,6 +1458,16 @@
     "lang": "en",
     "title": "Gates of Paradise",
     "wiki_url": "https://en.wikipedia.org/wiki/Gates_of_Paradise"
+  },
+  "https://en.wikipedia.org/wiki/Georg_G%C3%A4nswein": {
+    "extract": "Georg Gänswein is a German prelate of the Catholic Church who was named Apostolic Nuncio to Lithuania, Estonia, and Latvia on 24 June 2024. He served as Prefect of the Papal Household from 2012 to 2023 and was the Personal Secretary of Pope Benedict XVI. He was a professor of Canon Law at the Pontifical University of the Holy Cross for about a decade and has been an archbishop since 2013. He is also an Honorary Canon of Freiburg Cathedral.",
+    "fetched_at": "2026-07-26T13:14:39.130307+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Exsequien_Joachim_Meisner-7798_%28Crop%29.jpg/330px-Exsequien_Joachim_Meisner-7798_%28Crop%29.jpg",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Georg Gänswein",
+    "wiki_url": "https://en.wikipedia.org/wiki/Georg_G%C3%A4nswein"
   },
   "https://en.wikipedia.org/wiki/George_David_Birkhoff": {
     "extract": "George David Birkhoff was an American mathematician. He is considered one of the top American mathematicians of his generation. He made valuable contributions to the theory of differential equations, dynamical systems, the four-color problem, the three-body problem, and general relativity. Today, Birkhoff is best remembered for the ergodic theorem. The George D. Birkhoff House, his residence in Cambridge, Massachusetts, has been designated a National Historic Landmark.",
@@ -1559,6 +1699,16 @@
     "title": "Hermann Göring",
     "wiki_url": "https://en.wikipedia.org/wiki/Hermann_G%C3%B6ring"
   },
+  "https://en.wikipedia.org/wiki/Hermann_G%C3%B6ring": {
+    "extract": "Hermann Wilhelm Göring was a German politician, aviator, military commander, and convicted war criminal. He was one of the most powerful figures in the Nazi Party, which controlled Germany from 1933 to 1945. He also served as Oberbefehlshaber der Luftwaffe, a position he held until the final days of the regime.",
+    "fetched_at": "2026-07-26T13:14:22.519119+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Hermann_Goering_-_Nuremberg_2_%28cropped%29.jpg/330px-Hermann_Goering_-_Nuremberg_2_%28cropped%29.jpg",
+    "image_height": 404,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Hermann Göring",
+    "wiki_url": "https://en.wikipedia.org/wiki/Hermann_G%C3%B6ring"
+  },
   "https://en.wikipedia.org/wiki/Hermann_Hesse": {
     "extract": "Hermann Karl Hesse was a German-Swiss poet and novelist, and winner of the 1946 Nobel Prize in Literature. His interest in Eastern religious, spiritual, and philosophical traditions, combined with his involvement with Jungian analysis, helped shape his literary work. His best-known novels include Demian, Steppenwolf, Siddhartha, Narcissus and Goldmund, and The Glass Bead Game, each of which explores an individual's search for authenticity, self-knowledge, and spirituality.",
     "fetched_at": "2026-07-26T11:17:22.894594+00:00",
@@ -1568,6 +1718,16 @@
     "lang": "en",
     "title": "Hermann Hesse",
     "wiki_url": "https://en.wikipedia.org/wiki/Hermann_Hesse"
+  },
+  "https://en.wikipedia.org/wiki/Hilbert%27s_problems": {
+    "extract": "Hilbert's problems are 23 problems in mathematics published by German mathematician David Hilbert in 1900. They were all unsolved at the time, and several proved to be very influential for 20th-century mathematics. Hilbert presented ten of the problems at the Paris conference of the International Congress of Mathematicians, speaking on August 8 at the Sorbonne. The complete list of 23 problems was published later, and translated into English in 1902 by Mary Frances Winston Newson in the Bulletin of the American Mathematical Society. Earlier publications appeared in Archiv der Mathematik und Physik.",
+    "fetched_at": "2026-07-26T13:14:13.177692+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Hilbert.jpg/330px-Hilbert.jpg",
+    "image_height": 447,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Hilbert's problems",
+    "wiki_url": "https://en.wikipedia.org/wiki/Hilbert's_problems"
   },
   "https://en.wikipedia.org/wiki/Hiroshima_Panels": {
     "extract": "\n\nThe Hiroshima Panels are a series of fifteen painted folding panels by the collaborative husband and wife artists Toshi Maruki and Iri Maruki completed over a span of thirty-two years (1950–1982). The Panels depict the consequences of the atomic bombings of Hiroshima and Nagasaki, as well as other nuclear disasters of the 20th century. Each panel stands 1.8 metres x 7.2 metres.",
@@ -1709,6 +1869,16 @@
     "title": "Jūratė and Kastytis",
     "wiki_url": "https://en.wikipedia.org/wiki/J%C5%ABrat%C4%97_and_Kastytis"
   },
+  "https://en.wikipedia.org/wiki/J%C5%ABrat%C4%97_and_Kastytis": {
+    "extract": "Jūratė and Kastytis is one of the most famous and popular Lithuanian legends and tales. The first time it was recorded was in 1842, in the writings of Liudvikas Adomas Jucevičius. Since then it has been adapted many times for modern poems, ballets, and even rock operas. Since the heroine does not appear in Lithuanian mythology, the tale is likely of literary-romantic origin.",
+    "fetched_at": "2026-07-26T13:14:39.820029+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Jurata-popiersie.jpg/330px-Jurata-popiersie.jpg",
+    "image_height": 440,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Jūratė and Kastytis",
+    "wiki_url": "https://en.wikipedia.org/wiki/J%C5%ABrat%C4%97_and_Kastytis"
+  },
   "https://en.wikipedia.org/wiki/Jackson_Pollock": {
     "extract": "Paul Jackson Pollock was an American painter. A major figure in the abstract expressionist movement, he was widely noticed for his \"drip technique\" of pouring or splashing liquid household paint onto a horizontal surface, enabling him to view and paint his canvases from all angles. It was called all-over painting and action painting, because Pollock covered the entire canvas and used the force of his whole body to paint, often in a frenetic dancing style. This extreme form of abstraction divided critics: some praised the immediacy of the creation, while others derided the random effects.",
     "fetched_at": "2026-07-26T11:49:07.401134+00:00",
@@ -1789,6 +1959,16 @@
     "title": "Joseph Brodsky",
     "wiki_url": "https://en.wikipedia.org/wiki/Joseph_Brodsky"
   },
+  "https://en.wikipedia.org/wiki/Jupiter%20and%20Semele": {
+    "extract": "Jupiter et Sémélé is a painting by the French Symbolist artist Gustave Moreau (1826–1898). It depicts a moment from the classical myth of the mortal woman Semele, mother of the god Dionysus, and her lover, Jupiter, the king of the gods. She was treacherously advised by the goddess Juno, Jupiter's wife, to ask him to appear to her in all his divine splendor. He obliged, but, in so doing, brought about her violent death by his divine thunder and lightning. The painting is a representation of \"divinized physical love\" and the overpowering experience that consumes Semele as the god appears in his supreme beauty which has been called \"quite simply the most sumptuous expression imaginable of an orgasm\".",
+    "fetched_at": "2026-07-26T13:14:02.006729+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Jupiter_and_Semele_by_Gustave_Moreau.jpg/330px-Jupiter_and_Semele_by_Gustave_Moreau.jpg",
+    "image_height": 597,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Jupiter and Semele",
+    "wiki_url": "https://en.wikipedia.org/wiki/Jupiter_and_Semele"
+  },
   "https://en.wikipedia.org/wiki/Kalman_filter": {
     "extract": "In statistics and control theory, Kalman filtering is an algorithm that uses a series of measurements observed over time, including statistical noise and other inaccuracies, to produce estimates of unknown variables that tend to be more accurate than those based on a single measurement, by estimating a joint probability distribution over the variables for each time-step. The filter is constructed as a mean squared error minimiser, but an alternative derivation of the filter is also provided showing how the filter relates to maximum likelihood statistics. The filter is named after Rudolf E. Kálmán.",
     "fetched_at": "2026-07-26T11:51:45.968269+00:00",
@@ -1828,6 +2008,16 @@
     "lang": "en",
     "title": "Karnak",
     "wiki_url": "https://en.wikipedia.org/wiki/Karnak"
+  },
+  "https://en.wikipedia.org/wiki/King%27s_College_Chapel,_Cambridge": {
+    "extract": "King's College Chapel is the chapel of King's College in the University of Cambridge. It is considered one of the finest examples of Perpendicular Gothic architecture and features the world's largest fan vault. The Chapel was built in phases by a succession of kings of England from 1448 to 1515, a period which spanned the Wars of the Roses and three subsequent decades. The Chapel's large stained glass windows were completed by 1531, and its early Renaissance pulpitum was erected in 1532–36. The Chapel is an active place of worship, and home of the King's College Choir. It is a landmark and a commonly used symbol of the city of Cambridge.",
+    "fetched_at": "2026-07-26T13:13:46.194445+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/KingsCollegeChapel.jpg/330px-KingsCollegeChapel.jpg",
+    "image_height": 238,
+    "image_width": 330,
+    "lang": "en",
+    "title": "King's College Chapel, Cambridge",
+    "wiki_url": "https://en.wikipedia.org/wiki/King's_College_Chapel%2C_Cambridge"
   },
   "https://en.wikipedia.org/wiki/Klezmer": {
     "extract": "Klezmer is an instrumental musical tradition of the Ashkenazi Jews of Central and Eastern Europe. The essential elements of the tradition include dance tunes, ritual melodies, and virtuosic improvisations played for listening; these would have been played at weddings and other social functions. The musical genre incorporated elements of many other musical genres including Ottoman music, Baroque music, German and Slavic folk dances, and religious Jewish music. As the music arrived in the United States, it lost some of its traditional ritual elements and adopted elements of American big band and popular music. Among the European-born klezmers who popularized the genre in the United States in the 1910s and 1920s were Dave Tarras and Naftule Brandwein; they were followed by American-born musicians such as Max Epstein, Sid Beckerman and Ray Musiker.",
@@ -1888,6 +2078,16 @@
     "lang": "en",
     "title": "Landau levels",
     "wiki_url": "https://en.wikipedia.org/wiki/Landau_levels"
+  },
+  "https://en.wikipedia.org/wiki/Landauer%27s_principle": {
+    "extract": "Landauer's principle is a physical principle pertaining to a lower theoretical limit of energy consumption of computation. It holds that an irreversible change in information stored in a computer, such as merging two computational paths, dissipates a minimum amount of heat to its surroundings. It is hypothesized that energy consumption below this lower bound would require the development of reversible computing.",
+    "fetched_at": "2026-07-26T13:14:16.597076+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "en",
+    "title": "Landauer's principle",
+    "wiki_url": "https://en.wikipedia.org/wiki/Landauer's_principle"
   },
   "https://en.wikipedia.org/wiki/Langevin_equation": {
     "extract": "In physics, a Langevin equation is a stochastic differential equation describing how a system evolves when subjected to a combination of deterministic and fluctuating (\"random\") forces. The dependent variables in a Langevin equation typically are collective (macroscopic) variables changing only slowly in comparison to the other (microscopic) variables of the system. The fast (microscopic) variables are responsible for the stochastic nature of the Langevin equation. One application is to Brownian motion, which models the fluctuating motion of a small particle in a fluid.",
@@ -1969,6 +2169,16 @@
     "title": "LZMA",
     "wiki_url": "https://en.wikipedia.org/wiki/LZMA"
   },
+  "https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm": {
+    "extract": "LZMA is a lossless data compression algorithm developed since 1998 by Igor Pavlov, the developer of 7-Zip. It has been used in the 7z format of the 7-Zip archiver since 2001. This algorithm uses a dictionary compression scheme somewhat similar to the LZ77 algorithm published by Abraham Lempel and Jacob Ziv in 1977 and features a high compression ratio and a variable compression-dictionary size, while still maintaining decompression speed similar to other commonly used compression algorithms.",
+    "fetched_at": "2026-07-26T13:14:06.549598+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "en",
+    "title": "LZMA",
+    "wiki_url": "https://en.wikipedia.org/wiki/LZMA"
+  },
   "https://en.wikipedia.org/wiki/Lenny_Abrahamson": {
     "extract": "Leonard Ian Abrahamson is an Irish film and television director. He is best known for directing the independent films Adam & Paul (2004), Garage (2007), What Richard Did (2012), Frank (2014), and Room (2015), all of which contributed to Abrahamson's six Irish Film and Television Awards.",
     "fetched_at": "2026-07-26T11:55:50.717120+00:00",
@@ -1999,6 +2209,16 @@
     "title": "Lifeboat (1944 film)",
     "wiki_url": "https://en.wikipedia.org/wiki/Lifeboat_(1944_film)"
   },
+  "https://en.wikipedia.org/wiki/Lion%20Gate": {
+    "extract": "The Lion Gate is the popular modern name for the main entrance of the Bronze Age citadel of Mycenae in Southern Greece. It was erected during the thirteenth century BC, around 1250 BC, in the northwestern side of the acropolis. In modern times, it was named after the relief sculpture of two lions or lionesses in a heraldic pose that stands above the entrance.",
+    "fetched_at": "2026-07-26T13:13:46.918846+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg/330px-Lion_Gate_-_Mycenae_by_Joy_of_Museums.jpg",
+    "image_height": 220,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Lion Gate",
+    "wiki_url": "https://en.wikipedia.org/wiki/Lion_Gate"
+  },
   "https://en.wikipedia.org/wiki/Lorenzo_Senni": {
     "extract": "Lorenzo Senni is an Italian musician and visual artist. His first release on Warp Records was in 2016. His most recent full-length album Scacco Matto was released on April 24, 2020.",
     "fetched_at": "2026-07-26T11:49:47.573902+00:00",
@@ -2008,6 +2228,16 @@
     "lang": "en",
     "title": "Lorenzo Senni",
     "wiki_url": "https://en.wikipedia.org/wiki/Lorenzo_Senni"
+  },
+  "https://en.wikipedia.org/wiki/Lorenzo_de%27_Medici": {
+    "extract": "Lorenzo di Piero de' Medici, known as Lorenzo the Magnificent, was an Italian statesman, de facto ruler of the Florentine Republic, and the most powerful patron of Renaissance culture in Italy. Lorenzo held the balance of power within the Italic League, an alliance of states that stabilized political conditions on the Italian Peninsula for decades, and his life coincided with the mature phase of the Italian Renaissance and the golden age of Florence. As a patron, he is best known for his sponsorship of artists such as Botticelli and Michelangelo. On the foreign policy front, Lorenzo manifested a clear plan to stem the territorial ambitions of Pope Sixtus IV, in the name of the balance of the Italic League of 1454. For these reasons, Lorenzo was the subject of the Pazzi conspiracy (1478), in which his brother Giuliano was assassinated. The Peace of Lodi of 1454 that he supported among the various Italian states collapsed with his death. He is buried in the Medici Chapel in Florence.",
+    "fetched_at": "2026-07-26T13:14:23.220005+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Lorenzo_de_Medici.jpg/330px-Lorenzo_de_Medici.jpg",
+    "image_height": 412,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Lorenzo de' Medici",
+    "wiki_url": "https://en.wikipedia.org/wiki/Lorenzo_de'_Medici"
   },
   "https://en.wikipedia.org/wiki/Louis_Vuitton_Foundation": {
     "extract": "The Louis Vuitton Foundation, previously Louis Vuitton Foundation for Creation, is a French art museum and cultural center sponsored by the group LVMH and its subsidiaries. It is run as a legally separate, nonprofit entity as part of LVMH's promotion of art and culture.",
@@ -2058,6 +2288,16 @@
     "lang": "en",
     "title": "M-theory",
     "wiki_url": "https://en.wikipedia.org/wiki/M-theory"
+  },
+  "https://en.wikipedia.org/wiki/Mach%E2%80%93Zehnder_interferometer": {
+    "extract": "The Mach–Zehnder interferometer is a device used to determine the relative phase shift variations between two collimated beams derived by splitting light from a single source. The interferometer has been used, among other things, to measure phase shifts between the two beams caused by a sample or a change in length of one of the paths. The apparatus is named after the physicists Ludwig Mach and Ludwig Zehnder; Zehnder's proposal in an 1891 article was refined by Mach in an 1892 article. Mach–Zehnder interferometry has been demonstrated with electrons as well as with light. The versatility of the Mach–Zehnder configuration has led to its being used in a range of research topics efforts especially in fundamental quantum mechanics.",
+    "fetched_at": "2026-07-26T13:14:14.467989+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Mach%E2%80%93Zehnder_interferometer.gif/330px-Mach%E2%80%93Zehnder_interferometer.gif",
+    "image_height": 242,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Mach–Zehnder interferometer",
+    "wiki_url": "https://en.wikipedia.org/wiki/Mach%E2%80%93Zehnder_interferometer"
   },
   "https://en.wikipedia.org/wiki/Machu_Picchu": {
     "extract": "Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru on a mountain ridge at 2,430 meters (7,970 ft). It is situated in the Machupicchu District of Urubamba Province about 80 kilometers northwest of Cusco, above the Sacred Valley and along the Urubamba River, which forms a deep canyon with a subtropical mountain climate.",
@@ -2219,9 +2459,29 @@
     "title": "Max Richter",
     "wiki_url": "https://en.wikipedia.org/wiki/Max_Richter"
   },
+  "https://en.wikipedia.org/wiki/Maxwell%27s_demon": {
+    "extract": "Maxwell's demon is a thought experiment that appears to disprove the second law of thermodynamics. It was proposed by the physicist James Clerk Maxwell in 1867. In his first letter, Maxwell referred to the entity as a \"finite being\" or a \"being who can play a game of skill with the molecules\". Lord Kelvin would later call it a \"demon\".",
+    "fetched_at": "2026-07-26T13:14:10.633393+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Maxwell%27s_demon.svg/330px-Maxwell%27s_demon.svg.png",
+    "image_height": 122,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Maxwell's demon",
+    "wiki_url": "https://en.wikipedia.org/wiki/Maxwell's_demon"
+  },
   "https://en.wikipedia.org/wiki/Men%C3%A9ndez%20brothers": {
     "extract": "Joseph Lyle Menendez and Erik Galen Menendez, commonly referred to as the Menendez brothers, are American brothers convicted of killing their parents, José and Mary Louise \"Kitty\" Menendez, in their Beverly Hills home in 1989.",
     "fetched_at": "2026-07-26T13:07:57.318082+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Menendez_brothers_2023_%28cropped%29.png/330px-Menendez_brothers_2023_%28cropped%29.png",
+    "image_height": 173,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Lyle and Erik Menendez",
+    "wiki_url": "https://en.wikipedia.org/wiki/Lyle_and_Erik_Menendez"
+  },
+  "https://en.wikipedia.org/wiki/Men%C3%A9ndez_brothers": {
+    "extract": "Joseph Lyle Menendez and Erik Galen Menendez, commonly referred to as the Menendez brothers, are American brothers convicted of killing their parents, José and Mary Louise \"Kitty\" Menendez, in their Beverly Hills home in 1989.",
+    "fetched_at": "2026-07-26T13:14:24.042757+00:00",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Menendez_brothers_2023_%28cropped%29.png/330px-Menendez_brothers_2023_%28cropped%29.png",
     "image_height": 173,
     "image_width": 330,
@@ -2358,6 +2618,16 @@
     "lang": "en",
     "title": "Minaret",
     "wiki_url": "https://en.wikipedia.org/wiki/Minaret"
+  },
+  "https://en.wikipedia.org/wiki/Moir%C3%A9_pattern": {
+    "extract": "In mathematics, physics, and art, a moiré pattern or moiré fringe is a large-scale wave interference pattern that can be produced when a partially opaque ruled pattern with transparent gaps is overlaid on another similar pattern. For the moiré interference pattern to appear, the two patterns must not be completely identical, but rather displaced, rotated, or have slightly different pitch.",
+    "fetched_at": "2026-07-26T13:14:15.299845+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Moir%C3%A9_pattern.svg/330px-Moir%C3%A9_pattern.svg.png",
+    "image_height": 415,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Moiré pattern",
+    "wiki_url": "https://en.wikipedia.org/wiki/Moir%C3%A9_pattern"
   },
   "https://en.wikipedia.org/wiki/Mole_Antonelliana": {
     "extract": "The Mole Antonelliana is a major landmark building in Turin, Italy, named after its architect, Alessandro Antonelli. A mole in Italian is a building of monumental proportions.",
@@ -2789,6 +3059,16 @@
     "title": "Pascaline",
     "wiki_url": "https://en.wikipedia.org/wiki/Pascaline"
   },
+  "https://en.wikipedia.org/wiki/Pascal%27s_calculator": {
+    "extract": "The Pascaline is a mechanical calculator invented by Blaise Pascal in 1642. Pascal was led to develop a calculator by the laborious arithmetical calculations required by his father's work as the supervisor of taxes in Rouen, France. He designed the machine to add and subtract two numbers and to perform multiplication and division through repeated addition or subtraction. It used a stylus to perform calculations.",
+    "fetched_at": "2026-07-26T13:14:08.714757+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Pascaline-CnAM_823-1-IMG_1506-black.jpg/330px-Pascaline-CnAM_823-1-IMG_1506-black.jpg",
+    "image_height": 220,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Pascaline",
+    "wiki_url": "https://en.wikipedia.org/wiki/Pascaline"
+  },
   "https://en.wikipedia.org/wiki/Paul_Marcinkus": {
     "extract": "Paul Casimir Marcinkus was an American Catholic prelate who served as president of the Institute for the Works of Religion, commonly known as the Vatican Bank, from 1971 to 1989. He also served as president of the Governorate for Vatican City State from 1989 to 1990, following eight years as vice-president. He was the titular Archbishop of Horta.",
     "fetched_at": "2026-07-26T11:53:38.819725+00:00",
@@ -3089,6 +3369,16 @@
     "title": "Roman Forum",
     "wiki_url": "https://en.wikipedia.org/wiki/Roman_Forum"
   },
+  "https://en.wikipedia.org/wiki/Roman_Pola%C5%84ski": {
+    "extract": "Raymond Roman Thierry Polański is a Polish and French filmmaker and actor. He is the recipient of numerous accolades, including an Academy Award, three British Academy Film Awards, ten César Awards, and two Golden Globe Awards as well as a Golden Bear and a Palme d'Or.",
+    "fetched_at": "2026-07-26T13:14:53.388408+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2023.11.13._Roman_Polanski_Photo_Mariusz_Kubik_06.JPG/330px-2023.11.13._Roman_Polanski_Photo_Mariusz_Kubik_06.JPG",
+    "image_height": 455,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Roman Polanski",
+    "wiki_url": "https://en.wikipedia.org/wiki/Roman_Polanski"
+  },
   "https://en.wikipedia.org/wiki/Romanesque_architecture": {
     "extract": "Romanesque architecture is an architectural style of medieval Europe that was predominant in the 11th and 12th centuries. The style eventually developed into the Gothic style with the shape of the arches providing a simple distinction: the Romanesque is characterized by semicircular arches, while the Gothic is marked by the pointed arches. The Romanesque emerged nearly simultaneously in multiple countries of Western Europe; its examples can be found across the continent, making it the first pan-European architectural style since Imperial Roman architecture. As is the case with Gothic, the name of the style was transferred onto the contemporary Romanesque art.",
     "fetched_at": "2026-07-26T11:04:04.562920+00:00",
@@ -3129,6 +3419,16 @@
     "title": "Royal Monastery of Brou",
     "wiki_url": "https://en.wikipedia.org/wiki/Royal_Monastery_of_Brou"
   },
+  "https://en.wikipedia.org/wiki/Rudolf_H%C3%B6%C3%9F": {
+    "extract": "Rudolf Franz Ferdinand Höss was a German SS officer and the commandant of the Auschwitz concentration camp. After the defeat of Nazi Germany and the end of World War II, he lived under a false name until discovered by the British, who then turned him over to Polish authorities. Höss was convicted in Poland and executed for war crimes committed on the prisoners of the Auschwitz concentration camp and for his role in the Holocaust.",
+    "fetched_at": "2026-07-26T13:14:24.830859+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Rudolf_Hoess%2C_Auschwitz._Album_H%C3%B6cker_%28cropped%29%282%29.jpg/330px-Rudolf_Hoess%2C_Auschwitz._Album_H%C3%B6cker_%28cropped%29%282%29.jpg",
+    "image_height": 423,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Rudolf Höss",
+    "wiki_url": "https://en.wikipedia.org/wiki/Rudolf_H%C3%B6ss"
+  },
   "https://en.wikipedia.org/wiki/Rudolf_Hess": {
     "extract": "Rudolf Walter Richard Hess was a German politician, convicted war criminal, and a leading member of the Nazi Party in Germany. Appointed Deputy to the Führer in 1933, Hess held that position until 1941, when he flew solo to Scotland in an attempt to negotiate the United Kingdom's exit from the Second World War. He was taken prisoner and eventually convicted of crimes against peace. He was still serving his life sentence and 93 years old at the time of his suicide in 1987.",
     "fetched_at": "2026-07-26T11:53:41.745079+00:00",
@@ -3138,6 +3438,16 @@
     "lang": "en",
     "title": "Rudolf Hess",
     "wiki_url": "https://en.wikipedia.org/wiki/Rudolf_Hess"
+  },
+  "https://en.wikipedia.org/wiki/Rurik%C5%8D-ji": {
+    "extract": "Rurikō-ji (瑠璃光寺) is a Buddhist temple located in the Kozan neighborhood of the city of Yamaguchi, Yamaguchi Prefecture, Japan. The temple belongs to the Sōtō school of Japanese Zen sect and its honzon is a statue of Yakushi Nyorai. The temple's full name is Honeizan Rurikōzen-ji (保寧山瑠璃光禪寺). It is noted for its Muromachi period Five-story Pagoda which is designated a National Treasure.",
+    "fetched_at": "2026-07-26T13:13:57.500370+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/140720_Ruriko-ji_Yamaguchi_Yamaguchi_pref_Japan02s3.jpg/330px-140720_Ruriko-ji_Yamaguchi_Yamaguchi_pref_Japan02s3.jpg",
+    "image_height": 220,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Rurikō-ji",
+    "wiki_url": "https://en.wikipedia.org/wiki/Rurik%C5%8D-ji"
   },
   "https://en.wikipedia.org/wiki/Rustication_(architecture)": {
     "extract": "Rustication is a range of masonry techniques used in classical architecture giving visible surfaces a finish texture that contrasts with smooth, squared-block masonry called ashlar. The visible face of each individual block is cut back around the edges to make its size and placing very clear. In addition the central part of the face of each block may be given a deliberately rough or patterned surface.",
@@ -3319,6 +3629,16 @@
     "title": "Sin-eater",
     "wiki_url": "https://en.wikipedia.org/wiki/Sin-eater"
   },
+  "https://en.wikipedia.org/wiki/Sir_John_Soane%27s_Museum": {
+    "extract": "Sir John Soane's Museum is a house museum, located next to Lincoln's Inn Fields in Holborn, London, which was formerly the home of neo-classical architect John Soane. It holds many drawings and architectural models of Soane's projects and a large collection of paintings, sculptures, drawings, and antiquities that he acquired over many years. The museum was established during Soane's lifetime by a private act of Parliament, Sir John Soane's Museum Act 1833, which took effect on his death in 1837. Soane engaged in this lengthy parliamentary campaign in order to disinherit his son, whom he disliked intensely. The act stipulated that on Soane's death, his house and collections would pass into the care of a board of trustees acting on behalf of the nation, and that they would be preserved as nearly as possible exactly in the state they were at his death. The museum's trustees remained completely independent, relying only on Soane's original endowment, until 1947. Since then, the museum has received an annual Grant-in-Aid from the British Government via the Department for Culture, Media and Sport. Only 90 visitors are allowed in the museum at a time.",
+    "fetched_at": "2026-07-26T13:13:58.212995+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Sir_John_Soane_Museum_%2813952611347%29.jpg/330px-Sir_John_Soane_Museum_%2813952611347%29.jpg",
+    "image_height": 573,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Sir John Soane's Museum",
+    "wiki_url": "https://en.wikipedia.org/wiki/Sir_John_Soane's_Museum"
+  },
   "https://en.wikipedia.org/wiki/Sleeping_Venus": {
     "extract": "Sleeping Venus may refer to:Sleeping Venus (Carracci), a c. 1603 painting by Annibale Carracci\nSleeping Venus (Delvaux), a 1944 painting by Paul Delvaux\nSleeping Venus (Giorgione), a 1510 painting by Giorgione and Titian\nSleeping Venus with Cupid (Poussin), a 1630 painting by Nicolas Poussin\nVenus and Cupid (Gentileschi) a c. 1626 painting by Artemisia Gentileschi, known also as Sleeping Venus",
     "fetched_at": "2026-07-26T11:49:27.429341+00:00",
@@ -3329,6 +3649,16 @@
     "title": "Sleeping Venus",
     "wiki_url": "https://en.wikipedia.org/wiki/Sleeping_Venus"
   },
+  "https://en.wikipedia.org/wiki/Smolensk%20air%20disaster": {
+    "extract": "On 10 April 2010, a Tupolev Tu-154 aircraft operating as Polish Air Force Flight PLF 101, crashed near the Russian city of Smolensk, killing all 96 people on board. Among the victims were the president of Poland, Lech Kaczyński, and a number of senior Polish military officers, Polish government officials, and members of the Polish clergy, as well as relatives of victims of the Katyn massacre. The group was arriving from Warsaw to attend an event commemorating the 70th anniversary of the massacre.",
+    "fetched_at": "2026-07-26T13:14:26.408774+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Katastrofa_w_Smole%C5%84sku.jpg/330px-Katastrofa_w_Smole%C5%84sku.jpg",
+    "image_height": 166,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Smolensk air disaster",
+    "wiki_url": "https://en.wikipedia.org/wiki/Smolensk_air_disaster"
+  },
   "https://en.wikipedia.org/wiki/Socialist_classicism": {
     "extract": "Stalinist architecture, mostly known in the former Eastern Bloc as Stalinist style or socialist classicism, is a leading movement in architecture, monumental, and decorative art in the USSR and other countries of the socialist bloc from the mid-1930s to the mid-1950s. The style developed under the conditions of a totalitarian state as a visual embodiment of the triumph of the socialist system, combining elements of classicism, baroque, Napoleonic Empire style, and art deco.",
     "fetched_at": "2026-07-26T11:04:01.652350+00:00",
@@ -3338,6 +3668,16 @@
     "lang": "en",
     "title": "Stalinist architecture",
     "wiki_url": "https://en.wikipedia.org/wiki/Stalinist_architecture"
+  },
+  "https://en.wikipedia.org/wiki/Sol%C3%A8r%27s_theorem": {
+    "extract": "In mathematics, Solèr's theorem is a result concerning certain infinite-dimensional vector spaces. It states that any orthomodular form that has an infinite orthonormal set is a Hilbert space over the real numbers, complex numbers or quaternions. Originally proved by Maria Pia Solèr, the result is significant for quantum logic and the foundations of quantum mechanics. In particular, Solèr's theorem helps to fill a gap in the effort to use Gleason's theorem to rederive quantum mechanics from information-theoretic postulates. It is also an important step in the Heunen–Kornell axiomatisation of the category of Hilbert spaces.",
+    "fetched_at": "2026-07-26T13:14:18.092651+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "en",
+    "title": "Solèr's theorem",
+    "wiki_url": "https://en.wikipedia.org/wiki/Sol%C3%A8r's_theorem"
   },
   "https://en.wikipedia.org/wiki/Solidarity_(Polish_trade_union)": {
     "extract": "Solidarity, full name Independent Self-Governing Trade Union \"Solidarity\", is a Polish trade union founded in August 1980 at the Lenin Shipyard in Gdańsk, Poland. Subsequently, it was the first independent trade union in a Warsaw Pact country to be recognised by the state.",
@@ -3359,6 +3699,26 @@
     "title": "Songyue Pagoda",
     "wiki_url": "https://en.wikipedia.org/wiki/Songyue_Pagoda"
   },
+  "https://en.wikipedia.org/wiki/Sotheby%27s": {
+    "extract": "Sotheby's is a British-founded multinational corporation with headquarters in New York City. It is one of the world's oldest and largest brokers of fine and decorative art, jewellery, and collectibles. It has 80 locations in 40 countries, and maintains a significant presence in the UK.",
+    "fetched_at": "2026-07-26T13:15:04.306117+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sotheby%27s_%2851921999492%29.jpg/330px-Sotheby%27s_%2851921999492%29.jpg",
+    "image_height": 248,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Sotheby's",
+    "wiki_url": "https://en.wikipedia.org/wiki/Sotheby's"
+  },
+  "https://en.wikipedia.org/wiki/Speakers%27_Corner": {
+    "extract": "A Speakers' Corner is an area where free speech, open-air public speaking, debate, and discussion are allowed. The original and best known is in the north-east corner of Hyde Park in Westminster, England, near Marble Arch. Historically, there were a number of other areas designated as Speakers' Corners in other parks in London, such as Lincoln's Inn Fields, Finsbury Park, Clapham Common, Kennington Park, and Victoria Park. Speakers' Corners have been established elsewhere in the United Kingdom and in other countries.",
+    "fetched_at": "2026-07-26T13:13:59.059894+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Orator_at_Speakers_Corner%2C_London%2C_with_crowd%2C_1974.jpg/330px-Orator_at_Speakers_Corner%2C_London%2C_with_crowd%2C_1974.jpg",
+    "image_height": 231,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Speakers' Corner",
+    "wiki_url": "https://en.wikipedia.org/wiki/Speakers'_Corner"
+  },
   "https://en.wikipedia.org/wiki/Spinor": {
     "extract": "In geometry and physics, spinors are elements of a complex vector space that can be associated with Euclidean space. Spinors can be thought of as companion geometric objects to Euclidean space that, like Euclidean vectors, respond when the Euclidean space is subjected to a rotation. A spinor transforms linearly when the Euclidean space is subjected to a slight (infinitesimal) rotation, but unlike geometric vectors and tensors, a spinor transforms to its negative when the space rotates through 360°. It takes a rotation of 720° for a spinor to go back to its original state. Spinors are therefore often described heuristically as \"square roots\" of (geometric) vectors, and a geometric vector can be constructed quadratically from a spinor.",
     "fetched_at": "2026-07-26T11:52:27.102615+00:00",
@@ -3378,6 +3738,26 @@
     "lang": "en",
     "title": "Spontaneous human combustion",
     "wiki_url": "https://en.wikipedia.org/wiki/Spontaneous_human_combustion"
+  },
+  "https://en.wikipedia.org/wiki/St._Mary%27s_Cathedral,_Tokyo": {
+    "extract": "St. Mary's Cathedral is the seat of the Roman Catholic Archdiocese of Tokyo. It is located in the Sekiguchi neighborhood of Bunkyo, Tokyo, Japan.",
+    "fetched_at": "2026-07-26T13:13:59.741247+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/20030702_2_July_2003_Tokyo_Cathedorale_1_Tange_Kenzou_Sekiguchi_Tokyo_Japan_b.jpg/330px-20030702_2_July_2003_Tokyo_Cathedorale_1_Tange_Kenzou_Sekiguchi_Tokyo_Japan_b.jpg",
+    "image_height": 247,
+    "image_width": 330,
+    "lang": "en",
+    "title": "St. Mary's Cathedral, Tokyo",
+    "wiki_url": "https://en.wikipedia.org/wiki/St._Mary's_Cathedral%2C_Tokyo"
+  },
+  "https://en.wikipedia.org/wiki/Stanis%C5%82aw_Lem": {
+    "extract": "Stanisław Herman Lem was a Polish writer. He was the author of many novels, short stories, and essays on various subjects, including philosophy, futurology, and literary criticism. Many of his science fiction stories are of satirical and humorous character. Lem's books have been translated into more than 50 languages and have sold more than 45 million copies. Worldwide, he is best known as the author of the 1961 novel Solaris. In 1976, Theodore Sturgeon wrote that Lem was the most widely read science fiction writer in the world.",
+    "fetched_at": "2026-07-26T13:14:41.431168+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Stanislaw_Lem_2_manually_dusted.jpg/330px-Stanislaw_Lem_2_manually_dusted.jpg",
+    "image_height": 450,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Stanisław Lem",
+    "wiki_url": "https://en.wikipedia.org/wiki/Stanis%C5%82aw_Lem"
   },
   "https://en.wikipedia.org/wiki/Stanley_Kubrick": {
     "extract": "Stanley Kubrick was an American filmmaker and photographer. A prominent figure of the New Hollywood era, Kubrick is regarded as one of the greatest and most influential filmmakers. His films spanned a number of genres and gained recognition for their attention to detail, innovative cinematography, extensive set design, and dark humor.",
@@ -3568,6 +3948,16 @@
     "lang": "en",
     "title": "Thales of Miletus",
     "wiki_url": "https://en.wikipedia.org/wiki/Thales_of_Miletus"
+  },
+  "https://en.wikipedia.org/wiki/The%20Nine": {
+    "extract": "9 is a number, numeral, and glyph.",
+    "fetched_at": "2026-07-26T13:14:21.696641+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "en",
+    "title": "9 (disambiguation)",
+    "wiki_url": "https://en.wikipedia.org/wiki/9_(disambiguation)"
   },
   "https://en.wikipedia.org/wiki/The%20Nine%20%28Siena%29": {
     "extract": "9 is a number, numeral, and glyph.",
@@ -3769,6 +4159,16 @@
     "title": "Trajan's Column",
     "wiki_url": "https://en.wikipedia.org/wiki/Trajan's_Column"
   },
+  "https://en.wikipedia.org/wiki/Trajan%27s_Kiosk": {
+    "extract": "Trajan's Kiosk, also known as Pharaoh's Bed by the locals, is a hypaethral temple currently located on Agilkia Island in southern Egypt. The unfinished monument is attributed to Trajan, Roman emperor from 98 to 117 AD, due to his depiction as pharaoh seen on some of the interior reliefs. However, the majority of the structure dates to an earlier time, possibly to the reign of Augustus. The temple was originally built on the island of Philae, near the lower Aswan Dam, and served as main entrance to the Philae Island Temple Complex from the Nile river. It was relocated to Agilika Island in the 1960s as part of the International Campaign to Save the Monuments of Nubia to save it from the rising waters of the Nile that followed the construction of the Aswan High Dam.",
+    "fetched_at": "2026-07-26T13:14:00.436466+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Agilkia_Trajankiosk_01.JPG/330px-Agilkia_Trajankiosk_01.JPG",
+    "image_height": 248,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Trajan's Kiosk",
+    "wiki_url": "https://en.wikipedia.org/wiki/Trajan's_Kiosk"
+  },
   "https://en.wikipedia.org/wiki/Transmon": {
     "extract": "In quantum computing, and more specifically in superconducting quantum computing, a transmon is a type of superconducting charge qubit designed to have reduced sensitivity to charge noise. The transmon was developed by Jens Koch, Terri M. Yu, Jay Gambetta, Andrew Houck, David Schuster, Johannes Majer, Alexandre Blais, Michel Devoret, Steven M. Girvin, and Robert J. Schoelkopf at Yale University and Université de Sherbrooke in 2007. Its name is an abbreviation of the term transmission line shunted plasma oscillation qubit; one which consists of a Cooper-pair box \"where the two superconductors are also [capacitively] shunted in order to decrease the sensitivity to charge noise, while maintaining a sufficient anharmonicity for selective qubit control\".",
     "fetched_at": "2026-07-26T11:52:43.097412+00:00",
@@ -3788,6 +4188,16 @@
     "lang": "en",
     "title": "Treasury of Atreus",
     "wiki_url": "https://en.wikipedia.org/wiki/Treasury_of_Atreus"
+  },
+  "https://en.wikipedia.org/wiki/Trompe-l%27%C5%93il": {
+    "extract": "Trompe-l'œil is an artistic technique that creates a highly realistic optical illusion of three-dimensional space and objects on a two-dimensional surface. Trompe-l'œil, which is most often associated with painting, tricks the viewer into perceiving painted objects or spaces as real. Forced perspective is a related illusion in architecture, and Op art is a modern style mostly dealing with geometric patterns.",
+    "fetched_at": "2026-07-26T13:14:04.318606+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Benvenuto_Tisi_called_Il_Garofalo_-_Treasure_Room_Fresco_-_Google_Art_Project.jpg/330px-Benvenuto_Tisi_called_Il_Garofalo_-_Treasure_Room_Fresco_-_Google_Art_Project.jpg",
+    "image_height": 228,
+    "image_width": 330,
+    "lang": "en",
+    "title": "Trompe-l'œil",
+    "wiki_url": "https://en.wikipedia.org/wiki/Trompe-l'%C5%93il"
   },
   "https://en.wikipedia.org/wiki/Twelve_Olympians": {
     "extract": "In ancient Greek religion and mythology, the twelve Olympians are the major deities of the Greek pantheon, commonly considered to be Zeus, Poseidon, Hera, Demeter, Aphrodite, Athena, Artemis, Apollo, Ares, Hephaestus, Hermes, and either Hestia or Dionysus. They were called Olympians because, according to tradition, they resided on Mount Olympus.",
@@ -4119,6 +4529,16 @@
     "title": "Battaglia di Trafalgar",
     "wiki_url": "https://it.wikipedia.org/wiki/Battaglia_di_Trafalgar"
   },
+  "https://it.wikipedia.org/wiki/Belzeb%C3%B9": {
+    "extract": "Belzebù era una divinità di Ekron, città dei Filistei. Nella Vulgata il nome assegnatogli è Beelzebub.",
+    "fetched_at": "2026-07-26T13:14:54.121697+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Beelzebub_and_them_with_him.jpg?utm_source=it.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "image_height": 480,
+    "image_width": 321,
+    "lang": "it",
+    "title": "Belzebù",
+    "wiki_url": "https://it.wikipedia.org/wiki/Belzeb%C3%B9"
+  },
   "https://it.wikipedia.org/wiki/Blow-Up": {
     "extract": "Blow-Up è un film del 1966 diretto da Michelangelo Antonioni, ispirato al racconto Le bave del diavolo dell'argentino Julio Cortázar.",
     "fetched_at": "2026-07-26T11:55:35.275778+00:00",
@@ -4139,6 +4559,16 @@
     "title": "Campo fermionico",
     "wiki_url": "https://it.wikipedia.org/wiki/Campo_fermionico"
   },
+  "https://it.wikipedia.org/wiki/Carl_Friedrich_von_Weizs%C3%A4cker": {
+    "extract": "Il barone Carl Friedrich Freiherr von Weizsäcker è stato un fisico, astrofisico e filosofo tedesco.",
+    "fetched_at": "2026-07-26T13:14:09.833732+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Carl_Friedrich_von_Weizsaecker.jpg/330px-Carl_Friedrich_von_Weizsaecker.jpg?utm_source=it.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "image_height": 297,
+    "image_width": 330,
+    "lang": "it",
+    "title": "Carl Friedrich von Weizsäcker",
+    "wiki_url": "https://it.wikipedia.org/wiki/Carl_Friedrich_von_Weizs%C3%A4cker"
+  },
   "https://it.wikipedia.org/wiki/Chung_Myung-whun": {
     "extract": "Chung Myung-whun è un direttore d'orchestra e pianista sudcoreano. Designato direttore Musicale del Teatro alla Scala.",
     "fetched_at": "2026-07-26T11:49:37.534663+00:00",
@@ -4158,6 +4588,16 @@
     "lang": "it",
     "title": "Claude Shannon",
     "wiki_url": "https://it.wikipedia.org/wiki/Claude_Shannon"
+  },
+  "https://it.wikipedia.org/wiki/Curva_di_B%C3%A9zier": {
+    "extract": "Una curva di Bézier è una particolare curva parametrica, che ha grande applicazione nella computer grafica. Un metodo numericamente stabile per calcolare le curve di Bézier è l'algoritmo di de Casteljau.",
+    "fetched_at": "2026-07-26T13:14:07.627293+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "it",
+    "title": "Curva di Bézier",
+    "wiki_url": "https://it.wikipedia.org/wiki/Curva_di_B%C3%A9zier"
   },
   "https://it.wikipedia.org/wiki/Dolomiti": {
     "extract": "Le Dolomiti, dette anche Monti pallidi, sono un insieme di gruppi montuosi delle Alpi Orientali italiane, a sud della catena principale alpina, quasi interamente comprese nelle regioni di Friuli-Venezia Giulia, Trentino-Alto Adige e Veneto, con una piccola parte anche in Austria e a cavallo fra Friuli e Slovenia.",
@@ -4238,6 +4678,16 @@
     "lang": "it",
     "title": "Ghiaccio secco",
     "wiki_url": "https://it.wikipedia.org/wiki/Ghiaccio_secco"
+  },
+  "https://it.wikipedia.org/wiki/Gruppo_di_Poincar%C3%A9": {
+    "extract": "In fisica e in matematica il gruppo di Poincaré, formulato da Henri Poincaré, è il gruppo di isometrie dello spaziotempo di Minkowski. Si tratta del prodotto semidiretto delle traslazioni e delle trasformazioni di Lorentz ed è un gruppo di Lie non compatto a 10 dimensioni. L'algebra di Lie del gruppo di Poincaré è chiamata algebra di Poincaré. Il gruppo abeliano di traslazioni è un suo sottogruppo normale, mentre il gruppo di Lorentz è un sottogruppo, uno stabilizzatore di un punto.",
+    "fetched_at": "2026-07-26T13:14:12.449644+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "it",
+    "title": "Gruppo di Poincaré",
+    "wiki_url": "https://it.wikipedia.org/wiki/Gruppo_di_Poincar%C3%A9"
   },
   "https://it.wikipedia.org/wiki/Gruppo_di_rinormalizzazione": {
     "extract": "In fisica teorica, in particolare in teoria quantistica dei campi e in meccanica statistica, il gruppo di rinormalizzazione è una tecnica che permette di studiare i cambiamenti di un sistema multiscala alle differenti scale di distanza. Le trasformazioni di rinormalizzazione diminuiscono l'informazione, poiché il numero di variabili diminuisce. Per questo motivo, non hanno una trasformazione inversa e il gruppo di rinormalizzazione è in realtà un semigruppo. In teoria dei campi, riflette i cambiamenti delle leggi al variare della scala di energia alla quale il processo fisico avviene. Un cambio della scala è detto \"trasformazione di scala\" o, più in generale, \"trasformazione conforme\". Il gruppo di rinormalizzazione è intimamente legato alla \"invarianza di scala\", una simmetria per la quale il sistema appare lo stesso a tutte le scale.",
@@ -4339,6 +4789,26 @@
     "title": "Jorge Bolet",
     "wiki_url": "https://it.wikipedia.org/wiki/Jorge_Bolet"
   },
+  "https://it.wikipedia.org/wiki/L%27armata_Brancaleone": {
+    "extract": "L'armata Brancaleone è un film del 1966 diretto da Mario Monicelli.",
+    "fetched_at": "2026-07-26T13:14:51.922861+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/it/thumb/b/b2/Armata_brancaleone_%2811%29.jpg/330px-Armata_brancaleone_%2811%29.jpg?utm_source=it.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "image_height": 186,
+    "image_width": 330,
+    "lang": "it",
+    "title": "L'armata Brancaleone",
+    "wiki_url": "https://it.wikipedia.org/wiki/L'armata_Brancaleone"
+  },
+  "https://it.wikipedia.org/wiki/L%27eclisse": {
+    "extract": "L'eclisse è un film del 1962 diretto da Michelangelo Antonioni.",
+    "fetched_at": "2026-07-26T13:14:52.598583+00:00",
+    "image": "https://upload.wikimedia.org/wikipedia/it/thumb/c/cb/L%27eclisse_%281962%29_-_1.jpg/330px-L%27eclisse_%281962%29_-_1.jpg?utm_source=it.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "image_height": 180,
+    "image_width": 330,
+    "lang": "it",
+    "title": "L'eclisse",
+    "wiki_url": "https://it.wikipedia.org/wiki/L'eclisse"
+  },
   "https://it.wikipedia.org/wiki/Mar_Bianco": {
     "extract": "Il Mar Bianco è un mare laterale del Mar Glaciale Artico.",
     "fetched_at": "2026-07-26T11:56:21.175128+00:00",
@@ -4428,6 +4898,16 @@
     "lang": "it",
     "title": "Supersimmetria",
     "wiki_url": "https://it.wikipedia.org/wiki/Supersimmetria"
+  },
+  "https://it.wikipedia.org/wiki/Teorema_di_Rouch%C3%A9-Capelli": {
+    "extract": "Il teorema di Rouché-Capelli è un teorema di algebra lineare che permette di caratterizzare l'insieme delle soluzioni di un sistema di equazioni lineari mediante il rango della matrice completa e della matrice incompleta.",
+    "fetched_at": "2026-07-26T13:14:20.003560+00:00",
+    "image": null,
+    "image_height": null,
+    "image_width": null,
+    "lang": "it",
+    "title": "Teorema di Rouché-Capelli",
+    "wiki_url": "https://it.wikipedia.org/wiki/Teorema_di_Rouch%C3%A9-Capelli"
   },
   "https://it.wikipedia.org/wiki/Teoria_di_gauge": {
     "extract": "Una teoria di gauge è un tipo di teoria dei campi in cui la lagrangiana del sistema rimane invariata dopo l'applicazione di trasformazioni delle coordinate definite localmente. Tali trasformazioni sono dette simmetrie locali.",
