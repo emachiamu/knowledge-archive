@@ -125,20 +125,32 @@ def wiki_lang_and_title(url: str) -> Tuple[str, str]:
 
 def resolve_redirect(lang: str, page_title: str, session: requests.Session) -> Optional[Dict[str, Any]]:
     """Resolve Wikipedia redirects and get the actual page info using MediaWiki API."""
-    # Try different encodings for the page title
+    # Decode the page title first (to handle %27, %20, etc.)
+    decoded_title = urllib.parse.unquote(page_title)
+    
+    # Try different variations of the title
     titles_to_try = [
-        page_title,
-        urllib.parse.unquote(page_title),  # Decode URL encoding
-        urllib.parse.quote(page_title),    # URL encode
-        page_title.replace("_", " "),       # Replace underscores with spaces
-        page_title.replace(" ", "_"),       # Replace spaces with underscores
+        decoded_title,  # Fully decoded
+        decoded_title.replace("_", " "),  # Replace underscores with spaces
+        decoded_title.replace(" ", "_"),  # Replace spaces with underscores
+        decoded_title.replace(",", ""),  # Remove commas
+        decoded_title.replace("(architect)", "").strip(),  # Remove (architect) suffix
+        decoded_title.replace("(architect)", "").replace(" ", "_").strip(),  # Remove (architect) and underscore
+        decoded_title.replace("(architect)", "").strip(),  # Remove (architect) with spaces
     ]
+    
+    # Also try the original URL-encoded version
+    if page_title != decoded_title:
+        titles_to_try.insert(0, page_title)  # Original URL-encoded
     
     # Remove duplicates while preserving order
     seen = set()
     titles_to_try = [t for t in titles_to_try if not (t in seen or seen.add(t))]
     
     for title in titles_to_try:
+        if not title:
+            continue
+            
         query_url = (
             f"https://{lang}.wikipedia.org/w/api.php"
             f"?action=query"
@@ -187,16 +199,20 @@ def fetch_summary_with_retry(url: str, session: requests.Session) -> Dict[str, A
     if page_info:
         # Use the resolved title
         resolved_title = page_info["title"]
-        if resolved_title and resolved_title != page_title:
-            print(f"  ↪ Redirected from '{page_title}' to '{resolved_title}'")
+        if resolved_title and resolved_title != urllib.parse.unquote(page_title):
+            print(f"  ↪ Redirected from '{urllib.parse.unquote(page_title)}' to '{resolved_title}'")
             page_title = resolved_title
     else:
         # Try to find the page by searching for it
+        search_term = urllib.parse.unquote(page_title).replace("_", " ")
+        # Remove common suffixes that might cause search issues
+        search_term = re.sub(r"\s*\([^)]*\)\s*$", "", search_term)
+        
         search_url = (
             f"https://{lang}.wikipedia.org/w/api.php"
             f"?action=query"
             f"&list=search"
-            f"&srsearch={urllib.parse.quote(page_title.replace('_', ' '))}"
+            f"&srsearch={urllib.parse.quote(search_term)}"
             f"&srlimit=1"
             f"&format=json"
         )
@@ -208,14 +224,16 @@ def fetch_summary_with_retry(url: str, session: requests.Session) -> Dict[str, A
             if search_results:
                 # Use the first search result
                 search_title = search_results[0].get("title")
-                if search_title:
-                    print(f"  🔍 Found '{search_title}' via search for '{page_title}'")
+                if search_title and search_title != search_term:
+                    print(f"  🔍 Found '{search_title}' via search for '{search_term}'")
                     page_title = search_title
         except Exception:
             pass
     
-    # Now fetch the summary with the (possibly resolved) title
-    api_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{urllib.parse.quote(page_title)}"
+    # Now fetch the summary - use the decoded title directly (don't double-encode)
+    # The API expects a URL path, so we need to URL-encode once
+    encoded_title = urllib.parse.quote(page_title)
+    api_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{encoded_title}"
     
     retry_count = 0
     last_error = None
@@ -266,6 +284,9 @@ def fetch_summary_with_retry(url: str, session: requests.Session) -> Dict[str, A
         except requests.exceptions.HTTPError as e:
             # Don't retry 404s
             if e.response and e.response.status_code == 404:
+                raise
+            # Don't retry 403s (Forbidden - usually means malformed URL)
+            if e.response and e.response.status_code == 403:
                 raise
             retry_count += 1
             last_error = e
@@ -355,6 +376,7 @@ def enrich_categories(categories: List[Dict], refresh: bool = False, offline: bo
     processed = 0
     
     # Manual override for known problematic URLs
+    # These are the CORRECT titles that Wikipedia uses
     manual_fixes = {
         "https://en.wikipedia.org/wiki/King%27s_College_Chapel,_Cambridge": "King's College Chapel, Cambridge",
         "https://en.wikipedia.org/wiki/Lion_Gate,_Mycenae": "Lion Gate",
@@ -408,7 +430,7 @@ def enrich_categories(categories: List[Dict], refresh: bool = False, offline: bo
         "https://en.wikipedia.org/wiki/On_Literature_(Eco)": "On Literature (essay collection)",
         "https://it.wikipedia.org/wiki/L%27armata_Brancaleone": "L'armata Brancaleone",
         "https://it.wikipedia.org/wiki/L%27eclisse": "L'eclisse",
-        "https://en.wikipedia.org/wiki/Roman_Pola%C5%84ski": "Roman Polański",
+        "https://en.wikipedia.org/wiki/Roman_Pola%C5%84ski": "Roman Polanski",
         "https://it.wikipedia.org/wiki/Belzeb%C3%B9": "Belzebù",
         "https://en.wikipedia.org/wiki/Colombe_d%27Or": "Colombe d'Or",
         "https://en.wikipedia.org/wiki/Ne_sutor_ultra_crepidam": "Sutor, ne ultra crepidam",
@@ -424,13 +446,18 @@ def enrich_categories(categories: List[Dict], refresh: bool = False, offline: bo
             
             # Check if we have a manual fix for this URL
             if url in manual_fixes:
-                # Create a corrected URL
+                # Get the correct title
+                correct_title = manual_fixes[url]
                 lang, _ = wiki_lang_and_title(url)
-                corrected_title = manual_fixes[url]
-                corrected_url = f"https://{lang}.wikipedia.org/wiki/{urllib.parse.quote(corrected_title)}"
-                print(f"  🔧 Manual fix for {url} -> {corrected_url}")
-                entry["url"] = corrected_url
-                url = corrected_url
+                
+                # Replace the URL with the corrected one (properly encoded)
+                encoded_title = urllib.parse.quote(correct_title)
+                corrected_url = f"https://{lang}.wikipedia.org/wiki/{encoded_title}"
+                
+                if url != corrected_url:
+                    print(f"  🔧 Manual fix: {url} -> {corrected_url}")
+                    entry["url"] = corrected_url
+                    url = corrected_url
             
             # Check cache
             cached = cache.get(url)
@@ -467,9 +494,9 @@ def enrich_categories(categories: List[Dict], refresh: bool = False, offline: bo
                 print(f"  ✓ {meta['title']} ({stats['fetched']} fetched, {stats['from_cache']} cached, {stats['failed']} failed)")
                 
             except requests.exceptions.HTTPError as e:
-                # 404 errors - log but don't count as fatal
-                if "404" in str(e):
-                    print(f"  ⚠ Page not found: {url}")
+                # 403/404 errors - log but don't count as fatal
+                if "403" in str(e) or "404" in str(e):
+                    print(f"  ⚠ Page not accessible: {url} ({str(e)})")
                     stats["failed"] += 1
                     # Use cached version if available, otherwise fallback
                     fallback = cache.get(url) or {
