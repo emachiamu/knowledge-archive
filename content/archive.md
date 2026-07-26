@@ -16,13 +16,13 @@ Ca' d'Oro: https://en.wikipedia.org/wiki/Ca%27_d%27Oro
 Campidoglio: https://en.wikipedia.org/wiki/Capitoline_Hill
 Cappella Sansevero: https://en.wikipedia.org/wiki/Sansevero_Chapel
 Cardiff Castle: https://en.wikipedia.org/wiki/Cardiff_Castle
-Carlo Ratti: https://en.wikipedia.org/wiki/Carlo_Ratti_(architect)
+Carlo Ratti: https://en.wikipedia.org/wiki/Carlo_Ratti
 Cariatide: https://en.wikipedia.org/wiki/Caryatid
 Castel Sant'Angelo: https://en.wikipedia.org/wiki/Castel_Sant%27Angelo
 Cattedrale di Notre-Dame: https://en.wikipedia.org/wiki/Notre-Dame_de_Paris
 Cattedrale di Santa Maria del Fiore: https://en.wikipedia.org/wiki/Florence_Cathedral
 César Manrique: https://en.wikipedia.org/wiki/C%C3%A9sar_Manrique
-Chiesa di Brou: https://en.wikipedia.org/wiki/Monastery_of_Brou
+Chiesa di Brou: https://en.wikipedia.org/wiki/Royal_Monastery_of_Brou
 Chiesa di Sant'Agnese in Agone: https://en.wikipedia.org/wiki/Sant%27Agnese_in_Agone
 Christo and Jeanne-Claude: https://en.wikipedia.org/wiki/Christo_and_Jeanne-Claude
 Chrysler Building: https://en.wikipedia.org/wiki/Chrysler_Building
@@ -33,7 +33,7 @@ Dome of the Rock: https://en.wikipedia.org/wiki/Dome_of_the_Rock
 Domus Aurea: https://en.wikipedia.org/wiki/Domus_Aurea
 Duomo di Milano: https://en.wikipedia.org/wiki/Milan_Cathedral
 Eames House: https://en.wikipedia.org/wiki/Eames_House
-Ed-Deir, Petra: https://en.wikipedia.org/wiki/Al-Deir
+Ed-Deir, Petra: https://en.wikipedia.org/wiki/Ed-Deir,_Petra
 Einstein Tower: https://en.wikipedia.org/wiki/Einstein_Tower
 Fontana dei Quattro Fiumi: https://en.wikipedia.org/wiki/Fountain_of_the_Four_Rivers
 Foro Romano: https://en.wikipedia.org/wiki/Roman_Forum

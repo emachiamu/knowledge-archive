@@ -25,11 +25,15 @@ import re
 import shutil
 import sys
 import time
+import random
 import urllib.parse
 from datetime import date, datetime, timezone
 from pathlib import Path
+from typing import Dict, List, Optional, Any, Tuple
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -39,12 +43,21 @@ TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 OUTPUT_DIR = ROOT / "docs"  # GitHub Pages serves from /docs on the main branch
 
-USER_AGENT = "PersonalKnowledgeArchive/1.0 (static site build script; contact via GitHub repo)"
+USER_AGENT = "KnowledgeArchive/1.0 (https://github.com/emachiamu/knowledge-archive; personal knowledge archive project)"
 SITE_TITLE = "Knowledge Archive"
 
 CATEGORY_RE = re.compile(r"^(.+?)\s*((?:\[\[[a-z0-9\- ]+\]\]\s*,?\s*)+)$")
 TAG_RE = re.compile(r"\[\[([a-z0-9\- ]+)\]\]")
 ENTRY_RE = re.compile(r"^(.+?):\s*(https?://\S+)\s*$")
+
+# Cache saving interval (number of successful fetches between saves)
+CACHE_SAVE_INTERVAL = 25
+
+# Maximum number of retries for failed requests
+MAX_RETRIES = 6
+
+# Base delay between requests (in seconds)
+BASE_REQUEST_DELAY = 1.0
 
 
 # ---------------------------------------------------------------------------
@@ -96,40 +109,103 @@ def parse_archive(md_path: Path):
             current["entries"].append({"title": title.strip(), "url": repair_url(url.strip())})
             continue
 
-        # Anything else (the free-text preamble at the top of the file, etc.)
-        # is intentionally ignored -- only recognised lines become content.
-
     return [c for c in categories if c["entries"]]
 
 
 # ---------------------------------------------------------------------------
-# 2. Fetch + cache Wikipedia metadata
+# 2. Fetch + cache Wikipedia metadata (with robust retry logic)
 # ---------------------------------------------------------------------------
 
-def wiki_lang_and_title(url: str):
+def wiki_lang_and_title(url: str) -> Tuple[str, str]:
     parsed = urllib.parse.urlparse(url)
-    lang = parsed.netloc.split(".")[0]  # "en" or "it" from en.wikipedia.org
+    lang = parsed.netloc.split(".")[0]
     page_title = parsed.path.rsplit("/wiki/", 1)[-1]
     return lang, page_title
 
 
-def fetch_summary(url: str, session: requests.Session):
+def resolve_redirect(lang: str, page_title: str, session: requests.Session) -> Optional[str]:
+    """Resolve Wikipedia redirects using the MediaWiki API."""
+    query_url = (
+        f"https://{lang}.wikipedia.org/w/api.php"
+        f"?action=query&titles={urllib.parse.quote(page_title)}"
+        "&redirects=1&format=json"
+    )
+    try:
+        resp = session.get(query_url, timeout=15)
+        resp.raise_for_status()
+        data = resp.json()
+        pages = data.get("query", {}).get("pages", {})
+        if pages:
+            # Get the first page (the key is the page ID or -1 for missing)
+            page = next(iter(pages.values()))
+            if "missing" not in page:
+                return page.get("title")
+    except Exception:
+        pass
+    return None
+
+
+def fetch_summary_with_retry(url: str, session: requests.Session) -> Dict[str, Any]:
+    """
+    Fetch Wikipedia summary with robust retry logic, redirect resolution,
+    and exponential backoff for rate limiting.
+    """
     lang, page_title = wiki_lang_and_title(url)
-    api_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{page_title}"
-    resp = session.get(api_url, headers={"User-Agent": USER_AGENT}, timeout=15)
-    if resp.status_code == 404:
-        # Try resolving redirects via the query API (handles renamed pages)
-        query_url = (
-            f"https://{lang}.wikipedia.org/w/api.php?action=query&titles={page_title}"
-            "&redirects=1&format=json"
-        )
-        q = session.get(query_url, headers={"User-Agent": USER_AGENT}, timeout=15).json()
-        pages = q.get("query", {}).get("pages", {})
-        real_title = next(iter(pages.values()), {}).get("title") if pages else None
-        if real_title:
-            api_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{urllib.parse.quote(real_title)}"
-            resp = session.get(api_url, headers={"User-Agent": USER_AGENT}, timeout=15)
-    resp.raise_for_status()
+    
+    # First, try to resolve any redirects
+    resolved_title = resolve_redirect(lang, page_title, session)
+    if resolved_title and resolved_title != page_title:
+        page_title = resolved_title
+    
+    # Now fetch the summary
+    api_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{urllib.parse.quote(page_title)}"
+    
+    retry_count = 0
+    while retry_count <= MAX_RETRIES:
+        try:
+            resp = session.get(api_url, timeout=15)
+            
+            if resp.status_code == 404:
+                # Try one more time with redirect resolution
+                resolved_title = resolve_redirect(lang, page_title, session)
+                if resolved_title and resolved_title != page_title:
+                    api_url = f"https://{lang}.wikipedia.org/api/rest_v1/page/summary/{urllib.parse.quote(resolved_title)}"
+                    resp = session.get(api_url, timeout=15)
+                    if resp.status_code == 200:
+                        page_title = resolved_title
+                        break
+            
+            if resp.status_code == 429:
+                # Rate limited - wait and retry
+                retry_after = int(resp.headers.get("Retry-After", 10))
+                wait_time = retry_after + random.uniform(0.5, 2.0)
+                print(f"  ⏳ Rate limited for {page_title}, waiting {wait_time:.1f}s...")
+                time.sleep(wait_time)
+                retry_count += 1
+                continue
+            
+            if resp.status_code >= 500:
+                # Server error - retry with backoff
+                wait_time = (2 ** retry_count) + random.uniform(0.5, 1.0)
+                print(f"  ⏳ Server error ({resp.status_code}) for {page_title}, retrying in {wait_time:.1f}s...")
+                time.sleep(wait_time)
+                retry_count += 1
+                continue
+            
+            resp.raise_for_status()
+            break
+            
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+            wait_time = (2 ** retry_count) + random.uniform(0.5, 1.0)
+            print(f"  ⏳ Connection error: {e}, retrying in {wait_time:.1f}s...")
+            time.sleep(wait_time)
+            retry_count += 1
+            continue
+    
+    # If we exhausted retries, raise the last error
+    if retry_count > MAX_RETRIES:
+        raise requests.exceptions.RequestException(f"Max retries exceeded for {api_url}")
+    
     data = resp.json()
     thumb = data.get("thumbnail") or data.get("originalimage") or {}
     return {
@@ -144,60 +220,145 @@ def fetch_summary(url: str, session: requests.Session):
     }
 
 
-def load_cache():
+def create_robust_session() -> requests.Session:
+    """Create a requests session with retry logic and proper headers."""
+    session = requests.Session()
+    
+    # Set user agent
+    session.headers.update({"User-Agent": USER_AGENT})
+    
+    # Configure retry strategy
+    retry_strategy = Retry(
+        total=MAX_RETRIES,
+        backoff_factor=2,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["GET"],
+        raise_on_status=False,
+    )
+    
+    adapter = HTTPAdapter(
+        max_retries=retry_strategy,
+        pool_connections=10,
+        pool_maxsize=10,
+    )
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    
+    return session
+
+
+def load_cache() -> Dict[str, Any]:
     if CACHE_FILE.exists():
-        return json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+        try:
+            return json.loads(CACHE_FILE.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            print("Warning: cache.json is corrupted, starting with empty cache")
+            return {}
     return {}
 
 
-def save_cache(cache):
+def save_cache(cache: Dict[str, Any]):
+    """Save cache atomically to avoid corruption."""
     CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    CACHE_FILE.write_text(json.dumps(cache, indent=2, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+    temp_file = CACHE_FILE.with_suffix(".tmp")
+    temp_file.write_text(
+        json.dumps(cache, indent=2, ensure_ascii=False, sort_keys=True),
+        encoding="utf-8"
+    )
+    temp_file.replace(CACHE_FILE)
 
 
-def enrich_categories(categories, refresh=False, offline=False):
+def enrich_categories(categories: List[Dict], refresh: bool = False, offline: bool = False) -> List[Dict]:
+    """Fetch Wikipedia metadata for all entries with robust retry logic."""
     cache = load_cache()
-    session = requests.Session()
-    fetched, failed = 0, 0
-
+    session = create_robust_session()
+    
+    stats = {
+        "fetched": 0,
+        "from_cache": 0,
+        "failed": 0,
+        "redirected": 0,
+        "retried": 0,
+    }
+    
+    # Count total entries
+    total_entries = sum(len(c["entries"]) for c in categories)
+    processed = 0
+    
     for cat in categories:
         for entry in cat["entries"]:
             url = entry["url"]
+            processed += 1
+            
+            # Check cache
             cached = cache.get(url)
             if cached and not refresh:
                 entry.update(cached)
+                stats["from_cache"] += 1
                 continue
+            
             if offline:
-                # No cache entry and we're not allowed to hit the network:
-                # fall back to a minimal placeholder built from the markdown title.
+                # Offline mode: use minimal placeholder
+                lang, _ = wiki_lang_and_title(url)
                 entry.update({
+                    "title": entry["title"],
+                    "extract": "",
+                    "image": None,
+                    "wiki_url": url,
+                    "lang": lang,
+                    "fetched_at": None,
+                })
+                stats["from_cache"] += 1
+                continue
+            
+            # Fetch from Wikipedia with retry
+            try:
+                meta = fetch_summary_with_retry(url, session)
+                cache[url] = meta
+                entry.update(meta)
+                stats["fetched"] += 1
+                
+                # Check if URL was redirected
+                if meta.get("wiki_url") != url and meta.get("wiki_url"):
+                    stats["redirected"] += 1
+                
+                print(f"  ✓ {meta['title']} ({stats['fetched']} fetched, {stats['from_cache']} cached, {stats['failed']} failed)")
+                
+            except Exception as exc:
+                print(f"  ! failed to fetch {url}: {exc}")
+                stats["failed"] += 1
+                # Use cached version if available, otherwise fallback
+                fallback = cache.get(url) or {
                     "title": entry["title"],
                     "extract": "",
                     "image": None,
                     "wiki_url": url,
                     "lang": wiki_lang_and_title(url)[0],
                     "fetched_at": None,
-                })
-                continue
-            try:
-                meta = fetch_summary(url, session)
-                cache[url] = meta
-                entry.update(meta)
-                fetched += 1
-                time.sleep(0.05)  # be polite to the API
-            except Exception as exc:  # noqa: BLE001
-                print(f"  ! failed to fetch {url}: {exc}", file=sys.stderr)
-                fallback = cache.get(url) or {
-                    "title": entry["title"], "extract": "", "image": None,
-                    "wiki_url": url, "lang": wiki_lang_and_title(url)[0], "fetched_at": None,
                 }
                 entry.update(fallback)
-                failed += 1
-
+            
+            # Save cache periodically
+            if (stats["fetched"] + stats["from_cache"]) % CACHE_SAVE_INTERVAL == 0:
+                save_cache(cache)
+                print(f"  💾 Cache saved ({len(cache)} entries)")
+            
+            # Polite delay between requests (with jitter)
+            if stats["fetched"] > 0:
+                delay = BASE_REQUEST_DELAY + random.uniform(0.1, 0.5)
+                time.sleep(delay)
+    
+    # Final cache save
     if not offline:
         save_cache(cache)
-    print(f"Wikipedia metadata: {fetched} fetched, {failed} failed, "
-          f"{sum(len(c['entries']) for c in categories) - fetched - failed} from cache.")
+    
+    print(f"\nWikipedia metadata summary:")
+    print(f"  ✓ {stats['fetched']} new articles fetched")
+    print(f"  ↪ {stats['redirected']} redirects resolved")
+    print(f"  📦 {stats['from_cache']} articles from cache")
+    print(f"  ⚠ {stats['failed']} articles failed")
+    print(f"  📊 {len(cache)} total entries in cache")
+    
     return categories
 
 
@@ -205,7 +366,7 @@ def enrich_categories(categories, refresh=False, offline=False):
 # 3. Render the site
 # ---------------------------------------------------------------------------
 
-def truncate(text, length=280):
+def truncate(text: str, length: int = 280) -> str:
     text = (text or "").strip()
     if len(text) <= length:
         return text
@@ -213,7 +374,7 @@ def truncate(text, length=280):
     return cut + "…"
 
 
-def build_site(categories):
+def build_site(categories: List[Dict]):
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
         autoescape=select_autoescape(["html"]),
@@ -310,7 +471,7 @@ def build_site(categories):
     # .nojekyll so GitHub Pages serves the docs/ folder as-is
     (OUTPUT_DIR / ".nojekyll").write_text("", encoding="utf-8")
 
-    print(f"Built {len(categories)} category pages + homepage + search page "
+    print(f"\nBuilt {len(categories)} category pages + homepage + search page "
           f"({total_articles} articles) into {OUTPUT_DIR}")
 
 
@@ -324,12 +485,19 @@ def main():
     parser.add_argument("--offline", action="store_true", help="Never touch the network; cache only")
     args = parser.parse_args()
 
+    print("=" * 60)
+    print("Knowledge Archive Build")
+    print("=" * 60)
+    
     categories = parse_archive(CONTENT_MD)
     total = sum(len(c["entries"]) for c in categories)
     print(f"Parsed {len(categories)} categories, {total} articles from {CONTENT_MD.name}")
 
     categories = enrich_categories(categories, refresh=args.refresh, offline=args.offline)
     build_site(categories)
+    
+    print("\n" + "=" * 60)
+    print("Build complete!")
 
 
 if __name__ == "__main__":
