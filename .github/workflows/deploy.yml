@@ -25,6 +25,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30  # Add timeout to prevent hanging builds
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,11 +35,31 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('scripts/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
       - name: Build site (fetches new/changed Wikipedia metadata, caches it)
         run: python scripts/build.py
+        env:
+          PYTHONUNBUFFERED: 1  # Ensure logs are streamed immediately
+
+      - name: Upload build artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: |
+            data/cache.json
+            docs/
+          retention-days: 7
 
       - name: Commit updated cache
         run: |
@@ -46,8 +67,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/cache.json
           git diff --cached --quiet || git commit -m "Update Wikipedia metadata cache [skip ci]"
-          git pull --rebase origin main
-          git push
+          git pull --rebase origin main || echo "No updates to pull"
+          git push || echo "No changes to push"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
